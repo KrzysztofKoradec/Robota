@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Meta info -->
+	<title>Ekran powitalny</title>
+	<meta name="description" value="">
+	<meta name="keywords" value="">
+	<meta name="author" value="">
+
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="assets/ico/favicon.png">
+
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="assets/css/style.css" rel="stylesheet">
+	<!-- styles needed for carousel slider -->
+	<link href="assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+	<!-- bxSlider CSS file -->
+	<link href="assets/plugins/bxslider/jquery.bxslider.css" rel="stylesheet"/>
+
+	<!-- Just for debugging purposes. -->
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- include pace script for automatic web page progress bar  -->
+	<script>
+			paceOptions = {
+					elements: true
+			};
+	</script>
+	<script src="assets/js/pace.min.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+
+
+  
+	<!-- HEADER, or navbar -->
+	<div class="header">
+		<nav class="navbar navbar-site navbar-default" role="navigation">
+			<div class="container">
+
+				<!-- NAVBAR HEADER -->
+				<!-- logo and navigations toggle buttons -->
+				<div class="navbar-header">
+
+					<!-- open menu btn -->
+					<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle toggle-icon" type="button">
+  					<span class="sr-only">Toggle navigation</span>
+						<i class="fa fa-user closed active" aria-hidden="true"></i>
+						<i class="fa fa-times opened" aria-hidden="true"></i>
+						<span class="badge bg-info">new</span>
+					</button>
+					
+					<!-- obserwowane -->
+					<a class="navbar-toggle" href="#">
+						<i class="fa icon-star-empty active" aria-hidden="true"></i>
+						<span class="badge bg-info to-left">2</span>
+          </a>
+
+					<!-- logo -->
+					<a href="index.html" class="navbar-brand logo logo-title">
+  					<span class="logo-icon">
+              <i class="icon icon-search-1 ln-shadow-logo "></i>
+            </span>
+						<span class="light">OFERTY</span> <span>PRACY</span>
+					</a>
+					
+					<!-- go back -->
+					<a href="#" class="go-back">
+						<i class="fa fa-angle-double-left" aria-hidden="true"></i>
+					</a>
+				</div>
+
+
+				<!-- NAVBAR COLLAPSE -->
+				<!-- main navigation, will collapse on mobile -->
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+
+					
+
+						
+
+						<!-- Profil - dropdown -->
+						<li class="dropdown user-dropdown">
+
+							<!-- toggler -->
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa-user fa mr-1"></i>
+								<span>Jhon Doe</span>
+								<i class=" icon-down-open-big fa"></i>
+							</a>
+
+							<!-- menu -->
+							<ul class="dropdown-menu user-menu">
+
+								<!-- accounte name -->
+								<li class="account-name">
+									<i class="fa fa-user ln-shadow"></i>
+									<p>john.doe@example.com</p>
+									<a href="#" class="btn btn-primary">
+										<span>Doładuj konto</span><br>
+										<small>Stan 147 PLN / kredytów</small>
+									</a>
+								</li>
+
+								<!-- links -->
+								<li><a href="lista_ogloszen.html">
+									<i class=" icon-docs "></i> Ogłoszenia
+								</a></li>
+
+								<li>
+									<a href="uzytkownik_profil.html">
+										<i class="icon-user"></i> 
+										<span>Profil</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-mail"></i> Wiadomości
+									</a>
+								</li>
+
+								<li>
+									<a href="#navbar-ustawienia-collapse" data-toggle="collapse">
+										<i class="fa fa-angle-down pull-right" aria-hidden="true"></i>
+										<i class="icon-cog"></i> Ustawienia
+									</a>
+
+									<div class="collapse navbar-collapse-together" id="navbar-ustawienia-collapse">
+										<a href="#">Ustawienia</a>
+										<a href="#">Płatności</a>
+									</div>
+								</li>
+
+								<li><a href="login.html">
+									<i class=" icon-logout "></i> Wyloguj
+								</a></li>
+
+							</ul>
+						</li>
+
+						<!-- dodaj ogloszenie -->
+						<li class="postadd">
+							<a class="btn btn-block btn-border btn-post btn-danger" href="dodawanie_ogloszenia.html" data-toggle="tooltip" title="Dodaj nową ofertę pracy"
+							 data-placement="bottom">
+                <i class="fa fa-plus" aria-hidden="true"></i> ofertę pracy za darmo
+              </a>
+						</li>
+
+						<!-- lang menu -->
+						<li class="dropdown lang-menu">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								<span class="lang-title">PL </span><span class="caret"></span>
+							</button>
+
+							<ul class="dropdown-menu user-menu" role="menu">
+								<li><a class="active">
+										<span class="lang-name">English</span>
+								</a></li>
+								<li><a><span class="lang-name">German </span></a></li>
+								<li><a><span class="lang-name">Russian </span></a></li>
+								<li><a><span class="lang-name">Ukrainian </span></a></li>
+							</ul>
+						</li>
+
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+
+
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+	</div>
+	<!-- /.header -->
+
+
+
+	<!-- MAIN CONTAINER -->
+	<div class="main-container">
+		<div class="container">
+			<div class="row">
+
+
+				<!-- SIDEBAR -->
+				<div class="col-sm-3 page-sidebar hidden-xs">
+					<aside>
+						<div class="inner-box">
+							<div class="user-panel-sidebar">
+								<!-- Box -->
+								<div class="collapse-box ">
+									<h5 class="collapse-title bold">
+										Panel Pracodawcy
+
+										<a href="#aside-ustawienia" data-toggle="collapse" class="pull-right">
+											<i class="fa fa-angle-down"></i>
+										</a>
+									</h5>
+
+									<div class="panel-collapse collapse in" id="aside-ustawienia">
+										<ul class="acc-list">
+											<li class="active"><a href="#">
+												<i class="icon-docs" aria-hidden="true"></i> Ogłoszenia
+											</a></li>
+											<li><a href="#">
+												<i class="fa fa-envelope-o" aria-hidden="true"></i> Wiadomości
+											</a></li>
+											<li><a href="profil_pracodawcy.html">
+												<i class="icon-user"></i> Profil
+											</a></li>
+											<li><a href="#.html">
+												<i class="icon-cog"></i> Ustawienia
+											</a></li>
+										</ul>
+									</div>
+								</div>
+								<!-- /.collapse-box  -->
+								
+
+							</div>
+							<!-- /.user-panel-sidebar  -->
+						</div>
+						<!-- /.inner-box  -->
+					</aside>
+				</div>
+				<!--/.page-sidebar-->
+				
+				<!-- CONTENT -->
+				<div class="col-sm-9 page-content">
+					<div class="inner-box overflow">
+
+						<!-- title -->
+						<div class="title-2">
+							<h2><i class="icon-docs" aria-hidden="true"></i>Dodaj ogłoszenie</h2>
+							<h5>Witaj na platformie <strong>Takpracuj</strong>.pl</h5>
+						</div>
+
+
+						<!-- alert -->
+						<div class="alert alert-warning pgray collapse-mobile mb-5" role="alert">
+							<h2><i class="fa fa-exclamation-circle"></i> Dziekujemy profil jest aktywny.</h2>
+							
+							<div class="collapse mb-2" id="dane-alert">
+								<p>Już możesz dodawać oferty pracy. Zachęcamy do uzupełnienia jednorazowo danych teleadresowych - profilu, zostaną one przypisane automatycznie przy dodawaniu kolejnych ogłoszeń. <a href="">Uzupełnij profil pracodawcy</a></p>
+							</div>
+							
+
+
+							<!-- close btn -->
+							<div class="close-btn close-btn-absolute mt-0">
+								<button data-target="#dane-alert" data-toggle="collapse" type="button" aria-expanded="false">
+									<i class="fa fa-angle-down"></i>
+								</button>
+							</div>
+						</div>
+                       
+						<!-- cta -->
+						<span class="row">
+							<div class="col-sm-6 col-sm-offset-3 text-center postadd">
+								<a class="btn btn-border btn-post btn-danger d-block" href="dodawanie_ogloszenia.html" data-toggle="tooltip" title="Dodaj nową ofertę pracy" data-placement="bottom">
+									<i class="fa fa-plus" aria-hidden="true"></i> ofertę pracy za darmo
+								</a>
+							</div>
+						</span>
+
+                        <p><h4 class="text-center  no-padding mt-5">Na start <span class="big">30 kredytów</span> gratis na wypromowanie ogferty pracy: </h4></p>
+						<!-- icon boxes -->
+						
+                     <div class="row hidden-xs">	
+
+                        <div class="col-sm-4 col-xs-12 mb-4 mb-sm-0">
+						  <div class="promo-text-box text-center"><i class=" icon-pencil-circled fa fa-4x icon-color-3"></i></div>
+                          <h5 class="text-center"><strong>1. Publikuj ogłoszenie</strong> </h5>
+                        </div>
+
+                        <div class="col-sm-4 col-xs-12 mb-4 mb-sm-0">
+                        <div class="promo-text-box text-center"><i class=" icon-picture fa fa-4x icon-color-3"></i></div>
+                        <h5 class="text-center"><strong>2. Przegladaj zgłoszenia </strong></h5>
+                        </div>
+
+                        <div class="col-sm-4 col-xs-12 mb-4 mb-sm-0">
+                        <div class="promo-text-box text-center"><i class=" icon-briefcase fa fa-4x icon-color-3"></i></div>
+                        <h5 class="text-center"><strong>3. Zatrudnij pracownika </strong></h5>
+                        </div>
+					</div>
+
+					</div><!-- /.inner-box -->
+				</div><!--/.page-content-->
+
+
+			</div><!--/.row-->
+		</div><!--/.container-->
+	</div><!-- /.main-container -->
+
+
+
+	<!-- FOOTER -->
+	<footer class="main-footer">
+		<div class="footer-content">
+			<div class="container">
+				<div class="row">
+
+					<!-- Links 1 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">About us</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="#">About Company</a></li>
+								<li><a href="#">For Business</a></li>
+								<li><a href="#">Our Partners</a></li>
+								<li><a href="#">Press Contact</a></li>
+								<li><a href="#">Careers</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Links 2 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">Help & Contact</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="#">Stay Safe Online</a></li>
+								<li><a href="#">How to Sell</a></li>
+								<li><a href="#">How to Buy</a></li>
+								<li><a href="#">Posting Rules</a></li>
+								<li><a href="#">Promote Your Ad</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Links 3 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">More From Us</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="blogs.html">Blog</a></li>
+								<li><a href="#">Popular Searches</a></li>
+								<li><a href="#"> Site Map</a></li>
+								<li><a href="#"> Customer Reviews</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Links 4 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">Account</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="account-home.html"> Manage Account	</a></li>
+								<li><a href="login.html">Login</a></li>
+								<li><a href="signup.html">Register</a></li>
+								<li><a href="account-myads.html"> My ads</a></li>
+								<li><a href="seller-profile.html"> Profile</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Newsletter & socials -->
+					<div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="row">
+
+							<!-- Newsletter -->
+							<div class="col-xxs-12 col-xs-6 col-sm-12 text-xxs-center">
+								<h4 class="footer-title">Zapisz się do newslettera</h4>
+								<form class="form-inline">
+									<div class="form-group">
+										<label for="newsletter_email" class="sr-only">
+											Podaj swój adres email
+										</label>
+
+										<input type="email" name="newsletter_email" id="newsletter_email" class="form-control" placeholder="Podaj adres email" required>
+
+										<input type="submit" name="newletter-submit" id="newletter-submit" class="form-control btn btn-primary" value="Zapisz mnie">
+									</div>
+								</form>
+							</div>
+
+
+							<!-- Socials -->
+							<div class="col-xxs-12 col-xs-6 col-sm-12 text-xxs-center">
+								<h4 class="footer-title">Znajdź nas na</h4>
+								<ul class="list-unstyled list-inline footer-nav social-list-footer social-list-color footer-nav-inline">
+									<li><a class="icon-color fb" title="Facebook" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-facebook"></i> </a></li>
+									<li><a class="icon-color tw" title="Twitter" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-twitter"></i> </a></li>
+									<li><a class="icon-color gp" title="Google+" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-google-plus"></i> </a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+
+					<!-- Copyrights -->
+					<div class="col-xs-12">
+						<div class="copy-info text-center">
+							&copy; 2017 BootClassified. All Rights Reserved.
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</footer><!-- /.footer -->
+
+
+
+</div><!-- /.wrapper -->
+
+
+
+
+<!-- Modals
+================================================== -->
+<div>
+	<!-- Modal pakiet premium -->
+	<div class="modal fade" id="modalPakietPremium" tabindex="-1" role="dialog" aria-labelledby="modalPakietPremiumLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalPakietPremiumLabel">
+						<img src="images/icon_premium.jpg" alt="Ikonka premium"> Pakiet premium
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+
+						<div class="col-md-8">
+							<h2>Tytuł pakiet premium</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat alias ab dolor minus optio sunt, animi distinctio corporis ut repudiandae eum labore perferendis at explicabo iure veniam, officia quia saepe.</p>
+		
+							<ul class="list-check">
+								<li>Lorem ipsum dolor sit amet</li>
+								<li>Numquam temporibus</li>
+								<li>Labore porro quas excepturi repellat</li>
+							</ul>
+						</div>
+
+						<div class="col-md-4">
+							<img src="images/preview_premium.jpg" alt="Podgląd ogłoszeń premium">
+						</div>
+
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	<!-- Modal pakiet Wyroznij -->
+	<div class="modal fade" id="modalPakietWyroznij" tabindex="-1" role="dialog" aria-labelledby="modalPakietWyroznijLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalPakietWyroznijLabel">
+						<img src="images/icon_wyroznij.jpg" alt="Ikonka wyróżnij"> Pakiet wyróżnij
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+
+						<div class="col-md-8">
+							<h2>Wyróżnij swoje ogłoszenie</h2>
+							<p>Jeśli chcesz wyróżnić swoje ogłoszenie na tle innych , skorzystaj z opcji wyróżnienia. Użytkownicy łatwo dostrzegą Twoją ofertę. W ten sposób zwiększysz szansę na pozyskanie odpowiedniego pracownika.</p>
+		
+							<ul class="list-check">
+								<li>większa oglądalność ogłoszeń</li>
+								<li>podświetlenie Twojej oferty pracy</li>
+							</ul>
+						</div>
+
+						<div class="col-md-4">
+							<img src="images/preview_wyroznij.jpg" alt="Podgląd ogłoszeń premium">
+						</div>
+
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	<!-- Modal podbij-->
+	<div class="modal fade" id="modalPodbij" tabindex="-1" role="dialog" aria-labelledby="modalPodbijLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalPodbijLabel">
+						<img src="images/icon_podbij.jpg" alt="Ikonka podbij"> Podbij ogłoszenie
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+
+						<div class="col-md-8">
+							<h2>Tytuł podbij</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat alias ab dolor minus optio sunt, animi distinctio corporis ut repudiandae eum labore perferendis at explicabo iure veniam, officia quia saepe.</p>
+		
+							<ul class="list-check">
+								<li>Lorem ipsum dolor sit amet</li>
+								<li>Numquam temporibus</li>
+								<li>Labore porro quas excepturi repellat</li>
+							</ul>
+						</div>
+
+						<div class="col-md-4">
+							<img src="images/preview_premium.jpg" alt="Podgląd ogłoszeń premium">
+						</div>
+
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	<!-- Modal wiadomosc -->
+	<div class="modal fade" id="napiszWiadomosc" tabindex="-1" role="dialog" aria-labelledby="napiszWiadomoscLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="napiszWiadomoscLabel">
+						<i class="icon-mail"></i> Napisz do wykonawcy
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<!--<h4 class="no-padding text-center">Wiadomość dotycząca ogłoszenia <span class="small">(123123)</span>:</h4>-->
+							<!--<h3 class="bold mt5 mb15 text-center">Kierowca Tira poszukiwany</h3>-->
+	
+							<form role="form">
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="wiadomosc" class="control-label">Wiadomość</label>
+									<textarea
+									placeholder="Wiadomość"
+									class="form-control" name="wiadomosc" rows="6"
+									required
+									maxlength="300"></textarea>
+								</div>
+								<!-- osoba -->
+								<div class="form-group ">
+									<label for="osoba" class="control-label">
+										Osoba kontaktowa
+									</label>
+									<input type="text"
+										class="form-control"
+										name="osoba" id="osoba"
+										placeholder="Podaj osobę kontaktową"
+										maxlength="50"
+									>
+								</div>
+								<!-- telefon -->
+								<div class="form-group ">
+									<label for="tel" class="control-label">
+										Telefon
+									</label>
+									<input type="text"
+										class="form-control only-number"
+										name="tel" id="tel"
+										placeholder="Wpisz numer telefonu"
+										maxlength="20"
+									>
+								</div>
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal potwierdz wybor -->
+	<div class="modal fade" id="potwierdzWybor" tabindex="-1" role="dialog" aria-labelledby="potwierdzWyborLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="potwierdzWyborLabel">
+						<i class="icon-trophy"></i> Potwierdź wybór ogłoszenia
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center">Czy napewno chcesz wybrać tę ofertę?</h3>
+							<h4 class="no-padding text-center">Jeżeli zlecenie jest aktualne, wybierając tę ofertę automatyczne zlecenie zostanie wygaszone</h4>
+	
+							<form role="form">
+								<!-- Submit and reset -->
+								<div class="form-group text-center mt15">
+									<button class="btn btn-primary">
+										Tak
+									</button>
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Nie
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Sukces!</strong> Twój wybór został zapisany.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal potwierdz usuniecie ogloszenia -->
+	<div class="modal fade" id="potwierdzUsun" tabindex="-1" role="dialog" aria-labelledby="potwierdzUsunLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="potwierdzUsunLabel">
+						<i class="icon-trash"></i> Potwierdź usunięcie ogłoszenia
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center">Czy napewno chcesz usunąć to ogłoszenie?</h3>
+							<!-- <h4 class="no-padding text-center"></h4> -->
+	
+							<form role="form">
+								<!-- Submit and reset -->
+								<div class="form-group text-center mt15">
+									<button class="btn btn-primary">
+										Tak
+									</button>
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Nie
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Sukces!</strong> Ogłoszenie zostało usunięte.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal potwierdz usuniecie wpisu -->
+	<div class="modal fade" id="potwierdzUsun" tabindex="-1" role="dialog" aria-labelledby="potwierdzUsunLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="potwierdzUsunLabel">
+						<i class="icon-trash"></i> Potwierdź usunięcie wpisu
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center">Czy napewno chcesz usunąć ten wpis?</h3>
+							<!-- <h4 class="no-padding text-center"></h4> -->
+	
+							<form role="form">
+								<!-- Submit and reset -->
+								<div class="form-group text-center mt15">
+									<button class="btn btn-primary">
+										Tak
+									</button>
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Nie
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Sukces!</strong> Wpis został usunięty.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal potwierdz wygasniecie -->
+	<div class="modal fade" id="potwierdzWygas" tabindex="-1" role="dialog" aria-labelledby="potwierdzWygasLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="potwierdzWygasLabel">
+						<i class="fa fa-archive"></i> Potwierdź wygaśnięcie ogłoszenia
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center">Czy napewno chcesz wygasić to ogłoszenie?</h3>
+							<!-- <h4 class="no-padding text-center"></h4> -->
+	
+							<form role="form">
+								<!-- Submit and reset -->
+								<div class="form-group text-center mt15">
+									<button class="btn btn-primary">
+										Tak
+									</button>
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Nie
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Sukces!</strong> Twoje ogłosznie zostało wygaszone.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal dane -->
+	<div class="modal fade" id="daneModal" tabindex="-1" role="dialog" aria-labelledby="daneModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="daneModalLabel">
+						<i class="icon-newspaper"></i> Zmień dane
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-12">
+							<form class="form-horizontal">
+								<fieldset>
+									<!-- nazwa firmy -->
+									<div class="form-group row">
+										<label for="nazwa_firmy" class="col-md-3 control-label">
+											Nazwa firmy
+										</label>
+										<div class="col-md-9 controls">
+											<input type="text"
+											class="form-control"
+											name="nazwa_firmy" id="nazwa_firmy"
+											placeholder="Wpisz nazwę firmy"
+											maxlength="30"
+											required
+											>
+										</div>
+									</div>
+									<!-- ulica -->
+									<div class="form-group row">
+										<label for="ulica" class="col-md-3 control-label">
+											Ulica
+										</label>
+										<div class="col-md-9 controls">
+											<input type="text"
+											class="form-control"
+											name="ulica" id="ulica"
+											placeholder="Wpisz ulicę"
+											maxlength="30"
+											required
+											>
+										</div>
+									</div>
+									<!-- kod pocztowy -->
+									<div class="form-group row">
+										<label for="kod_pocztowy" class="col-md-3 control-label">
+											Kod pocztowy
+										</label>
+										<div class="col-md-9 controls">
+											<input type="text"
+											class="form-control"
+											name="kod_pocztowy"
+											placeholder="Wpisz kod pocztowy (00-000)"
+											title="Wpisz poprawny kod pocztowy np. 01-001"
+											required
+											>
+										</div>
+									</div>
+									<!-- miasto -->
+									<div class="form-group row">
+										<label for="miasto" class="col-md-3 control-label">
+											Miasto
+										</label>
+										<div class="col-md-9 controls">
+											<input type="text"
+											class="form-control"
+											name="miasto" id="miasto"
+											placeholder="Wpisz miasto"
+											required
+											>
+										</div>
+									</div>
+									<!-- nip -->
+									<div class="form-group row">
+										<label for="nip" class="col-md-3 control-label">
+											NIP
+										</label>
+										<div class="col-md-9 controls">
+											<input type="text"
+											class="form-control"
+											name="nip" id="nip"
+											placeholder="Wpisz NIP"
+											title="Wpisz dziesięciocyfrowy kod"
+											required
+											>
+										</div>
+									</div>
+									<!-- Submit and reset -->
+									<div class="form-group">
+										<label class="col-md-3 control-label"></label>
+										<div class="col-md-9 text-right">
+											<button type="reset" class="btn btn-default" data-dismiss="modal">
+												Anuluj
+											</button>
+											<button class="btn btn-primary">
+												Zapisz
+											</button>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+							</div>
+	
+						</div>
+					</div><!-- /.row -->
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal lista wykonawcow -->
+	<div class="modal fade" id="listaWykonawcow" tabindex="-1" role="dialog" aria-labelledby="listaWykonawcowLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="listaWykonawcowLabel">
+						<i class="fa fa-users"></i> Lista wykonawców
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center">Wysłano do:</h3>
+							<!-- <h4 class="no-padding text-center"></h4> -->
+	
+							<div class="row">
+								<div class="col-md-6">
+									<ul class="list-check">
+										<li><a href="#">Lorem ipsum</a></li>
+										<li><a href="#">dolor sit amet</a></li>
+										<li><a href="#">sed do eiusmod tempor</a></li>
+										<li><a href="#">consectetur adipisicing elit</a></li>
+										<li><a href="#">incididunt ut labore</a></li>
+									</ul>
+								</div>
+								<div class="col-md-6">
+									<ul class="list-check">
+										<li><a href="#">et dolore magna aliqua</a></li>
+										<li><a href="#">Ut enim ad minim veniam</a></li>
+										<li><a href="#">quis nostrud exercitation</a></li>
+										<li><a href="#">ullamco laboris nisi</a></li>
+										<li><a href="#">ut aliquip ex ea commodo</a></li>
+									</ul>
+								</div>
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal formy promocji ogloszenia -->
+	<div class="modal fade" id="formyPromocji" tabindex="-1" role="dialog" aria-labelledby="formyPromocjiLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="formyPromocjiLabel">
+						<i class="fa fa-star"></i> Formy promocji ogłoszenia:
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<!-- <h3 class="bold mt5 mb15 text-center">Formy promocji ogłoszenia:</h3> -->
+							<!-- <h4 class="no-padding text-center"></h4> -->
+	
+							<div class="row">
+								<div class="col-md-12">
+									<ul class="list-check">
+										<li>Pakiet wyróżnij: <b>34 dni</b></li>
+										<li>Pakiet premium: <b>12 dni</b></li>
+										<li>Ogłoszenie podbite</li>
+									</ul>
+								</div>
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal formy promocji profilu -->
+	<div class="modal fade" id="formyPromocji" tabindex="-1" role="dialog" aria-labelledby="formyPromocjiLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="formyPromocjiLabel">
+						<i class="fa fa-star"></i> Formy promocji profilu:
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<!-- <h3 class="bold mt5 mb15 text-center">Formy promocji ogłoszenia:</h3> -->
+							<!-- <h4 class="no-padding text-center"></h4> -->
+	
+							<div class="row">
+								<div class="col-md-12">
+									<ul class="list-check">
+										<li>Pakiet wyróżnij: <b>34 dni</b></li>
+										<li>Pakiet premium: <b>12 dni</b></li>
+										<li>Ogłoszenie podbite</li>
+									</ul>
+								</div>
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal share -->
+	<div class="modal fade" id="modalShare" tabindex="-1" role="dialog" aria-labelledby="modalShareLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalShareLabel">
+						<i class="fa fa-thumbs-up"></i> Poleć zlecenie
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h4 class="no-padding text-center">Jeśli chcesz poinformować swojego znajomego o zleceniu, które Twoim zdaniem może go zainteresować, skorzystaj z poniższego formularza.</h4>
+	
+							<form role="form">
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="wiadomosc" class="control-label">Wiadomość</label>
+									<textarea
+									placeholder="Wiadomość"
+									class="form-control" name="wiadomosc" rows="6"
+									required
+									maxlength="300"></textarea>
+								</div>
+								<!-- osoba -->
+								<div class="form-group ">
+									<label for="do" class="control-label">
+										Do
+									</label>
+									<input type="text"
+										class="form-control"
+										name="do" id="do"
+										placeholder="Podaj email kontaktowy"
+										maxlength="50"
+										required
+									>
+								</div>
+								<!-- podpis -->
+								<div class="form-group ">
+									<label for="podpis" class="control-label">
+										Podpis
+									</label>
+									<input type="text"
+										name="podpis" id="podpis"
+										placeholder="Podpisz się"
+										class="form-control"
+										maxlength="50"
+										required
+									>
+								</div>
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal zaloguj -->
+	<div class="modal fade" id="alertZaloguj" tabindex="-1" role="dialog" aria-labelledby="alertZalogujLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="alertZalogujLabel">
+						<i class="icon-mail"></i> Wyślij ofertę do zgłoszenia
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12 text-center">
+	
+							<h4 class="no-padding">Jeśli chcesz wysłać ofertę do zlecenia</h4>
+							<h3 class="bold mt5 mb15">Zaloguj się lub załóż konto i uzupełnij profil specjalisty</h3>
+	
+							<a href="../signup.html" class="btn btn-primary">
+								<i class="fa fa-user"></i> Zaloguj
+							</a>
+							<a href="../signup.html" class="btn btn-warning">
+								<i class="fa fa-sign-in"></i> Zarejestruj
+							</a>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal szukam pracy jakiś stary -->
+	<div class="modal fade" id="modalSzukamPracy" tabindex="-1" role="dialog" aria-labelledby="modalSzukamPracyLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalSzukamPracyLabel">
+						<i class="fa fa-briefcase"></i> Poszukuję pracy:
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-12">
+	
+							<!-- switch -->
+							<!--<div class="text-right w100-mobile">
+								<div class="switch-wrapper">
+									<span>Informacja widoczna w profilu: </span>
+									<span class="small">off</span>
+									<label class="switch">
+										<input type="checkbox" checked>
+										<div class="slider"></div>
+									</label>
+									<span class="small on">on</span>
+									<a class="round-icon xs inline-block" data-toggle="tooltip" data-placement="bottom"
+										title="Tu ma być jakiś tekst pomocy?"><i class="fa fa-question bg-dark-grey"></i>
+									</a>
+								</div>
+							</div>-->
+	
+							<form class="form-horizontal">
+								<fieldset>
+									<!-- zakres -->
+									<div class="form-group">
+										<label class="col-md-3 control-label" for="zakres">Zakres poszukiwanej pracy</label>
+										<div class="col-md-9">
+											<div class="checkbox">
+												<label for="pelny">
+													<input
+														name="zakres" id="pelny" value="pelny" type="checkbox"
+														required
+													>
+													pełny etat
+												</label>
+											</div>
+	
+											<div class="checkbox">
+												<label for="niepelny">
+													<input
+														name="zakres" id="niepelny" value="niepelny"
+														type="checkbox"
+													>
+													pół etatu
+												</label>
+											</div>
+	
+											<div class="checkbox">
+												<label for="freelancer">
+													<input
+														name="zakres" id="freelancer" value="freelancer"
+														type="checkbox"
+													>
+													freelancer
+												</label>
+											</div>
+	
+											<div class="checkbox">
+												<label for="zlecenie_projekt">
+													<input
+														name="zakres" id="zlecenie_projekt" value="zlecenie_projekt"
+														type="checkbox"
+													>
+													zlecenie / projekt
+												</label>
+											</div>
+	
+											<div class="checkbox">
+												<label for="praktyka">
+													<input
+														name="zakres" id="praktyka" value="praktyka"
+														type="checkbox"
+													>
+													praktyka
+												</label>
+											</div>
+	
+											<div class="checkbox">
+												<label for="staz">
+													<input
+														name="zakres" id="staz" value="staz"
+														type="checkbox"
+													>
+													staż
+												</label>
+											</div>
+											<div class="checkbox">
+												<label for="po_godzinach">
+													<input
+														name="zakres" id="po_godzinach" value="po_godzinach"
+														type="checkbox"
+													>
+													po godzinach
+												</label>
+											</div>
+										</div>
+									</div>
+	
+									<!-- opis pracy -->
+									<div class="form-group row">
+										<label for="opis_pracy" class="col-md-3 control-label">
+											Opis
+										</label>
+										<div class="col-md-9 controls">
+											<textarea
+												class="form-control"
+												name="opis_pracy" id="opis_pracy"
+												rows="5"
+												maxlength="300"
+												required
+												placeholder="Wpisz krótki opis"
+											></textarea>
+										</div>
+									</div>
+	
+									<!-- Submit and reset -->
+									<div class="form-group">
+										<label class="col-md-3 control-label"></label>
+										<div class="col-md-9 text-right">
+											<button type="reset" class="btn btn-default" data-dismiss="modal">
+												Anuluj
+											</button>
+											<button class="btn btn-primary">
+												Zapisz
+											</button>
+										</div>
+									</div>
+	
+								</fieldset>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+							</div>
+	
+						</div>
+					</div><!-- /.row -->
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal dodano do książki adresowej -->
+	<div class="modal fade" id="modalDoKsiazki" tabindex="-1" role="dialog" aria-labelledby="modalDoKsiazkiLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalDoKsiazkiLabel">
+						<i class="fa fa-address-book"></i> Książka adresowa
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12 text-center">
+	
+							<!--<h4 class="no-padding text-center">ID: 123123123</h4>-->
+							<h3 class="bold text-center">Kontakt został dodant do Twojej książki adresowej!</h3>
+							
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal SzukamPracy -->
+	<div class="modal fade" id="modalSzukamPracy" tabindex="-1" role="dialog" aria-labelledby="modalSzukamPracyLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalSzukamPracyLabel">
+						<i class="fa fa-briefcase"></i> Poszukuję pracy
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<div class="alert alert-warning" role="alert">
+								<h3>
+									<i class="fa fa-pencil"></i> Opis szukanej pracy
+								</h3>
+								<label class="control-label block no-margin">Zakres pracy:</label>
+								<ul class="list-ustyled list-inline">
+									<li>Pełny etat</li>
+									<li>Pół etatu</li>
+									<li>Freelancer</li>
+									<li>Zlecenie</li>
+									<li>Pratyka</li>
+									<li>Staż</li>
+									<li>Po godzinach</li>
+								</ul>
+	
+								<hr>
+								<p class="color-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem praesentium quia dolores sunt? Dicta modi possimus autem dolorem quas at iusto aperiam, quos voluptatem non, ipsum accusantium doloremque voluptates quo.</p>
+							</div>
+	
+							<h3>Zaproponuj pracę: </h3>
+	
+							<form role="form">
+								<!--zakres pracy-->
+								<!--<div class="form-group">
+									<label for="zakres_pracy" class="control-label block">Zakres pracy:</label>
+									<label for="pelny" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="pelny" checked required> Pełny etat
+									</label>
+									<label for="pol" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="pol"> Pół etatu
+									</label>
+									<label for="freelancer" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="freelancer"> Freelancer
+									</label>
+									<label for="zlecenie" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="zlecenie"> Zlecenie
+									</label>
+									<label for="praktyka" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="praktyka"> Praktyka
+									</label>
+									<label for="staz" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="staz"> Staż
+									</label>
+									<label for="po_godzinach" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="po_godzinach"> Po godzinach
+									</label>
+								</div>-->
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="wiadomosc" class="control-label">Opis:</label>
+									<textarea
+										placeholder="Wiadomość"
+										class="form-control" name="wiadomosc" rows="6"
+										required
+										maxlength="300"
+									></textarea>
+								</div>
+								<!-- tel -->
+								<div class="form-group ">
+									<label for="tel" class="control-label">
+										Telefon:
+									</label>
+									<input type="text"
+										class="form-control only-number"
+										name="tel" id="tel"
+										placeholder="Podaj numer telefonu kontaktowego"
+										maxlength="50"
+										required
+									>
+								</div>
+								<!-- podpis -->
+								<div class="form-group ">
+									<label for="podpis" class="control-label">
+										Podpis
+									</label>
+									<input type="text"
+										name="podpis" id="podpis"
+										placeholder="Podpisz się"
+										class="form-control"
+										maxlength="50"
+										required
+									>
+								</div>
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal SzukamPracyInfo -->
+	<div id="modalSzukamPracyInfo"
+			 class="modal fade"
+			 tabindex="-1" role="dialog"
+			 aria-labelledby="modalSzukamPracyInfoLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalSzukamPracyInfoLabel">
+						<i class="fa fa-briefcase"></i> Poszukuję pracy
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mb15 text-center">Opis szukanej pracy</h3>
+	
+							<strong>Zakres pracy:</strong>
+							<ul class="list-ustyled list-inline">
+								<li>Pełny etat</li>
+								<li>Pół etatu</li>
+								<li>Freelancer</li>
+								<li>Zlecenie</li>
+								<li>Pratyka</li>
+								<li>Staż</li>
+								<li>Po godzinach</li>
+							</ul><hr>
+	
+							<strong>Lokalizacja:</strong>
+							<p>Warszawa, Mazowieckie</p><hr>
+	
+							<strong>W dni:</strong>
+							<p>Poniedziałek, wtorek, środa, czwartek, piątek, sobota</p><hr>
+	
+							<strong>W branży:</strong>
+							<p>Fryzjer, ochrona, programista, konserwator powierzchni płaskich</p>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal wyslij zalogowany -->
+	<div id="modalWyslijZalogowany"
+			 class="modal fade" 
+			 tabindex="-1" role="dialog" aria-labelledby="modalWyslijZalogowanyLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalWyslijZalogowanyLabel">
+						<i class="icon-mail"></i> Jestem zainteresowany tą ofertą pracy <small>(ID: 123231)</small>
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<!--<h4 class="no-padding text-center">Wiadomość dotycząca oferty do zlecenia <span class="small">(123123)</span>:</h4>-->
+							<h3 class="bold mt5 mb15 text-center">Poszukujemy kierowcy na trasy międzynarodowe</h3>
+	
+							<form role="form">
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="wiadomosc" class="control-label">Wiadomość</label>
+									<textarea
+									placeholder="Napisz wiadomość"
+									class="form-control" name="wiadomosc" rows="6"
+									required
+									maxlength="300"></textarea>
+								</div>
+								<!--stawka-->
+								<div class="form-group">
+									<label for="stawka" class="control-label">
+										Stawka
+									</label>
+									<div class="input-group">
+										<span class="input-group-addon">PLN</span>
+										<input
+											type="text" id="price" name="price"
+											class="form-control numbers-only" placeholder="Podaj kwotę"
+										>
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-secondary dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+												Typ <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu ">
+												<li><a class="dropdown-item">na godzinę</a></li>
+												<li><a class="dropdown-item">miesięcznie</a></li>
+											</ul>
+										</span>
+									</div>
+								</div>
+								<!-- osoba -->
+								<div class="form-group ">
+									<label for="osoba" class="control-label">
+										Osoba kontaktowa
+									</label>
+									<input type="text"
+										class="form-control"
+										name="osoba" id="osoba"
+										placeholder="Podaj osobę kontaktową"
+										maxlength="50"
+									>
+								</div>
+								<!-- telefon -->
+								<div class="form-group ">
+									<label for="tel" class="control-label">
+										Telefon
+									</label>
+									<input type="text"
+										class="form-control only-number"
+										name="tel" id="tel"
+										placeholder="Wpisz numer telefonu"
+										maxlength="20"
+									>
+								</div>
+								<!-- plik -->
+								<div class="form-group ">
+									<label for="" class="control-label block">
+										Dodaj ofertę
+									</label>
+									<input
+										type="file"
+										name="dodaj_oferte_plik" id="dodaj_oferte_plik"
+										class="custom-file-input"
+									>
+									<label for="dodaj_oferte_plik" class="btn btn-sm btn-primary w100">
+										<i class="fa fa-file"></i> <span>Wybierz plik z CV</span>
+									</label>
+									<div class="small color-grey mt5">
+										Format: jpg, gif; Maksymalny rozmiar: 230kB, Wymiary: 1920x1080
+									</div>
+								</div>
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Aplikuj
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Sukces!</strong> Twoje wiadomość została wysłana.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal wyslij Niezalogowany -->
+	<div id="modalWyslijNiezalogowany"
+			 class="modal fade"
+			 tabindex="-1" role="dialog" aria-labelledby="modalWyslijNiezalogowanyLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalWyslijNiezalogowanyLabel">
+						<i class="icon-money"></i> Jeśli chcesz uzyskać jednorazowy dostęp do ogłoszenia:
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+	
+						<div class="col-md-8 col-md-offset-2">
+							<h3 class="uppercase blue no-padding text-center mb15">wykup usługę dostępu przez sms</h3>
+							
+							<div class="row">
+								<div class="col-xs-6">Numer: </div>
+								<div class="col-xs-6"><strong>76378162371</strong> </div>
+							</div>
+							<div class="row">
+								<div class="col-xs-6">Treść: </div>
+								<div class="col-xs-6"><strong>GADH16253RGASVD</strong> </div>
+							</div>
+							<div class="row">
+								<div class="col-xs-6">Koszt SMS: </div>
+								<div class="col-xs-6"><strong>3.00 PLN</strong> (z vat 3.66 PLN) </div>
+							</div>
+	
+							<form class="form-inline mt30 mb30">
+								<div class="form-group">
+									<label for="kodSMS" class="sr-only">Wpisz kod sms</label>
+									<input type="text" class="form-control" id="kodSMS" placeholder="Wpisz kod SMS">
+								</div>
+								<button type="submit" class="btn btn-primary">Wyślij</button>
+							</form>
+	
+							<p class="small color-lg-grey">
+								Otrzymany kod jest jednorazowy, możesz go wykorzystać w ciągu 14 dni. Po wpisaniu kodu i kliknięciu Wyślij usługa zostanie wykonana natychmiast, a Ty utracisz ustawowe prawo do rezygnacji z usługi. Usługa działa w sieciach operatorów: Plus GSM, T-Mobile, Orange, Play. Serwis SMS obsługuje Centrum Technologii Mobilnych Mobiltek S.A.
+							</p>
+						</div>
+	
+						<div class="col-md-12 text-center">
+							<h4 class="no-padding">
+								Jeśli chcesz wysłać swoją propozycję do tej oferty pracy za darmo
+							</h4>
+							<h3 class="bold mt5 mb15">
+								Zaloguj się lub załóż konto i uzupełnij profil specjalisty
+							</h3>
+	
+							<a href="login.html" class="btn btn-primary">
+								<i class="fa fa-user"></i> Zaloguj
+							</a>
+							<a href="signup.html" class="btn btn-warning">
+								<i class="fa fa-sign-in"></i> Zarejestruj
+							</a>
+						</div>
+	
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal wyslij agencja -->
+	<div id="modalWyslijAgencja"
+			 class="modal fade"
+			 tabindex="-1" role="dialog" aria-labelledby="modalWyslijAgencjaLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalWyslijAgencjaLabel">
+						<i class="icon-money"></i> Jesteśmy zainteresowani współpracą w zakresie tego ogłoszenia
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+	
+						<div class="col-md-12 text-center">
+							<h4 class="no-padding mb15">
+								Poszukujemy <span class="orange">15</span> pracowników.
+							</h4>
+							<h3 class="uppercase blue no-padding text-center mb5">
+								chcę wysłać swoją ofertę<br>przejdź do płatności
+							</h3>
+							<h3 class="uppercase blue no-padding text-center mb15">
+								Jestem zainteresowany nawiązaniem współpracy
+							</h3>
+							<p>
+								<strong>75. -PLN</strong>
+								<a href="#" class="btn btn-primary ml10">Przejdź do płatności</a>
+							</p>
+						</div>
+	
+						<div class="col-md-8 col-md-offset-2 mt15">
+							<p class="small color-lg-grey">
+								Jeżeli jesteś Agencją Pośrednictwa Pracy i jesteś zainteresowany współpracą z firmą wystawiającą ofertę pracy, przejdź do płatności, wyślij swoją ofertę, nawiąż długotrwałą współpracę.
+							</p>
+							<p class="no-margin small color-grey">
+								Otrzymuj automatycznie e-fakturę za dodawane operacje -
+								<a href="#daneModal" data-toggle="modal">Zmień dane</a>
+							</p>
+						</div>
+	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+</div>
+
+
+
+<!-- Le javascript
+================================================== -->
+
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="assets/js/jquery/2.2.4/jquery.js"></script>
+<script src="assets/js/vendors.min.js"></script>
+<script src="assets/js/jquery.sticky-kit.min.js"></script>
+<script src="assets/js/fileinput.js"></script>
+
+<!-- include custom script for site  -->
+<script src="assets/js/script.js"></script>
+
+
+</body>
+</html>

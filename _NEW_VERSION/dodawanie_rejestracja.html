@@ -1,0 +1,4659 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Meta info -->
+	<title>Dodaj ogłoszenie</title>
+	<meta name="description" value="">
+	<meta name="keywords" value="">
+	<meta name="author" value="">
+
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="assets/ico/favicon.png">
+
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="assets/css/style.css" rel="stylesheet">
+	<!-- styles needed for carousel slider -->
+	<link href="assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+	<!-- bxSlider CSS file -->
+	<link href="assets/plugins/bxslider/jquery.bxslider.css" rel="stylesheet"/>
+
+	<!-- Just for debugging purposes. -->
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- include pace script for automatic web page progress bar  -->
+	<script>
+			paceOptions = {
+					elements: true
+			};
+	</script>
+	<script src="assets/js/pace.min.js"></script>
+	<script src="ckeditor/ckeditor.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+
+
+  
+<!-- HEADER, or navbar -->
+  <div class="header">
+  	<nav class="navbar navbar-site navbar-default" role="navigation">
+  		<div class="container">
+
+        <!-- NAVBAR HEADER -->
+        <!-- logo and navigations toggle buttons -->
+  			<div class="navbar-header">
+
+          <!-- open menu btn -->
+  				<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle toggle-icon" type="button">
+  					<span class="sr-only">Toggle navigation</span>
+						<i class="fa fa-bars closed active" aria-hidden="true"></i>
+						<i class="fa fa-times opened" aria-hidden="true"></i>
+					</button>
+
+          <!-- logo -->
+  				<a href="index.html" class="navbar-brand logo logo-title">
+  					<span class="logo-icon">
+              <i class="icon icon-search-1 ln-shadow-logo "></i>
+            </span>
+						<span class="light">OFERTY</span> <span>PRACY</span>
+					</a>
+  			</div>
+
+
+        <!-- NAVBAR COLLAPSE -->
+        <!-- main navigation, will collapse on mobile -->
+  			<div class="navbar-collapse collapse">
+
+          <!-- main navigation -->
+  				<ul class="nav navbar-nav navbar-right">
+  					<li>
+              <a href="login.html">Logowanie</a>
+						</li>
+						
+						<li>
+              <a href="register.html">Rejestracja</a>
+            </li>
+
+  					<li class="postadd">
+							<a class="btn btn-block btn-border btn-post btn-danger" href="dodawanie_ogloszenia.html" data-toggle="tooltip" title="Dodaj nową ofertę pracy"
+							 data-placement="bottom">
+                <i class="fa fa-plus" aria-hidden="true"></i> ofertę pracy za darmo
+              </a>
+						</li>
+						
+						<li class="dropdown lang-menu">
+							<button type="button"
+											class="btn btn-default dropdown-toggle"
+											data-toggle="dropdown">
+								<span class="lang-title">PL </span><span class="caret"></span>
+							</button>
+
+							<ul class="dropdown-menu user-menu" role="menu">
+								<li><a class="active">
+        								<span class="lang-name">English</span></a></li>
+								<li><a><span class="lang-name">German </span></a></li>
+								<li><a><span class="lang-name">Russian </span></a></li>
+								<li><a><span class="lang-name">Ukrainian </span></a></li>
+							</ul>
+						</li>
+  				</ul>
+
+				</div><!--/.nav-collapse -->
+				
+
+  		</div><!-- /.container-fluid -->
+  	</nav>
+  </div><!-- /.header -->
+  
+
+  <!-- INTRO -->
+  <div class="intro jobs-intro bottom-out hasOverly higher"
+       style="background-image: url(images/jobs/1.jpg); background-position: center center;">
+    <div class="overlay"></div>
+    <div class="container text-center">
+
+      <h1 class="intro-title animated fadeInDown"> znajdź pracownika</h1>
+      <p class="sub animateme fittext3 animated fadeIn"> Zatrudnij specjalistę z Polski, Ukrainy lub Białorusi</p>
+
+    </div>
+	</div>
+  <!-- /intro -->
+
+
+
+	<!-- MAIN CONTAINER -->
+	<div class="main-container">
+		<div class="container">
+			<div class="page-content">
+				<div class="inner-box">
+					<div class="row d-flex" id="reklama-sticker-parent">
+            
+            <!-- FORM -->
+            <div class="panel no-style col-sm-8 col-md-9 mb-0">
+              <form class="form-horizontal col-12 calc-payment" id="dodawanie-ogloszenia">
+
+                <!-- dodaj oferte -->
+                <div class="panel no-style" id="">
+
+                  <div class="panel-heading">
+                    <h4 class="title-2 no-margin">
+                       <i class="fa fa-plus-square-o"></i> Dodaj ogłoszenie
+                      <span class="small color-primary ml-5 ml-sm-3 d-block d-sm-inline">
+						<strong>za darmo</strong> 
+					  </span>
+                    </h4>
+                  </div>
+                        
+                  <div id="collapse_dodaj_oferte" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <!-- alert danger -->
+                      <div class="alert alert-danger pgray alert-lg" role="alert">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <h2>
+                          <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Uwaga wystąpił błąd!
+                        </h2>
+                        <p>Sprawdz ponownie wprowadzone dane i spróbuj ponownie.</p>
+                      </div>
+         
+
+                   
+
+                      <!-- CONTENT START -->
+                      <!-- tytul -->
+                      <div class="form-group row">
+                        <label for="tytul" class="col-md-4 control-label">
+                          <span class="d-none d-xs-inline">Tytuł pracy *</span>
+                          <span class="d-xs-none">Tytuł i kategoria pracy *</span>
+                        </label>
+
+                        <div class="col-md-7 controls">
+                          <input type="text"
+                                class="form-control required-do-schowka"
+                                name="tytul" id="tytul"
+                                placeholder="Tytuł ogłoszenia/stanowiska"
+                                maxlength="70"
+                                required>
+                        </div>
+
+                        <!-- popover tu było info o tytule-->
+                        
+                      </div>
+
+                      <!-- kategoria -->
+                      <div class="form-group row">
+                        <label for="kategoria" class="col-md-4 control-label d-none d-xs-block">
+                          Wybierz kategorię *
+                        </label>
+                        <div class="col-md-7 controls">
+                          <button id="kategoria"
+                                  class="btn btn-default btn-wrap-text cat-change-trigger"
+                                  type="button"
+                                  data-toggle="modal"
+                                  data-target="#modalCategory">
+                            <i class="fa fa-plus" aria-hidden="true"></i><span class="hidden-xs">Kategoria:</span>
+                            <span class="cat-choose-val"></span>
+                          </button>
+                          <input type="text"
+                                class="input-hide show-more"
+                                name="cat-choose-input"
+                                id="cat-choose-input"
+                                data-target="#stawka_more"
+                                required>
+                        </div>
+                      </div>
+
+                      <div id="stawka_more" hidden>
+                        <!-- doswiadczenie -->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="wym_dosw">Doświadczenie</label>
+                          <div class="col-md-4">
+                            <select name="wym_dosw" id="wym_dosw" class="form-control">
+                              <option value="ne" selected>nie jest wymagane</option>
+                              <option value="ta">przynajmniej roczne</option>
+                              <option value="ta">przynajmniej dwu letnie</option>
+                              <option value="ta">kilkuletnie</option>
+                              <option value="ta">kilkuletnie z uprawnieniami</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- w dni -->
+                        <div class="form-group">
+                          <label for="dni" class="col-md-4 control-label pt-0">W dni</label>
+                          <div class="col-md-8">
+                            <div class="checkbox">
+                              <label class="checkbox-inline" for="pon">
+                                <input name="dni" id="pon" value="1"  type="checkbox" checked>pon
+                              </label>
+                              <label class="checkbox-inline" for="wt">
+                                <input name="dni" id="wt" value="1"  type="checkbox" checked>wt
+                              </label>
+                              <label class="checkbox-inline" for="sr">
+                                <input name="dni" id="sr" value="1"  type="checkbox" checked>śr
+                              </label>
+                              <label class="checkbox-inline" for="czw">
+                                <input name="dni" id="czw" value="1"  type="checkbox" checked>czw
+                              </label>
+                              <label class="checkbox-inline" for="pt">
+                                <input name="dni" id="pt" value="1"  type="checkbox" checked>pt
+                              </label>
+                              <label class="checkbox-inline" for="sb">
+                                <input name="dni" id="sb" value="1"  type="checkbox">sob
+                              </label>
+                              <label class="checkbox-inline" for="ndz">
+                                <input name="dni" id="ndz" value="1"  type="checkbox">nied
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- praca zdalna -->
+                        <div class="form-group">
+                          <label for="pracazdalna" class="col-md-4 control-label pt-0">Praca zdalna</label>
+                          <div class="col-md-8">
+                            <div class="checkbox">
+                              <label class="checkbox-inline" for="zdalna">
+                                <input name="pracazdalna" id="zdalna" value="1"  type="checkbox" checked> możliwa praca zdalna
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- stawka -->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="stawka_od">Stawka (netto)</label>
+
+                          <div class="col-md-7">
+                            <div class="input-group custom input-2">
+                              <span class="input-group-addon">PLN</span>
+
+                              <input type="tel"
+                                      id="stawka_od"
+                                      name="stawka_od"
+                                      class="form-control only-number"
+                                      max="999999"
+                                      step="1"
+                                      min="1"
+                                      maxlength="6"
+                                      placeholder="Od">
+                                
+                              <input type="tel"
+                                      id="stawka_do"
+                                      name="stawka_do"
+                                      class="form-control only-number"
+                                      placeholder="Do"
+                                      max="999999"
+                                      step="1"
+                                      min="1"
+                                      maxlength="6">
+
+                              <span class="input-group-btn">
+                                <select name="" id="stawka_typ" class="form-control">
+                                  <option selected disabled>Typ</option>
+                                  <option value="calosc">Za całość</option>
+                                  <option value="godzina">Na godzinę</option>
+                                  <option value="miesiecznie">miesięcznie</option>
+                                </select>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- lokalizacja pracy-->
+                      <div class="form-group row">
+                        <label for="miejscowosc1" class="col-md-4 control-label">
+                          Lokalizacja pracy *
+                        </label>         
+                        
+
+                        <div class="col-md-7 controls">
+                          <input type="text"
+                                class="form-control"
+                                name="miejscowosc1" id="miejscowosc1"
+                                placeholder="Podaj miejscowość"
+                                maxlength="60"
+                                required>
+                        </div>
+                        
+                      </div>																								
+
+                      <!-- wymiar pracy -->
+                      <div class="form-group">
+                        <label class="col-md-4 control-label" for="wymiar_pracy">Rodzaj pracy *</label>
+                        
+                        <div class="col-md-4">
+                          <!-- add .show-more in order to make #wymiar-pracy-more collapsible -->
+                          <select name="wymiar_pracy"
+                                  id="wymiar_pracy"
+                                  class="form-control show-more"
+                                  data-target="#wymiar-pracy-more"
+                                  required>
+                            <option value="" disabled selected>Wymiar pracy</option>
+                            <option value="pelny">pełny etat</option>
+                            <option value="niepelny">niepełny etat</option>
+                            <option value="dorywcza">dorywcza / sezonowa</option>
+                            <option value="tymczasowa">tymczasowa</option>
+                            <option value="praktyka">praktyka / staż</option>
+                            <option value="inna">inna</option>
+                          </select>
+                        </div>
+                        
+                        <div class="col-md-3 pl-md-0 controls mt10 mt-md-0">
+                          <select name="typ_umowy"
+                                  id="typ_umowy"
+                                  class="form-control show-more"
+                                  data-target="#wymiar-pracy-more"
+                                  >
+                            <option value="" disabled selected>Typ umowy</option>
+                            <option value="o_prace">umowa o pracę</option>
+                            <option value="o_dzielo">umowa o dzieło</option>
+                            <option value="zlecenie">zlecenie</option>
+                            <option value="samozatrudnienie">samozatrudnienie</option>
+                            <option value="kontrakt">kontrakt</option>
+                            <option value="inne">inne</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div id="wymiar-pracy-more" hidden>
+                        <!-- Podaj link do aplikowania -->
+                        <div class="form-group row">
+
+                          <label for="link_aplikuj" class="col-sm-1 col-md-4 control-label pt-0 d-none d-sm-block">
+                            <span class="sr-only">Zewnętrzny link do Aplikowania</span>
+                            <i class="fa fa-sign-out color-primary fa-2x" aria-hidden="true"></i>
+                          </label>
+
+                          <div class="col-xxs-12 col-sm-11 col-md-8 controls">
+                            <div class="checkbox">
+                              <label for="link_aplikuj">
+                                <input name="link_aplikuj" id="link_aplikuj" value="ta" type="checkbox" data-toggle="collapse" data-target="#link_collapse">
+                                <span class="align-top">Zewnętrzny link do Aplikowania</span>
+                                <i class="fa fa-question-circle ml-2 color-primary hidden-xs" aria-hidden="true" data-toggle="custom-tooltip" title="Jeżeli chcesz aby proces aplikowania odbywał się na innej stronie, wprowadz link, dotyczący ogłoszenia"
+                                  data-placement="left"></i>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- wprowadz link do ogloszenia -->
+                        <div class="collapse" id="link_collapse">
+                          <div class="form-group row">
+                            <label for="link_zewnetrzny" class="col-md-4 control-label">
+                              <span class="d-none d-xs-inline">Zewnętrzny link *</span>
+                              <span class="d-xs-none">Zewnętrzny link *</span>
+                            </label>
+
+                            <div class="col-md-7 controls">
+
+                              <input type="text" class="form-control required-do-schowka" name="link_zewnetrzny" id="link_zewnetrzny" placeholder="Wpisz adres: www. lub http://"
+                                maxlength="70" required>
+
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- od zaraz -->
+                        <div class="form-group row">
+                          <label for="stanowiska_pilne" class="col-sm-1 col-md-4 control-label pt-0 d-none d-sm-block" style="line-height: 2em;">
+                            <span class="badge bg-primary align-top">od zaraz!</span>
+                          </label>
+
+                          <div class="col-xxs-12 col-sm-11 col-md-8 controls">
+                            <div class="checkbox">
+                              <label class="pt-0">
+                                <input name="stanowiska_pilne"
+                                      id="stanowiska_pilne"
+                                      value="stanowiska_pilne"
+                                      type="checkbox">
+                                Zatrudnimy od zaraz
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- rodzaj_cv -->
+                        <div class="form-group row">
+                          <label for="rodzaj_cv" class="col-sm-1 col-md-4 control-label pt-0 d-none d-sm-block">
+                            <span class="sr-only">Czy chesz otrzymać rozszerzone CV z załącznikami?</span>
+                            <i class="fa fa-paperclip fa-2x color-primary"></i>
+                          </label>
+
+                          <div class="col-xxs-12 col-sm-11 col-md-8 controls">
+                            <div class="checkbox">
+                              <label for="rodzaj_cv" class="pt-0">
+                                <input name="rodzaj_cv" id="rodzaj_cv" value="do_negocjacji" type="checkbox">
+                                Chcę otrzymać rozszerzone CV z załącznikami.
+                                <i class="fa fa-question-circle ml-2 color-primary hidden-xs" aria-hidden="true"
+                                  data-toggle="custom-tooltip"
+                                  title="Jeżeli chcesz aby do Twojej oferty były dołączane CV kandydata w oddzielnym załączniki wybierz tą opcje"
+                                  data-placement="left"></i>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- agencja pracy -->
+                        <div class="form-group row">
+
+                          <label for="agencja_pracy" class="col-sm-1 col-md-4 control-label pt-0 d-none d-sm-block">
+                            <span class="sr-only">Współpraca z Agencją Pośrednictwa Pracy</span>
+                            <i class="fa fa-handshake-o color-primary fa-2x" aria-hidden="true"></i>
+                          </label>
+
+                          <div class="col-xxs-12 col-sm-11 col-md-8 controls">
+                            <div class="checkbox">
+                              <label for="agencja_pracy">
+                                <input name="agencja_pracy"
+                                      id="agencja_pracy"
+                                      value="ta"
+                                      type="checkbox"
+                                      data-toggle="collapse"
+                                      data-target="#stanowiska_collapse">
+                                <span class="align-top">nawiąże współpracę z Agencją Pośrednictwa Pracy. 
+                                </span>
+                                <i class="fa fa-question-circle ml-2 color-primary hidden-xs" aria-hidden="true"
+                                  data-toggle="custom-tooltip"
+                                  title="Oferta o Twoim ogłoszeniu zostanie automatycznie przesłana do agencji pracy zarejestrowanych w naszym systemie. W ten sposób zwiększysz szanse na znalezienie odpowiednich pracowników"
+                                  data-placement="left"></i>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- stanowiska -->
+                        <div class="collapse" id="stanowiska_collapse">
+                          <div class="form-group row">
+                            <label for="ilosc_stanowisk" class="col-md-4 control-label">
+                              Ilość stanowisk
+                            </label>
+                            
+                            <div class="col-md-2 controls">
+                              <input type="tel"
+                                      id="ilosc_stanowisk"
+                                      name="ilosc_stanowisk"
+                                      class="form-control only-number"
+                                      max="999"
+                                      step="1"
+                                      min="1"
+                                      maxlength="3"
+                                      value="1">
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- foreigns -->
+                        <div class="form-group row">
+                          <label for="obcokrajowcy" class="col-sm-1 col-md-4 control-label pt-0 d-none d-sm-block">
+                            <span class="sr-only">Zatrudnię obcokrajowca</span>
+                            <i class="fa fa-globe color-primary fa-2x" aria-hidden="true"></i>
+                          </label>
+
+                          <div class="col-xxs-12 col-sm-11 col-md-8 controls">
+                            <div class="checkbox">
+                              <label for="obcokrajowcy">
+                                <input name="obcokrajowcy"
+                                        id="obcokrajowcy"
+                                        value="ta"
+                                        type="checkbox"
+                                        data-toggle="collapse"
+                                        data-target="#foreign_collapse">
+                                <!-- <i class="fa fa-globe color-primary mr-1" aria-hidden="true"></i> -->
+                                <span class="align-top">możliwość zatrudnienia obcokrajowców</span> 
+                                <img src="assets/img/ua.gif" height="10" alt="Ukraine flag">
+                                <img src="assets/img/blr.png" height="10" alt="Ukraine flag">
+                                <i class="fa fa-question-circle ml-2 color-primary hidden-xs" aria-hidden="true"
+                data-toggle="custom-tooltip"
+                title="Jeżeli chcesz zatrudnić pewnego, doświadczonego i wykwalifikowanego pracownika z Ukrainy lub Białorusi my pomożemy Ci odszukać odpowiedniego kandydata. Twoje ogłoszenie automatycznie zostanie przetłumaczone na język ukraiński, rosyjski i białoruski. Informacja o Twoim ogłoszenie zostanie automatycznie rozesłana do kandydatów w naszej bazie danych.W cenie ogłoszenia, bez dodatkowych opłat"
+                data-placement="left"></i>
+                              </label>
+                            </div>
+                          </div>
+
+                          <!-- popover tu była informacja o obcokrajowcach-->
+                        
+                        </div>
+
+                        <!-- collapse -->
+                        <div class="collapse" id="foreign_collapse">
+
+                          <!-- poziom j. polski -->
+                          <div class="form-group">
+                            <label class="col-md-4 control-label" for="foreign-pol">Znajomość j. polskiego</label>
+                            <div class="col-md-4">
+                              <select id="foreign-pol" name="foreign-pol" class="form-control">
+                                <option value="" disabled selected>Wybierz poziom</option>
+                                <option value="1">nie wymagana</option>
+                                <option value="2">podstawowa</option>
+                                <option value="3">podstawowa w piśmie i mowie</option>
+                                <option value="4">bardzo dobra</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <!-- oczekujemy -->
+                          <div class="form-group">
+                            <label class="col-md-4 control-label pt-0" for="oczekujemy">
+                              <span class="sr-only">Oczekujemy</span>
+                            </label>
+                            <div class="col-md-8">
+                              <div class="checkbox">
+                                <label for="dokumentacja_pl" class="pt-0">
+                                  <input name="oczekujemy" id="dokumentacja_pl" value="dokumentacja_pl" type="checkbox" >
+                                  oczekujemy dokumentacji w j.polskim (CV/dokumenty)
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label for="legalizacja" class="pt-0">
+                                  <input name="oczekujemy" id="legalizacja" value="legalizacja" type="checkbox" >
+                                  pomoc w legalizacji pobytu - wizy
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label for="kurs_polski" class="pt-0">
+                                  <input name="oczekujemy" id="kurs_polski" value="kurs_polski" type="checkbox" >
+                                  zapewniamy kurs j. polskiego
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label for="zakwaterowanie" class="pt-0">
+                                  <input name="oczekujemy" id="zakwaterowanie" value="zakwaterowanie" type="checkbox" >
+                                  pomoc w zakwaterowaniu
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label for="wyzywienie" class="pt-0">
+                                  <input name="oczekujemy" id="wyzywienie" value="wyzywienie" type="checkbox" >
+                                  wyżywienie  dofinansowanie/pomoc/zapewniamy
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label for="szkolenie" class="pt-0">
+                                  <input name="oczekujemy" id="szkolenie" value="szkolenie" type="checkbox" >
+                                  bezpłatne szkolenie związane z ofertą pracy
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label for="dofinansowanie_przyjazdu" class="pt-0">
+                                  <input name="oczekujemy" id="dofinansowanie_przyjazdu" value="dofinansowanie_przyjazdu" type="checkbox" >
+                                  dofinansowanie przyjazdu
+                                </label>
+                              </div>
+                              <div class="checkbox">
+                                <label for="transport" class="pt-0">
+                                  <input name="oczekujemy" id="transport" value="transport" type="checkbox" >
+                                  zapewniamy transport do miejsca pracy z okreslongeo miejsca
+                                </label>
+                              </div>
+                                <div class="checkbox">
+                                <label for="transport" class="pt-0">
+                                  <input name="oczekujemy" id="transport" value="transport" type="checkbox" >
+                                  wymagane prawo jazdy
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>  
+
+                      <!-- opis dodatkowy -->
+                      <div class="panel no-style" id="">
+
+
+                        <!-- popover tu było info o opisie dodatkowym -->							
+
+                        <div class="panel-heading pt-0 px-0">
+                          <a data-toggle="collapse"
+                            href="#collapse_opis_dodatkowy"
+                            class="d-flex justify-content-between align-items-center border-bottom pb-2">
+
+                            <span class="color-primary text-right" style="min-width:31%; padding-right: 0px;">
+                              Opis opcjonalny (rozwiń)
+                              <i class="fa fa-question-circle ml-2 color-primary hidden-xs" aria-hidden="true"
+                              data-toggle="custom-tooltip"
+                              title="Wypełniając te dane skonkretyzujesz swoje oczekiwania co do kandydata na szukane stanowisko."
+                              data-placement="right"></i>
+                            </span>
+                            <i class="color-gray fa fa-angle-double-down fa-2x"></i>
+                            
+                          </a>
+                        </div>
+
+                        <div id="collapse_opis_dodatkowy" class="panel-collapse collapse">
+                          <div class="panel-body px-0 pb-0">
+
+                            <!-- CONTENT START -->		
+                            <div class="form-group">
+                              <label class="col-md-4 control-label pt-0 sr-only" for="zapewniamy">
+                                Dodatkowe opcje zatrudnienia
+                              </label>
+                              <div class="col-md-8 col-md-offset-4">
+                                <div class="checkbox">
+                                  <label for="badania_lekarskie" class="pt-0">
+                                    <input name="zapewniamy" id="badania_lekarskie" value="badania_lekarskie" type="checkbox">
+                                    wymagane aktualne badania lekarskie / Sanepid 
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="dokumentacja">
+                                    <input name="zapewniamy" id="dokumentacja" value="dokumentacja" type="checkbox" >
+                                    dokumentacja: zatrudnienia / uprawnień 
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="szkolenie_opis_dodatkowy">
+                                    <input name="zapewniamy" id="szkolenie_opis_dodatkowy" value="szkolenie_opis_dodatkowy" type="checkbox" >
+                                    zapewniamy bezpłatne szkolenia 
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="opieka_medyczna">
+                                    <input name="zapewniamy" id="opieka_medyczna" value="opieka_medyczna" type="checkbox" >
+                                    dodatkowy pakiet opieki medycznej 
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="transport_opis_ogolny">
+                                    <input name="zapewniamy" id="transport_opis_ogolny" value="transport_opis_ogolny" type="checkbox" >
+                                    transport do miejsca pracy 
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="zakwaterowanie_opis_ogolny">
+                                    <input name="zapewniamy" id="zakwaterowanie_opis_ogolny" value="zakwaterowanie_opis_ogolny" type="checkbox" >
+                                    pomoc w zakwaterowaniu 
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="wyzywienie_opis_ogolny">
+                                    <input name="zapewniamy" id="wyzywienie_opis_ogolny" value="wyzywienie_opis_ogolny" type="checkbox" >
+                                    wyżywienie: darmowe / dofinansowanie /zapewmiamy 
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="bony">
+                                    <input name="zapewniamy" id="bony" value="bony" type="checkbox" >
+                                    bony okolicznościowe  
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="karty">
+                                    <input name="zapewniamy" id="karty" value="karty" type="checkbox" >
+                                    karty multisportu  
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="nadgodziny">
+                                    <input name="zapewniamy" id="nadgodziny" value="nadgodziny" type="checkbox" >
+                                    dodatkowe nadgodziny
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="auto">
+                                    <input name="zapewniamy" id="auto" value="auto" type="checkbox" >
+                                    służbowy samochód
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                  <label for="czas_pracy">
+                                    <input name="zapewniamy" id="czas_pracy" value="czas_pracy" type="checkbox" >
+                                    ruchomy czas pracy
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- CONTENT END -->
+
+                          </div>
+                        </div>
+                      </div>  
+                      
+                      <!-- opis pracy -->
+                      <div class="form-group row mb-0">                      
+                        <label for="editor1" class="col-md-4 control-label d-none d-xs-block">
+                          <span class="d-none d-xs-inline">Opis pracy *</span>
+                        </label> 
+                        <div class="col-md-7 controls">
+                          <span class="d-xs-none"><p><strong>Opist stanowiska pracy *</strong></p></span>
+                          <textarea class="form-control" name="editor1" id="text_editor"
+                                    rows="10"
+                                    maxlength="4000"
+                                    required></textarea>
+                        </div>                        
+                      </div>
+                      <!-- CONTENT END -->
+
+                    </div>
+                  </div>
+                </div>                       
+                
+
+                
+
+
+                <!-- Dane rejestracji -->
+							<div class="panel no-style">
+
+								<div class="panel-heading">
+									<h4 class="title-2 no-margin">
+                    <i class="fa fa-pencil-square-o"></i>
+										 Załóż konto
+									</h4>
+								</div>
+
+								<div class="panel-body">
+
+									<!-- CONTENT START -->
+									<div class="row">
+										<div class="col-sm-12">
+
+											<!-- rodzaj -->
+											<div class="form-group row">
+												<label for="rodzaj_usera" class="col-md-4 control-label d-none d-xs-block pt-0">
+													Załóż konto jako *
+													<i class="fa fa-question-circle ml-2 color-primary hidden-xs" aria-hidden="true"
+											         data-toggle="custom-tooltip"
+											         title="Nie posiadasz konta? Dodając ofertę pracy automatycznie zakładasz konto bez konieczności wypełniania kolejnego formularza."
+											         data-placement="right"></i>
+												</label>
+
+												<div class="col-md-8 controls">
+                          <label class="d-block d-sm-inline radio-inline "
+                                 data-target="#collapse-login"
+                                 data-toggle="open-collapse"
+                                 data-close-collapse="#collapse-pass"
+                                 data-parent="#accordion-login"
+                                 data-show="#register-text"
+                                 data-hide="#login-text">
+														<input type="radio"
+																	 name="rodzaj_usera"
+																	 id="rodzaj_firma"
+																	 checked> Firma
+													</label>
+                          <label class="radio-inline d-block d-sm-inline"
+                                 data-target="#collapse-login"
+                                 data-toggle="open-collapse"
+                                 data-close-collapse="#collapse-pass"
+                                 data-parent="#accordion-login"
+                                 data-show="#register-text"
+                                 data-hide="#login-text">
+														<input type="radio"
+																	 name="rodzaj_usera"
+																	 id="rodzaj_agencja"> Agencja pracy
+													</label>
+													<label class="radio-inline d-block d-sm-inline"
+                                 data-target="#collapse-login"
+                                 data-toggle="open-collapse"
+                                 data-close-collapse="#collapse-pass"
+                                 data-parent="#accordion-login"
+                                 data-show="#register-text"
+                                 data-hide="#login-text">
+														<input type="radio"
+																	 name="rodzaj_usera"
+																	 id="rodzaj_osoba"> O. prywatna
+													</label>
+                          <label class="radio-inline d-block d-sm-inline"
+                                data-target="#collapse-pass"
+                                data-toggle="open-collapse"
+                                data-close-collapse="#collapse-login"
+                                data-parent="#accordion-login"
+                                data-show="#login-text"
+                                data-hide="#register-text">
+														<input type="radio"
+																	 name="rodzaj_usera"
+																	 id="rodzaj_mam"> Mam konto
+													</label>
+												</div>
+											</div>
+
+											<!-- login -->
+											<div class="form-group row">
+												<label for="sender-email" class="col-md-4 control-label d-none d-xs-block">
+													Nazwa użytkownika *
+												</label>
+												<div class="col-md-7 controls">
+													<div class="input-icon">
+														<i class="icon-user fa"></i>
+														<input id="sender-email"
+																	name="sender-email"
+																	type="text"
+																	placeholder="Wpisz adres e-mail"
+																	class="form-control email make-requried"
+																	required>
+													</div>
+												</div>
+
+												<!-- popover tu bylo info na temat logowania -->
+												
+											</div>
+
+											<!-- hasło -->
+											<div class="form-group row">
+												<label for="sender-pass" class="col-md-4 control-label d-none d-xs-block">
+													Hasło *
+												</label>
+												<div class="col-md-7 controls">
+													<div class="input-icon">
+														<i class="icon-lock fa"></i>
+														<input id="sender-pass"
+																	name="sender-pass"
+																	type="password"
+																	placeholder="Wpisz hasło"
+																	class="form-control make-required"
+																	required>
+													</div>
+												</div>
+											</div>
+
+                      <div id="accordion-login">
+                        <div class="panel no-style">
+                          <div class="form-group row mb-0 collapse in collapse-form-inputs" id="collapse-login">
+                            <!-- checkbox 1 -->
+                            <div class="termbox col-md-offset-4 col-md-7">
+                              <label class="checkbox-inline checkbox" for="check-regulamin">
+                                  <input
+                                    type="checkbox"
+                                    name="check-regulamin" id="check-regulamin"
+                                    value="1"
+                                    class="make-required"
+                                    required
+                                    data-validation-required-message="Musisz zaakceptować regulamin"
+                                  >
+                                  Oświadczam, że zapoznałem się z <a href="">regulamine serwisu</a> oraz <a href="">polityką prywatności</a><sup>*</sup>
+                                </label>
+                            </div>
+          
+                            <!-- checkbox 2 -->
+                            <div class="termbox col-md-offset-4 col-md-7">
+                              <label class="checkbox-inline checkbox" for="check-dane">
+                                  <input
+                                    type="checkbox"
+                                    name="check-dane" id="check-dane"
+                                    value="1"
+                                    class="make-required"
+                                    required
+                                    data-validation-required-message="Musisz zaakceptować regulamin"
+                                  >
+                                  Wyrażam zgodę na przetwarzanie danych osobowych dla celów związanych z prowadzeniem serwisu <sup>*</sup>
+                                </label>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group row mb-0  collapse collapse-form-inputs text-right" id="collapse-pass">
+                            <a href="forgot-password.html"> Zapomniałeś hasło? </a>
+                          </div>
+                        </div>
+                      </div>
+
+										</div>
+									</div><!-- /.row -->
+									<!-- CONTENT END -->
+
+								</div>
+
+              </div>
+
+
+                 <!-- Publikuj / wyróżnij ogłoszenie & SUBMIT -->
+							<div class="panel panel-default panel-payment" id="publikuj">
+								<div class="panel-collapse">
+									<div class="panel-footer no-border">
+
+										<!-- publikuj -->
+										<div class="form-group">
+
+											<div class="col">
+                        <i class="fa fa-external-link img" aria-hidden="true"></i>
+
+												<label for="publikuj">
+													<span>Publikuj</span>
+                          <div class="color-primary">za darmo</div>
+                        </label>
+                          <a class="help-modal" href="#modalPublikuj" data-toggle="modal">
+                          <i class="fa fa-question-circle" aria-hidden="true"></i>
+                          </a>
+                        
+											</div>
+
+											<div class="col">
+                          <label class="checkbox mb-0">
+                            <input name="publikuj" class="payment-input valid" id="publikuj_input" data-price="#publikuj_price" type="radio" value="14" checked="" aria-invalid="false">
+                            <span id="publikuj_text" class="big">  30 dni </span>
+                          </label>
+                      </div>
+
+											<div class="col">
+												<div class=" text-center">
+                          
+                          <span class="big equals" id="wyroznij_price">0.00</span>
+                          <span class="currency">pln / kredytów</span>
+                          
+                        </div>
+											</div>
+
+										</div>
+
+										<!-- submit -->
+										<div class="form-group pb-0 no-border d-block text-center row">
+                      <div class="col-md-8 col-md-offset-2">
+
+                        <button type="submit" name="submit1" class="btn btn-primary btn-block">
+                          <span id="login-text" hidden>Publikuj i zaloguj</span>
+                          <span id="register-text">Publikuj i załóż konto</span>
+                        </button>
+        
+                        </div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+							<!-- alert -->
+							<div class="alert alert-success pgray alert-lg hide-weak" role="alert">
+								<h2>
+									<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Sukces
+								</h2>
+								<p>Dziekujemy Dane ogłoszenia zostały przesłane pomyślnie, przejdz do aktywacji konta .</p>
+							</div>
+
+						</form>
+            </div>
+
+
+            <!-- SIDEBAR boczny tylko w desktopie -->
+            <div class="col-sm-4 col-md-3 page-sidebar-right hidden-xs">
+
+              <aside>
+                 <div class="promo-text-box text-center"><i class=" icon-pencil-circled fa fa-4x icon-color-3"></i></i>
+
+                            <h3><strong>Opisz Ofertę Pracy</strong></h3>
+                            <span class="bold color-primary">Publiku za darmo</span><br><span class="bold color-primary"><big>20</big> kredytów na start<br> na wyróznienie ogłoszenia</span></p>
+                                  <p>Uzupełnij opis oferty jak najlepiej, zwiększ tym samym szanse na pozyskanie najlepszych pracowników.<br>
+                                    
+                            
+                        </div> 
+
+                        <div class="promo-text-box text-center"><i class=" icon-picture fa fa-4x icon-color-3"></i>
+
+                            <h3><strong>Profil Pracodawcy </strong></h3>
+                                  <p>Uzupełnij <strong>profil pracodawcy</strong> - zwiększ swoją wiarygodność.</p>
+                            
+                        </div>
+                        <div class="promo-text-box text-center"><i class=" icon-briefcase fa fa-4x icon-color-3"></i>
+
+                            <h3><strong>Zatrudnij obcokrajowców </strong></h3>
+                                  <p>Chcesz zatrudnić pracowników z Ukrainy Białorusi?<br><strong>Zaznacz odpowiednią opcje</strong></p>
+                            
+                        </div> 
+              </aside>
+
+              <!-- reklama -->
+              <div class="inner-box no-padding sticker mb-0" data-sticker-parent="#reklama-sticker-parent">
+                <div class="inner-box-content">
+                  <a href="#" class="d-block">
+                    <img class="img-responsive" src="images/google_ss_300_600.jpg" alt="tv">
+                  </a>
+                </div>
+              </div>
+
+            </div><!-- Sidebar-->
+
+            
+          </div><!--/.row-->
+        </div><!-- /.inner-box -->
+      </div><!--/.page-content-->
+		</div><!--/.container-->
+	</div><!-- /.main-container -->
+
+
+
+
+
+
+
+
+	<!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="container">
+        <div class="row">
+
+          <!-- Links 1 -->
+          <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="footer-col">
+              <h4 class="footer-title">O nas</h4>
+
+              <ul class="list-unstyled footer-nav">
+                <li><a href="#">O nas</a></li>
+                <li><a href="#">Polityka prywatności</a></li>
+                <li><a href="#">Regulamin</a></li>
+              </ul>
+
+            </div>
+          </div>
+
+
+          <!-- Links 2 -->
+          <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="footer-col">
+              <h4 class="footer-title">Kontakt</h4>
+
+              <ul class="list-unstyled footer-nav">
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Zgłoś naruszenie</a></li>
+              </ul>
+
+            </div>
+          </div>
+
+
+          <!-- Links 3 -->
+          <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="footer-col">
+              <h4 class="footer-title">Jak zacząć?</h4>
+
+              <ul class="list-unstyled footer-nav">
+                <li><a href="#"> Załóż konto</a></li>
+                <li><a href="#"> Zaloguj </a></li>
+                <li><a href="#"> Cennik</a></li>
+              </ul>
+
+            </div>
+          </div>
+
+
+          <!-- Links 4 -->
+          <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            <div class="footer-col">
+              <h4 class="footer-title">Współpraca</h4>
+
+              <ul class="list-unstyled footer-nav">
+                <li><a href="#"> Współpraca</a></li>
+                <li><a href="#"> Reklama</a></li>
+              </ul>
+
+            </div>
+          </div>
+
+
+          <!-- Newsletter & socials -->
+          <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="row">
+
+              <!-- Newsletter -->
+              <div class="col-xxs-12 col-xs-6 col-sm-12 text-xxs-center">
+                <h4 class="footer-title">Zapisz się do newslettera</h4>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <label for="newsletter_email" class="sr-only">
+                      Podaj swój adres email
+                    </label>
+
+                    <input type="email" name="newsletter_email" id="newsletter_email" class="form-control" placeholder="Podaj adres email" required>
+
+                    <input type="submit" name="newletter-submit" id="newletter-submit" class="form-control btn btn-primary" value="Zapisz mnie">
+                  </div>
+                </form>
+              </div>
+
+
+              <!-- Socials -->
+              <div class="col-xxs-12 col-xs-6 col-sm-12 text-xxs-center">
+                <h4 class="footer-title">Znajdź nas na</h4>
+                <ul class="list-unstyled list-inline footer-nav social-list-footer social-list-color footer-nav-inline">
+                  <li><a class="icon-color fb" title="Facebook" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-facebook"></i> </a></li>
+                  <li><a class="icon-color tw" title="Twitter" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-twitter"></i> </a></li>
+                  <li><a class="icon-color gp" title="Google+" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-google-plus"></i> </a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Copyrights -->
+          <div class="col-xs-12">
+            <div class="copy-info text-center">
+              &copy; 2018 Info-Park sp. z o.o.
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </footer><!-- /.footer -->
+
+
+
+<!-- Modals
+================================================== -->
+<div>
+	<!-- Modal pakiet premium -->
+	<div class="modal fade" id="modalPakietPremium" tabindex="-1" role="dialog" aria-labelledby="modalPakietPremiumLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalPakietPremiumLabel">
+						<img src="images/icon_premium.jpg" alt="Ikonka premium"> Pakiet premium
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+
+						<div class="col-md-8">
+							<h2>Tytuł pakiet premium</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat alias ab dolor minus optio sunt, animi distinctio corporis ut repudiandae eum labore perferendis at explicabo iure veniam, officia quia saepe.</p>
+		
+							<ul class="list-check">
+								<li>Lorem ipsum dolor sit amet</li>
+								<li>Numquam temporibus</li>
+								<li>Labore porro quas excepturi repellat</li>
+							</ul>
+						</div>
+
+						<div class="col-md-4">
+							<img src="images/preview_premium.jpg" alt="Podgląd ogłoszeń premium">
+						</div>
+
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	<!-- Modal pakiet Wyroznij -->
+  <div class="modal fade" id="modalPakietWyroznij" tabindex="-1" role="dialog" aria-labelledby="modalPakietWyroznijLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="modalPakietWyroznijLabel">
+            <i class="fa fa-lightbulb-o img" aria-hidden="true"></i> Pakiet wyróżnij
+          </h4>
+        </div>
+  
+        <div class="modal-body">
+          <div class="row">
+
+            <div class="col-md-8">
+              <h2>Wyróżnij swoje ogłoszenie</h2>
+              <p>Chcesz aby Twoje ogłoszenie było dobrze widoczne i się wyróżniało na tle innych ogłoszeń. Skorzystaj z pakietu wyróżnij. Użytkownicy – potencjalni Pracownicy, łatwo dostrzega wyróżnione ogłoszenie tym samym Twoje ogłoszenie zyska większe zainteresowanie.</p>
+    
+              <ul class="list-check">
+                <li>większa oglądalność ogłoszeń</li>
+                <li>większe zainteresowanie Twoim ogłoszeniem</li>
+                <li>wyróżnienie innym kolorem na liście ogłoszeń</li>
+                <li>automatycznie więcej złożonych CV do Twojej oferty</li>
+              </ul>
+            </div>
+
+            <div class="col-md-4">
+              <img src="images/preview_wyroznij.jpg" alt="Podgląd ogłoszeń premium">
+            </div>
+
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <!-- /modal -->
+
+	<!-- Modal podbij-->
+	<div class="modal fade" id="modalPodbij" tabindex="-1" role="dialog" aria-labelledby="modalPodbijLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalPodbijLabel">
+						<img src="images/icon_podbij.jpg" alt="Ikonka podbij"> Podbij ogłoszenie
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+
+						<div class="col-md-8">
+							<h2>Tytuł podbij</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat alias ab dolor minus optio sunt, animi distinctio corporis ut repudiandae eum labore perferendis at explicabo iure veniam, officia quia saepe.</p>
+		
+							<ul class="list-check">
+								<li>Lorem ipsum dolor sit amet</li>
+								<li>Numquam temporibus</li>
+								<li>Labore porro quas excepturi repellat</li>
+							</ul>
+						</div>
+
+						<div class="col-md-4">
+							<img src="images/preview_premium.jpg" alt="Podgląd ogłoszeń premium">
+						</div>
+
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+    <!-- Modal publikuj-->
+  <div class="modal fade" id="modalPublikuj" tabindex="-1" role="dialog" aria-labelledby="modalPublikujLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="modalPublikujLabel">
+            <i class="fa fa-external-link img" aria-hidden="true"></i> Publikuj ogłoszenie
+          </h4>
+        </div>
+  
+        <div class="modal-body">
+          <div class="row">
+
+            <div class="col-md-8">
+              <p class="color-primary"><big><strong>Publikuj za darmo</big></strong> dodatkowo na start <big><strong>otrzymasz 20 kredytów</big></strong></strong></big>, które będziesz mógł wydać płacąc nimi za formy promocji wykupione do wybranego ogłoszenia</p>
+    
+              <ul class="list-check">
+                <li>Darmowa Publikacja</li>
+                <li>Tylko 2 minuty na publikację ogłoszenia</li>
+                <li>Bez zbędnych danych</li>
+                <li>W ogłoszeniu bez dodatkowych opłat graficzna personalizacja: publikuj swoje logo, indywidualny nagłówek graficzny</li>
+                <li>Darmowy Profil Pracodawcy - zaprezentuj swoja działalność</li>
+                <li>Korzystaj z pełnej funkcjonalności systemu</li>
+                <li>Swoje ogłoszenie dedykuj specjalnie dla specjalistów z zagranicy</li>
+                <li>Nawiąż współpracę z specjalistami, którzy za ciebie wynajda odpowiedniego specjalistę</li>
+              </ul>
+            </div>
+
+            <div class="col-md-4">
+              <img src="images/preview_premium.jpg" alt="Podgląd ogłoszeń premium">
+            </div>
+
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <!-- /modal -->
+
+	<!-- Modal wiadomosc -->
+	<div class="modal fade" id="napiszWiadomosc" tabindex="-1" role="dialog" aria-labelledby="napiszWiadomoscLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="napiszWiadomoscLabel">
+						<i class="icon-mail"></i> Napisz do wykonawcy
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							<form role="form">
+
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="wiadomosc" class="control-label">Wiadomość</label>
+									<textarea
+									placeholder="Wiadomość"
+									class="form-control" name="wiadomosc" rows="6"
+									required
+									maxlength="300"></textarea>
+								</div>
+
+								<!-- osoba -->
+								<div class="form-group ">
+									<label for="napiszWiadomosc-osoba" class="control-label">
+										Osoba kontaktowa
+									</label>
+									<input type="text"
+										class="form-control"
+										name="napiszWiadomosc-osoba" id="napiszWiadomosc-osoba"
+										placeholder="Podaj osobę kontaktową"
+										maxlength="50"
+										required>
+								</div>
+
+								<!-- telefon -->
+								<div class="form-group ">
+									<label for="napiszWiadomosc-tel" class="control-label">
+										Telefon
+									</label>
+									<input type="tel"
+										class="form-control only-number"
+										name="napiszWiadomosc-tel" id="napiszWiadomosc-tel"
+										placeholder="Wpisz numer telefonu"
+										maxlength="12"
+										required>
+								</div>
+
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+		
+								<div class="alert alert-success hide-weak" role="alert">
+									<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal potwierdz wybor -->
+	<div class="modal fade" id="potwierdzWybor" tabindex="-1" role="dialog" aria-labelledby="potwierdzWyborLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="potwierdzWyborLabel">
+						<i class="icon-trophy"></i> Potwierdź wybór ogłoszenia
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center">Czy napewno chcesz wybrać tę ofertę?</h3>
+							<h4 class="no-padding text-center">Jeżeli zlecenie jest aktualne, wybierając tę ofertę automatyczne zlecenie zostanie wygaszone</h4>
+	
+							<form role="form">
+								<!-- Submit and reset -->
+								<div class="form-group text-center mt15">
+									<button class="btn btn-primary">
+										Tak
+									</button>
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Nie
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Sukces!</strong> Twój wybór został zapisany.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal potwierdz usuniecie ogloszenia -->
+	<div class="modal fade" id="potwierdzUsun" tabindex="-1" role="dialog" aria-labelledby="potwierdzUsunLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="potwierdzUsunLabel">
+						<i class="icon-trash"></i> Potwierdź usunięcie ogłoszenia
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center">Czy napewno chcesz usunąć to ogłoszenie?</h3>
+							<!-- <h4 class="no-padding text-center"></h4> -->
+	
+							<form role="form">
+								<!-- Submit and reset -->
+								<div class="form-group text-center mt15">
+									<button class="btn btn-primary">
+										Tak
+									</button>
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Nie
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Sukces!</strong> Ogłoszenie zostało usunięte.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	<!-- Modal potwierdz usuniecie konta -->
+	<div class="modal fade" id="potwierdzUsunKonto" tabindex="-1" role="dialog" aria-labelledby="potwierdzUsunKontoLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="potwierdzUsunKontoLabel">
+						<i class="icon-trash"></i> Potwierdź usunięcie konta
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center">Czy napewno chcesz usunąć konto?</h3>
+							<h4 class="no-padding text-center">Czy jesteś pewien? Operacja jest <strong>nieodwracalna</strong>!</h4>
+	
+							<form role="form">
+								<!-- Submit and reset -->
+								<div class="form-group text-center mt15">
+									<button class="btn btn-primary">
+										Tak
+									</button>
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Nie
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Sukces!</strong> Konto zostało usunięte.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	
+	<!-- Modal potwierdz wygasniecie -->
+	<div class="modal fade" id="potwierdzWygas" tabindex="-1" role="dialog" aria-labelledby="potwierdzWygasLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="potwierdzWygasLabel">
+						<i class="fa fa-archive"></i> Potwierdź wygaśnięcie ogłoszenia
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center">Czy napewno chcesz wygasić to ogłoszenie?</h3>
+							<!-- <h4 class="no-padding text-center"></h4> -->
+	
+							<form role="form">
+								<!-- Submit and reset -->
+								<div class="form-group text-center mt15">
+									<button class="btn btn-primary">
+										Tak
+									</button>
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Nie
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Sukces!</strong> Twoje ogłosznie zostało wygaszone.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal dane -->
+	<div class="modal fade" id="daneModal" tabindex="-1" role="dialog" aria-labelledby="daneModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="daneModalLabel">
+						<i class="icon-newspaper"></i> Zmień dane
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-12">
+							<form class="form-horizontal">
+
+								<!-- nazwa firmy -->
+								<div class="form-group row">
+									<label for="daneModal-nazwa_firmy" class="col-md-3 control-label">
+										Nazwa firmy
+									</label>
+									<div class="col-md-9 controls">
+										<input type="text"
+										class="form-control"
+										name="daneModal-nazwa_firmy" id="daneModal-nazwa_firmy"
+										placeholder="Wpisz nazwę firmy"
+										maxlength="30"
+										required
+										>
+									</div>
+								</div>
+
+								<!-- ulica -->
+								<div class="form-group row">
+									<label for="daneModal-ulica" class="col-md-3 control-label">
+										Ulica
+									</label>
+									<div class="col-md-9 controls">
+										<input type="text"
+										class="form-control"
+										name="daneModal-ulica" id="daneModal-ulica"
+										placeholder="Wpisz ulicę"
+										maxlength="30"
+										required
+										>
+									</div>
+								</div>
+
+								<!-- kod pocztowy -->
+								<div class="form-group row">
+									<label for="pocztowy" class="col-md-3 control-label">
+										Kod pocztowy
+									</label>
+									<div class="col-md-9 controls">
+										<input type="text"
+										class="form-control"
+										name="pocztowy" id="pocztowy"
+										placeholder="Wpisz kod pocztowy (00-000)"
+										title="Wpisz poprawny kod pocztowy np. 01-001"
+										required
+										maxlength="6">
+									</div>
+								</div>
+
+								<!-- miasto -->
+								<div class="form-group row">
+									<label for="daneModal-miasto" class="col-md-3 control-label">
+										Miasto
+									</label>
+									<div class="col-md-9 controls">
+										<input type="text"
+										class="form-control"
+										name="daneModal-miasto" id="daneModal-miasto"
+										placeholder="Wpisz miasto"
+										required
+										>
+									</div>
+								</div>
+								
+								<!-- nip -->
+								<div class="form-group row">
+									<label for="nip" class="col-md-3 control-label">
+										NIP
+									</label>
+									<div class="col-md-9 controls">
+										<input type="text"
+										class="form-control only-number"
+										name="nip" id="nip"
+										placeholder="Wpisz NIP"
+										title="Wpisz dziesięciocyfrowy kod"
+										required
+										maxlength="10">
+									</div>
+								</div>
+
+								<!-- Submit and reset -->
+								<div class="form-group">
+									<label class="col-md-3 control-label"></label>
+									<div class="col-md-9 text-right">
+										<button type="reset" class="btn btn-default" data-dismiss="modal">
+											Anuluj
+										</button>
+										<button class="btn btn-primary">
+											Zapisz
+										</button>
+									</div>
+								</div>
+
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie, faktura będzie wystawiana automatycznie na te dane.
+							</div>
+	
+						</div>
+					</div><!-- /.row -->
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal lista wykonawcow -->
+	<div class="modal fade" id="listaWykonawcow" tabindex="-1" role="dialog" aria-labelledby="listaWykonawcowLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="listaWykonawcowLabel">
+						<i class="fa fa-users"></i> Lista wykonawców
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center">Wysłano do:</h3>
+							<!-- <h4 class="no-padding text-center"></h4> -->
+	
+							<div class="row">
+								<div class="col-md-6">
+									<ul class="list-check">
+										<li><a href="#">Lorem ipsum</a></li>
+										<li><a href="#">dolor sit amet</a></li>
+										<li><a href="#">sed do eiusmod tempor</a></li>
+										<li><a href="#">consectetur adipisicing elit</a></li>
+										<li><a href="#">incididunt ut labore</a></li>
+									</ul>
+								</div>
+								<div class="col-md-6">
+									<ul class="list-check">
+										<li><a href="#">et dolore magna aliqua</a></li>
+										<li><a href="#">Ut enim ad minim veniam</a></li>
+										<li><a href="#">quis nostrud exercitation</a></li>
+										<li><a href="#">ullamco laboris nisi</a></li>
+										<li><a href="#">ut aliquip ex ea commodo</a></li>
+									</ul>
+								</div>
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal formy promocji ogloszenia -->
+	<div class="modal fade" id="formyPromocji" tabindex="-1" role="dialog" aria-labelledby="formyPromocjiLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="formyPromocjiLabel">
+						<i class="fa fa-star"></i> Formy promocji ogłoszenia:
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<!-- <h3 class="bold mt5 mb15 text-center">Formy promocji ogłoszenia:</h3> -->
+							<!-- <h4 class="no-padding text-center"></h4> -->
+	
+							<div class="row">
+								<div class="col-md-12">
+									<ul class="list-check">
+										<li>Pakiet wyróżnij: <b>34 dni</b></li>
+										<li>Pakiet premium: <b>12 dni</b></li>
+										<li>Ogłoszenie podbite</li>
+									</ul>
+								</div>
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal formy promocji profilu -->
+	<div class="modal fade" id="formyPromocji" tabindex="-1" role="dialog" aria-labelledby="formyPromocjiLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="formyPromocjiLabel">
+						<i class="fa fa-star"></i> Formy promocji profilu:
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<!-- <h3 class="bold mt5 mb15 text-center">Formy promocji ogłoszenia:</h3> -->
+							<!-- <h4 class="no-padding text-center"></h4> -->
+	
+							<div class="row">
+								<div class="col-md-12">
+									<ul class="list-check">
+										<li>Pakiet wyróżnij: <b>34 dni</b></li>
+										<li>Pakiet premium: <b>12 dni</b></li>
+										<li>Ogłoszenie podbite</li>
+									</ul>
+								</div>
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal share -->
+	<div class="modal fade" id="modalShare" tabindex="-1" role="dialog" aria-labelledby="modalShareLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalShareLabel">
+						<i class="fa fa-thumbs-up"></i> Poleć zlecenie
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h4 class="no-padding text-center">Jeśli chcesz poinformować swojego znajomego o zleceniu, które Twoim zdaniem może go zainteresować, skorzystaj z poniższego formularza.</h4>
+	
+							<form role="form">
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="wiadomosc" class="control-label">Wiadomość</label>
+									<textarea
+									placeholder="Wiadomość"
+									class="form-control" name="wiadomosc" rows="6"
+									required
+									maxlength="300"></textarea>
+								</div>
+								<!-- osoba -->
+								<div class="form-group ">
+									<label for="do" class="control-label">
+										Do
+									</label>
+									<input type="text"
+										class="form-control"
+										name="do" id="do"
+										placeholder="Podaj email kontaktowy"
+										maxlength="50"
+										required
+									>
+								</div>
+								<!-- podpis -->
+								<div class="form-group ">
+									<label for="modalShare-podpis" class="control-label">
+										Podpis
+									</label>
+									<input type="text"
+										name="modalShare-podpis" id="modalShare-podpis"
+										placeholder="Podpisz się"
+										class="form-control"
+										maxlength="50"
+										required
+									>
+								</div>
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal zaloguj -->
+	<div class="modal fade" id="alertZaloguj" tabindex="-1" role="dialog" aria-labelledby="alertZalogujLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="alertZalogujLabel">
+						<i class="icon-mail"></i> Wyślij ofertę do zgłoszenia
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12 text-center">
+	
+							<h4 class="no-padding">Jeśli chcesz wysłać ofertę do zlecenia</h4>
+							<h3 class="bold mt5 mb15">Zaloguj się lub załóż konto i uzupełnij profil specjalisty</h3>
+	
+							<a href="../signup.html" class="btn btn-primary">
+								<i class="fa fa-user"></i> Zaloguj
+							</a>
+							<a href="../signup.html" class="btn btn-warning">
+								<i class="fa fa-sign-in"></i> Zarejestruj
+							</a>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal szukam pracy jakiś stary -->
+	<div class="modal fade" id="modalSzukamPracy" tabindex="-1" role="dialog" aria-labelledby="modalSzukamPracyLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalSzukamPracyLabel">
+						<i class="fa fa-briefcase"></i> Poszukuję pracy:
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-sm-12">
+							<form class="form-horizontal">
+
+									<!-- zakres -->
+									<div class="form-group">
+										<label class="col-md-3 control-label" for="modalSzukamPracy_zakres">Zakres poszukiwanej pracy</label>
+										<div class="col-md-9">
+											<div class="checkbox">
+												<label>
+													<input name="modalSzukamPracy_zakres"
+																 id="modalSzukamPracy_pelny" value="pelny"
+																 type="checkbox"
+																 required> pełny etat
+												</label>
+											</div>
+	
+											<div class="checkbox">
+												<label>
+													<input name="modalSzukamPracy_zakres"
+																 id="modalSzukamPracy_niepelny" value="niepelny"
+																 type="checkbox"> pół etatu
+												</label>
+											</div>
+	
+											<div class="checkbox">
+												<label>
+													<input name="modalSzukamPracy_zakres"
+																 id="modalSzukamPracy_freelance" value="freelance"
+																 type="checkbox"> freelancer
+												</label>
+											</div>
+	
+											<div class="checkbox">
+												<label>
+													<input name="modalSzukamPracy_zakres"
+																 id="modalSzukamPracy_zlecenie" value="zlecenie"
+																 type="checkbox"> zlecenie / projekt
+												</label>
+											</div>
+	
+											<div class="checkbox">
+												<label>
+													<input name="modalSzukamPracy_zakres"
+																 id="modalSzukamPracy_praktyka" value="praktyka"
+																 type="checkbox"> praktyka
+												</label>
+											</div>
+	
+											<div class="checkbox">
+												<label>
+													<input name="modalSzukamPracy_zakres"
+																 id="modalSzukamPracy_staz" value="staz"
+																 type="checkbox"> staz
+												</label>
+											</div>
+											<div class="checkbox">
+												<label>
+													<input name="modalSzukamPracy_zakres"
+																 id="modalSzukamPracy_pogodzinach" value="pogodzinach"
+																 type="checkbox"> po godzinach
+												</label>
+											</div>
+										</div>
+									</div>
+	
+									<!-- opis pracy -->
+									<div class="form-group row">
+										<label for="opis_pracy" class="col-md-3 control-label">
+											Opis
+										</label>
+										<div class="col-md-9 controls">
+											<textarea
+												class="form-control"
+												name="opis_pracy" id="opis_pracy"
+												rows="5"
+												maxlength="300"
+												required
+												placeholder="Wpisz krótki opis"
+											></textarea>
+										</div>
+									</div>
+	
+									<!-- Submit and reset -->
+									<div class="form-group">
+										<label class="col-md-3 control-label"></label>
+										<div class="col-md-9 text-right">
+											<button type="reset" class="btn btn-default" data-dismiss="modal">
+												Anuluj
+											</button>
+											<button class="btn btn-primary">
+												Zapisz
+											</button>
+										</div>
+									</div>
+	
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+							</div>
+	
+						</div>
+					</div><!-- /.row -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal dodano do książki adresowej -->
+	<div class="modal fade" id="modalDoKsiazki" tabindex="-1" role="dialog" aria-labelledby="modalDoKsiazkiLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalDoKsiazkiLabel">
+						<i class="fa fa-address-book"></i> Książka adresowa
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12 text-center">
+	
+							<!--<h4 class="no-padding text-center">ID: 123123123</h4>-->
+							<h3 class="bold text-center">Kontakt został dodant do Twojej książki adresowej!</h3>
+							
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal SzukamPracy -->
+	<div class="modal fade" id="modalSzukamPracy" tabindex="-1" role="dialog" aria-labelledby="modalSzukamPracyLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalSzukamPracyLabel">
+						<i class="fa fa-briefcase"></i> Poszukuję pracy
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<div class="alert alert-warning" role="alert">
+								<h3>
+									<i class="fa fa-pencil"></i> Opis szukanej pracy
+								</h3>
+								<label class="control-label block no-margin">Zakres pracy:</label>
+								<ul class="list-ustyled list-inline">
+									<li>Pełny etat</li>
+									<li>Pół etatu</li>
+									<li>Freelancer</li>
+									<li>Zlecenie</li>
+									<li>Pratyka</li>
+									<li>Staż</li>
+									<li>Po godzinach</li>
+								</ul>
+	
+								<hr>
+								<p class="color-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem praesentium quia dolores sunt? Dicta modi possimus autem dolorem quas at iusto aperiam, quos voluptatem non, ipsum accusantium doloremque voluptates quo.</p>
+							</div>
+	
+							<h3>Zaproponuj pracę: </h3>
+	
+							<form role="form">
+								<!--zakres pracy-->
+								<!--<div class="form-group">
+									<label for="zakres_pracy" class="control-label block">Zakres pracy:</label>
+									<label for="pelny" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="pelny" checked required> Pełny etat
+									</label>
+									<label for="pol" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="pol"> Pół etatu
+									</label>
+									<label for="freelancer" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="freelancer"> Freelancer
+									</label>
+									<label for="zlecenie" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="zlecenie"> Zlecenie
+									</label>
+									<label for="praktyka" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="praktyka"> Praktyka
+									</label>
+									<label for="staz" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="staz"> Staż
+									</label>
+									<label for="po_godzinach" class="radio-inline">
+										<input name="zakres_pracy" type="radio" id="po_godzinach"> Po godzinach
+									</label>
+								</div>-->
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="wiadomosc" class="control-label">Opis:</label>
+									<textarea
+										placeholder="Wiadomość"
+										class="form-control" name="wiadomosc" rows="6"
+										required
+										maxlength="300"
+									></textarea>
+								</div>
+								<!-- tel -->
+								<div class="form-group ">
+									<label for="modalSzukamPracy-tel" class="control-label">
+										Telefon:
+									</label>
+									<input type="text"
+										class="form-control only-number"
+										name="modalSzukamPracy-tel" id="modalSzukamPracy-tel"
+										placeholder="Podaj numer telefonu kontaktowego"
+										maxlength="50"
+										required
+									>
+								</div>
+								<!-- podpis -->
+								<div class="form-group ">
+									<label for="podpis" class="control-label">
+										Podpis
+									</label>
+									<input type="text"
+										name="podpis" id="podpis"
+										placeholder="Podpisz się"
+										class="form-control"
+										maxlength="50"
+										required
+									>
+								</div>
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal SzukamPracyInfo -->
+	<div id="modalSzukamPracyInfo"
+			 class="modal fade"
+			 tabindex="-1" role="dialog"
+			 aria-labelledby="modalSzukamPracyInfoLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalSzukamPracyInfoLabel">
+						<i class="fa fa-briefcase"></i> Poszukuję pracy
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mb15 text-center">Opis szukanej pracy</h3>
+	
+							<strong>Zakres pracy:</strong>
+							<ul class="list-ustyled list-inline">
+								<li>Pełny etat</li>
+								<li>Pół etatu</li>
+								<li>Freelancer</li>
+								<li>Zlecenie</li>
+								<li>Pratyka</li>
+								<li>Staż</li>
+								<li>Po godzinach</li>
+							</ul><hr>
+	
+							<strong>Lokalizacja:</strong>
+							<p>Warszawa, Mazowieckie</p><hr>
+	
+							<strong>W dni:</strong>
+							<p>Poniedziałek, wtorek, środa, czwartek, piątek, sobota</p><hr>
+	
+							<strong>W branży:</strong>
+							<p>Fryzjer, ochrona, programista, konserwator powierzchni płaskich</p>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- STARA WERSJA "APLIKUJ" Modal wyslij zalogowany -->
+	<div id="modalWyslijZalogowany"
+			 class="modal fade" 
+			 tabindex="-1" role="dialog" aria-labelledby="modalWyslijZalogowanyLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalWyslijZalogowanyLabel">
+						<i class="icon-mail"></i> Jestem zainteresowany tą ofertą pracy <small>(ID: 123231)</small>
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<!--<h4 class="no-padding text-center">Wiadomość dotycząca oferty do zlecenia <span class="small">(123123)</span>:</h4>-->
+							<h3 class="bold mt5 mb15 text-center">Poszukujemy kierowcy na trasy międzynarodowe</h3>
+	
+							<form role="form">
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="wiadomosc" class="control-label">Wiadomość</label>
+									<textarea
+									placeholder="Napisz wiadomość"
+									class="form-control" name="wiadomosc" rows="6"
+									required
+									maxlength="300"></textarea>
+								</div>
+								<!--stawka-->
+								<div class="form-group">
+									<label for="stawka" class="control-label">
+										Stawka
+									</label>
+									<div class="input-group">
+										<span class="input-group-addon">PLN</span>
+										<input
+											type="text" id="price" name="price"
+											class="form-control numbers-only" placeholder="Podaj kwotę"
+										>
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-secondary dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+												Typ <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu ">
+												<li><a class="dropdown-item">na godzinę</a></li>
+												<li><a class="dropdown-item">miesięcznie</a></li>
+											</ul>
+										</span>
+									</div>
+								</div>
+								<!-- osoba -->
+								<div class="form-group ">
+									<label for="modalWyslijZalogowany-osoba" class="control-label">
+										Osoba kontaktowa
+									</label>
+									<input type="text"
+										class="form-control"
+										name="modalWyslijZalogowany-osoba" id="modalWyslijZalogowany-osoba"
+										placeholder="Podaj osobę kontaktową"
+										maxlength="50"
+									>
+								</div>
+								<!-- telefon -->
+								<div class="form-group ">
+									<label for="modalWyslijZalogowany-tel" class="control-label">
+										Telefon
+									</label>
+									<input type="text"
+										class="form-control only-number"
+										name="modalWyslijZalogowany-tel" id="modalWyslijZalogowany-tel"
+										placeholder="Wpisz numer telefonu"
+										maxlength="20"
+									>
+								</div>
+								<!-- plik -->
+								<div class="form-group ">
+									<label for="" class="control-label block">
+										Dodaj ofertę
+									</label>
+									<input
+										type="file"
+										name="dodaj_oferte_plik" id="dodaj_oferte_plik"
+										class="custom-file-input"
+									>
+									<label for="dodaj_oferte_plik" class="btn btn-sm btn-primary w100">
+										<i class="fa fa-file"></i> <span>Wybierz plik z CV</span>
+									</label>
+									<div class="small color-grey mt5">
+										Format: jpg, gif; Maksymalny rozmiar: 230kB, Wymiary: 1920x1080
+									</div>
+								</div>
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Aplikuj
+									</button>
+								</div>
+							</form>
+	
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Sukces!</strong> Twoje wiadomość została wysłana.
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- STARA WERSJA "APLIKUJ NIEZALOGOWANY" Modal wyslij Niezalogowany -->
+	<div id="modalWyslijNiezalogowany"
+			 class="modal fade"
+			 tabindex="-1" role="dialog" aria-labelledby="modalWyslijNiezalogowanyLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalWyslijNiezalogowanyLabel">
+						<i class="icon-money"></i> Jeśli chcesz uzyskać jednorazowy dostęp do ogłoszenia:
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+	
+						<div class="col-md-8 col-md-offset-2">
+							<h3 class="uppercase blue no-padding text-center mb15">wykup usługę dostępu przez sms</h3>
+							
+							<div class="row">
+								<div class="col-xs-6">Numer: </div>
+								<div class="col-xs-6"><strong>76378162371</strong> </div>
+							</div>
+							<div class="row">
+								<div class="col-xs-6">Treść: </div>
+								<div class="col-xs-6"><strong>GADH16253RGASVD</strong> </div>
+							</div>
+							<div class="row">
+								<div class="col-xs-6">Koszt SMS: </div>
+								<div class="col-xs-6"><strong>3.00 PLN</strong> (z vat 3.66 PLN) </div>
+							</div>
+	
+							<form class="form-inline mt-4 mb-4">
+								<div class="form-group">
+									<label for="kodSMS" class="sr-only">Wpisz kod sms</label>
+									<input type="text" class="form-control" id="kodSMS" placeholder="Wpisz kod SMS">
+								</div>
+								<button type="submit" class="btn btn-primary">Wyślij</button>
+							</form>
+	
+							<p class="small color-lg-grey mb-4">
+								Otrzymany kod jest jednorazowy, możesz go wykorzystać w ciągu 14 dni. Po wpisaniu kodu i kliknięciu Wyślij usługa zostanie wykonana natychmiast, a Ty utracisz ustawowe prawo do rezygnacji z usługi. Usługa działa w sieciach operatorów: Plus GSM, T-Mobile, Orange, Play. Serwis SMS obsługuje Centrum Technologii Mobilnych Mobiltek S.A.
+							</p>
+						</div>
+	
+						<div class="col-md-12 text-center">
+							<h4 class="no-padding">
+								Jeśli chcesz wysłać swoją propozycję do tej oferty pracy za darmo
+							</h4>
+							<h3 class="bold mt5 mb15">
+								Zaloguj się lub załóż konto i uzupełnij profil specjalisty
+							</h3>
+	
+							<a href="login.html" class="btn btn-primary">
+								<i class="fa fa-user"></i> Zaloguj
+							</a>
+							<a href="signup.html" class="btn btn-warning">
+								<i class="fa fa-sign-in"></i> Zarejestruj
+							</a>
+						</div>
+	
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+	
+	<!-- Modal wyslij agencja -->
+	<div id="modalWyslijAgencja"
+			 class="modal fade"
+			 tabindex="-1" role="dialog" aria-labelledby="modalWyslijAgencjaLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalWyslijAgencjaLabel">
+						<i class="icon-money"></i> Jestem zainteresowany tą ofertą pracy
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					
+					<div class="text-center">
+						<h4 class="no-padding mb15">
+							Oferta dotycząca <span class="orange">15</span> miejsc pracy.
+						</h4>
+						<p class="small color-gray">
+							Jeśli jesteś Agencją Pośrednictwa Pracy i jesteś zainteresowany współpracą z firmą wystawiającą tę ofertę pracy, przejdź do płatności, następnie wyślij swoją ofertę. Nawiąż długotrwałą współpracę.
+						</p>
+					</div>
+
+					<div class="my-4 text-center">
+						<h3 class="pb-4">
+							Odblokuj kontakt - wyślij ofertę<br>
+							200 zł
+						</h3>
+						<a href="#" class="btn btn-primary ml-3">Przejdź do płatności</a>
+					</div>
+					
+					<p class="no-margin small color-grey">
+						Otrzymuj automatycznie e-fakturę za dodawane operacje -
+						<a href="#dane-collapse" data-toggle="collapse">Zmień dane</a>
+					</p>
+					
+					<!-- form -->
+					<div id="dane-collapse" class="collapse">
+						<form class="form-horizontal mt-3">
+
+							<!-- nazwa firmy -->
+							<div class="form-group row">
+								<label for="modalWyslijAgencja-nazwa_firmy" class="col-md-3 control-label">
+									Nazwa firmy
+								</label>
+								<div class="col-md-9 controls">
+									<input type="text"
+									class="form-control"
+									name="modalWyslijAgencja-nazwa_firmy" id="modalWyslijAgencja-nazwa_firmy"
+									placeholder="Wpisz nazwę firmy"
+									maxlength="30"
+									required
+									>
+								</div>
+							</div>
+
+							<!-- ulica -->
+							<div class="form-group row">
+								<label for="modalWyslijAgencja-ulica" class="col-md-3 control-label">
+									Ulica
+								</label>
+								<div class="col-md-9 controls">
+									<input type="text"
+									class="form-control"
+									name="modalWyslijAgencja-ulica" id="modalWyslijAgencja-ulica"
+									placeholder="Wpisz ulicę"
+									maxlength="30"
+									required
+									>
+								</div>
+							</div>
+
+							<!-- kod pocztowy -->
+							<div class="form-group row">
+								<label for="modalWyslijAgencja-kod_pocztowy" class="col-md-3 control-label">
+									Kod pocztowy
+								</label>
+								<div class="col-md-9 controls">
+									<input type="text"
+									class="form-control"
+									name="kod_pocztowy"
+									id="modalWyslijAgencja-kod_pocztowy"
+									placeholder="Wpisz kod pocztowy (00-000)"
+									title="Wpisz poprawny kod pocztowy np. 01-001"
+									required
+									maxlength="6">
+								</div>
+							</div>
+
+							<!-- miasto -->
+							<div class="form-group row">
+								<label for="modalWyslijAgencja-miasto" class="col-md-3 control-label">
+									Miasto
+								</label>
+								<div class="col-md-9 controls">
+									<input type="text"
+									class="form-control"
+									name="modalWyslijAgencja-miasto" id="modalWyslijAgencja-miasto"
+									placeholder="Wpisz miasto"
+									required
+									>
+								</div>
+							</div>
+
+							<!-- nip -->
+							<div class="form-group row">
+								<label for="modalWyslijAgencja-nip" class="col-md-3 control-label">
+									NIP
+								</label>
+								<div class="col-md-9 controls">
+									<input type="text"
+									class="form-control only-number"
+									name="modalWyslijAgencja-nip" id="modalWyslijAgencja-nip"
+									placeholder="Wpisz NIP"
+									title="Wpisz dziesięciocyfrowy kod"
+									maxlength="10"
+									required>
+								</div>
+							</div>
+
+							<div class="alert alert-success hide-weak" role="alert">
+								<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+							</div>
+
+							<!-- Submit and reset -->
+							<div class="form-group">
+								<label class="col-md-3 control-label"></label>
+								<div class="col-md-9 text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Zapisz
+									</button>
+								</div>
+							</div>
+
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	<!-- Modal Agencja2 -->
+	<div class="modal fade" id="modalAgencja2" tabindex="-1" role="dialog" aria-labelledby="modalAgencja2Label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalAgencja2Label">
+						<i class="icon-mail"></i> Jestem zainteresowany współpracą
+						<small>(ID: 123123)</small>
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center d-block d-sm-none">Pomocnik na budowie</h3>
+							<form role="form">
+
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="Agencja2-wiadomosc" class="control-label sr-only">Wiadomość do pracodawcy</label>
+									<textarea placeholder="Wiadomość"
+														class="form-control" name="Agencja2-wiadomosc" rows="6"
+														required
+														maxlength="300">Witam. Jestem zainteresowany Państwa ofertą pracy na wymienione stanowisko...</textarea>
+								</div>
+
+								<!-- stawka -->
+								<div class="form-group">
+									<label for="Agencja2-stawka" class="control-label sr-only">Stawka</label>
+
+									<div class="input-group custom">
+										<span class="input-group-addon">PLN</span>
+
+										<input type="text"
+														id="Agencja2-stawka"
+														name="Agencja2-stawka"
+														class="form-control only-numbers"
+														placeholder="Zaproponuj wynagrodzenie netto"
+														maxlength="6">
+
+										<span class="input-group-btn">
+											<select name="" id="Agencja2-stawka_typ" class="form-control">
+												<option selected disabled>Rodzaj płatności</option>
+												<option value="calosc">Za całość</option>
+												<option value="godzina">Na godzinę</option>
+												<option value="miesiecznie">miesięcznie</option>
+											</select>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<!-- osoba -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="Agencja2-osoba" class="control-label sr-only">
+											Osoba kontaktowa
+										</label>
+										<input type="text"
+													class="form-control"
+													name="Agencja2-osoba" id="Agencja2-osoba"
+													placeholder="Podaj osobę kontaktową"
+													maxlength="35"
+													required>
+									</div>
+	
+									<!-- telefon -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="Agencja2-tel" class="control-label sr-only">
+											Telefon
+										</label>
+										<input type="text"
+													class="form-control only-number"
+													name="Agencja2-tel" id="Agencja2-tel"
+													placeholder="Wpisz numer telefonu"
+													maxlength="15"
+													required>
+									</div>
+								</div>
+
+								<div class="alert alert-success hide-weak" role="alert">
+									<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+								</div>
+
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+
+							</form>	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->	
+
+	<!-- Modal aplikuj -->
+	<div class="modal fade" id="modalAplikuj" tabindex="-1" role="dialog" aria-labelledby="modalAplikujLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalAplikujLabel">
+						<i class="icon-mail"></i> Interesuje mnie ta praca
+						<small>(ID: 123123)</small>
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb-0 text-center d-block d-sm-none">Pomocnik na budowie</h3>
+
+							<!-- profil -->
+							<div class="add-list">
+								<div class="item-list item-small">
+	
+	                <div class="col content-wrap">
+	                  <div class="photobox">
+											<div class="thumbnail">
+												<img src="images/users/1.jpg" alt="Image of user">
+											</div>
+	                  </div>
+	
+	                  <div class="add-desc-box text-left">
+	                    <h5 class="add-title ">
+	                      <a href="#">Michaiła Malinowska</a>
+	                    </h5>
+	
+	                    <div class="info-row">
+	                      <a href="tel: +48123123123">
+	                        <i class="icon-phone"></i> +48 123 123 123
+	                      </a>
+	                      <a href="#">
+	                        <i class="icon-attach"></i> Załącznik: Twoje CV
+	                      </a>
+											</div>
+	
+	                  </div>
+	                </div>
+	
+	                <div class="col price-box ml-auto">
+										<a href="uzytkownik_profil.html" target="_blank" class="btn btn-success btn-sm">Edytuj profil</a>
+	                </div>
+	
+	              </div>
+							</div>
+
+	
+							<form role="form">
+
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="aplikuj-wiadomosc" class="control-label sr-only">Wiadomość do pracodawcy</label>
+									<textarea placeholder="Wiadomość"
+														class="form-control" name="aplikuj-wiadomosc" rows="6"
+														required
+														maxlength="400">Witam. Jestem zainteresowany Państwa ofertą pracy na wymienione stanowisko...</textarea>
+								</div>
+
+								<!-- stawka -->
+								<div class="form-group">
+									<label for="aplikuj-stawka" class="control-label sr-only">Stawka</label>
+
+									<div class="input-group custom">
+										<span class="input-group-addon">PLN</span>
+
+										<input type="tel"
+														id="aplikuj-stawka"
+														name="aplikuj-stawka"
+														class="form-control only-numbers"
+														placeholder="Zaproponuj wynagrodzenie netto"
+														maxlength="10">
+
+										<span class="input-group-btn">
+											<select name="" id="aplikuj-stawka_typ" class="form-control">
+												<option selected disabled>Rodzaj płatności</option>
+												<option value="calosc">Za całość</option>
+												<option value="godzina">Na godzinę</option>
+												<option value="miesiecznie">miesięcznie</option>
+											</select>
+										</span>
+									</div>
+								</div>
+
+								<!-- plik -->
+								<div class="form-group">
+									<label class="control-label d-block sr-only">Załącznik CV</label>
+									<div class="d-flex flex-wrap align-items-center">
+										<input type="file" class="custom-file-input" name="aplikuj-file-cv" id="aplikuj-file-cv" accept="image/gif,image/jpeg" required>
+
+										<label for="aplikuj-file-cv" class="btn btn-default">
+											<i class="fa fa-file"></i> <span>Wybierz plik z CV</span>
+										</label>
+
+										<a class="d-inline-block ml-2 mr-2"
+											 style="flex-shrink: 0;"
+											 data-toggle="tooltip"
+											 data-placement="bottom"
+											 title="Format .jpg lub .gif; maksymalny rozmiar 2MB">
+												<i class="fa fa-2x fa-question-circle" aria-hidden="true"></i>
+										</a>
+									</div>
+								</div>
+
+								<!-- info -->
+								<div class="privacy-info">
+									<p class="small">
+										Przesyłając CV wyrażasz zgodę na przetwarzanie i przechowywanie zawartych w nim danych przez Infopark sp. z.o.o oraz autora ogłoszenia.
+										<a href="#modalAplikuj-info-more" data-toggle="collapse">Szczegóły</a>
+									</p>
+									<p class="small collapse" id="modalAplikuj-info-more">
+										Niniejsza zgoda obejmuje również zezwolenie na udostępnianie Twojego CV i zawartych w nim danych pomiotom trzecim oraz na ich przetwarzanie przez te podmioty w celach związanych z postępowaniem rekrutacyjnym. Wyrażasz również zgodę na stworzenie przez Infopark sp. z.o.o na podstawie danych zawartych w CV Twojej indywidualnej sylwetki pracownika.
+									</p>
+								</div>
+
+								<div class="alert alert-success hide-weak" role="alert">
+									<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+								</div>
+
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+
+							</form>	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	<!-- Modal aplikujDane -->
+	<div class="modal fade" id="modalAplikujDane" tabindex="-1" role="dialog" aria-labelledby="modalAplikujDaneLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalAplikujDaneLabel">
+						<i class="icon-mail"></i> Interesuje mnie ta praca
+						<small>(ID: 123123)</small>
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center d-block d-sm-none">Pomocnik na budowie</h3>
+
+							<div class="alert alert-success mb-3 collapse-mobile" role="alert">
+								<h2>Jesteś zmęczony ciągłym uzupełnianiem danych?	</h2>
+								
+								<div class="d-sm-flex justify-content-between">
+									<div class="collapse" id="modalAplikujDane-alert">
+										<p>Uzupełnij zakładkę "Dane podstawowe" w swoim profilu pracownika</p>
+									</div>
+									<a class="btn btn-success btn-right mb-2 mb-sm-0" style="flex-shrink:0;" href="uzytkownik_profil.html">Edytuj profil</a>
+								</div>
+
+
+								<!-- close btn -->
+								<div class="close-btn close-btn-absolute mt-0">
+									<button data-target="#modalAplikujDane-alert" data-toggle="collapse" type="button" aria-expanded="false">
+										<i class="fa fa-angle-down"></i>
+									</button>
+								</div>
+							</div>
+	
+							<form role="form">
+
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="aplikujDane-wiadomosc" class="control-label sr-only">Wiadomość do pracodawcy</label>
+									<textarea placeholder="Wiadomość"
+														class="form-control" name="aplikujDane-wiadomosc" rows="6"
+														required
+														maxlength="400">Witam. Jestem zainteresowany Państwa ofertą pracy na wymienione stanowisko...</textarea>
+								</div>
+
+								<!-- stawka -->
+								<div class="form-group">
+									<label for="aplikujDane-stawka" class="control-label sr-only">Stawka</label>
+
+									<div class="input-group custom">
+										<span class="input-group-addon">PLN</span>
+
+										<input type="tel"
+														id="aplikujDane-stawka"
+														name="aplikujDane-stawka"
+														class="form-control only-numbers"
+														placeholder="Zaproponuj wynagrodzenie netto"
+														maxlength="10">
+
+										<span class="input-group-btn">
+											<select name="" id="aplikujDane-stawka_typ" class="form-control">
+												<option selected disabled>Rodzaj płatności</option>
+												<option value="calosc">Za całość</option>
+												<option value="godzina">Na godzinę</option>
+												<option value="miesiecznie">miesięcznie</option>
+											</select>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<!-- osoba -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="aplikujDane-osoba" class="control-label sr-only">
+											Osoba kontaktowa
+                    </label>
+                    <div class="input-icon">
+                      <i class="fa icon-user"></i>
+                      <input type="text"
+                            class="form-control"
+                            name="aplikujDane-osoba" id="aplikujDane-osoba"
+                            placeholder="Podaj osobę kontaktową"
+                            maxlength="35"
+                            required>
+                    </div>
+									</div>
+	
+									<!-- telefon -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="aplikujDane-tel" class="control-label sr-only">
+											Telefon
+                    </label>
+                    <div class="input-icon">
+                      <i class="fa icon-phone" aria-hidden="true"></i>
+                      <input type="tel"
+                            class="form-control only-number"
+                            name="aplikujDane-tel" id="aplikujDane-tel"
+                            placeholder="Wpisz numer telefonu"
+                            maxlength="15"
+                            required>
+                    </div>
+									</div>
+								</div>
+
+								<!-- plik -->
+								<div class="form-group">
+									<label class="control-label d-block sr-pnly">Załącznik CV</label>
+									<div class="d-flex flex-wrap align-items-center">
+										<input type="file" class="custom-file-input" name="aplikujDane-file-cv" id="aplikujDane-file-cv" accept="image/gif,image/jpeg" required>
+
+										<label for="aplikujDane-file-cv" class="btn btn-default">
+											<i class="fa fa-file"></i> <span>Wybierz plik z CV</span>
+										</label>
+
+										<a class="d-inline-block ml-2 mr-2"
+											 style="flex-shrink: 0;"
+											 data-toggle="tooltip"
+											 data-placement="bottom"
+											 title="Format .jpg lub .gif; maksymalny rozmiar 2MB">
+												<i class="fa fa-2x fa-question-circle" aria-hidden="true"></i>
+										</a>
+									</div>
+								</div>
+
+								<!-- info -->
+								<div class="privacy-info">
+									<p class="small">
+										Przesyłając CV wyrażasz zgodę na przetwarzanie i przechowywanie zawartych w nim danych przez Infopark sp. z.o.o oraz autora ogłoszenia.
+										<a href="#modalAplikujDane-info-more" data-toggle="collapse">Szczegóły</a>
+									</p>
+									<p class="small collapse" id="modalAplikujDane-info-more">
+										Niniejsza zgoda obejmuje również zezwolenie na udostępnianie Twojego CV i zawartych w nim danych pomiotom trzecim oraz na ich przetwarzanie przez te podmioty w celach związanych z postępowaniem rekrutacyjnym. Wyrażasz również zgodę na stworzenie przez Infopark sp. z.o.o na podstawie danych zawartych w CV Twojej indywidualnej sylwetki pracownika.
+									</p>
+								</div>
+
+								<div class="alert alert-success hide-weak" role="alert">
+									<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+								</div>
+
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+
+							</form>	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+  <!-- /modal -->
+  
+  <!-- Modal aplikuj wypelnione dane -->
+	<div class="modal fade" id="modalAplikujWypelnione" tabindex="-1" role="dialog" aria-labelledby="modalAplikujWypelnioneLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalAplikujWypelnioneLabel">
+						<i class="icon-mail"></i> Interesuje mnie ta praca
+						<small>(ID: 123123)</small>
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 d-block d-sm-none">Pomocnik na budowie</h3>
+	
+							<form role="form">
+
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="aplikujWypelnione-wiadomosc" class="control-label sr-only">Wiadomość do pracodawcy</label>
+									<textarea placeholder="Wiadomość"
+														class="form-control" name="aplikujWypelnione-wiadomosc" rows="6"
+														required
+														maxlength="400">Witam. Jestem zainteresowany Państwa ofertą pracy na wymienione stanowisko, ponieważ od dziecka marzyłem aby być pomocnikiem na budowie.</textarea>
+								</div>
+
+								<!-- stawka -->
+								<div class="form-group">
+									<label for="aplikujWypelnione-stawka" class="control-label sr-only">Stawka</label>
+
+									<div class="input-group custom">
+										<span class="input-group-addon">PLN</span>
+
+										<input type="tel"
+														id="aplikujWypelnione-stawka"
+														name="aplikujWypelnione-stawka"
+														class="form-control only-numbers"
+														placeholder="Zaproponuj wynagrodzenie netto"
+                            maxlength="10"
+                            value="10000">
+
+										<span class="input-group-btn">
+											<select name="" id="aplikujWypelnione-stawka_typ" class="form-control">
+												<option value="calosc">Za całość</option>
+												<option value="godzina">Na godzinę</option>
+												<option value="miesiecznie" checked>miesięcznie</option>
+											</select>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<!-- osoba -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="aplikujWypelnione-osoba" class="control-label sr-only">
+											Osoba kontaktowa
+                    </label>
+                    <div class="input-icon">
+                      <i class="fa icon-user"></i>
+                      <input type="text"
+                            class="form-control"
+                            name="aplikujWypelnione-osoba" id="aplikujWypelnione-osoba"
+                            placeholder="Podaj osobę kontaktową"
+                            maxlength="35"
+                            required
+                            value="Andrzej kontaktowy">
+                    </div>
+									</div>
+	
+									<!-- telefon -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="aplikujWypelnione-tel" class="control-label sr-only">
+											Telefon
+                    </label>
+                    <div class="input-icon">
+                      <i class="fa icon-phone" aria-hidden="true"></i>
+                      <input type="tel"
+                            class="form-control only-number"
+                            name="aplikujWypelnione-tel" id="aplikujWypelnione-tel"
+                            placeholder="Wpisz numer telefonu"
+                            maxlength="15"
+                            required
+                            value="514234589">
+                    </div>
+									</div>
+								</div>
+
+								<!-- plik -->
+								<div class="form-group">
+                  <label class="control-label d-block sr-pnly">Zmień załączone CV</label>   
+
+                  <div class="d-flex flex-wrap align-items-center">
+                    <input type="file"
+                            class="custom-file-input"
+                            name="aplikujWypelnione-file-cv"
+                            id="aplikujWypelnione-file-cv"
+                            accept="image/gif,image/jpeg"
+                            required>
+                    <label for="aplikujWypelnione-file-cv" class="btn btn-default color-gray">
+                      <i class="fa fa-paperclip"></i> <span>Załącznik: moje_super_cv.jpg</span>
+                    </label>
+                    <a class="d-inline-block ml-2 mr-2"
+                        style="flex-shrink: 0;"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Format .jpg lub .gif; maksymalny rozmiar 2MB">
+                      <i class="fa fa-2x fa-question-circle" aria-hidden="true"></i>
+                    </a>
+                  </div>                
+								</div>
+
+								<!-- info -->
+								<div class="privacy-info">
+									<p class="small">
+										Przesyłając CV wyrażasz zgodę na przetwarzanie i przechowywanie zawartych w nim danych przez Infopark sp. z.o.o oraz autora ogłoszenia.
+										<a href="#modalAplikujWypelnione-info-more" data-toggle="collapse">Szczegóły</a>
+									</p>
+									<p class="small collapse" id="modalAplikujWypelnione-info-more">
+										Niniejsza zgoda obejmuje również zezwolenie na udostępnianie Twojego CV i zawartych w nim danych pomiotom trzecim oraz na ich przetwarzanie przez te podmioty w celach związanych z postępowaniem rekrutacyjnym. Wyrażasz również zgodę na stworzenie przez Infopark sp. z.o.o na podstawie danych zawartych w CV Twojej indywidualnej sylwetki pracownika.
+									</p>
+								</div>
+
+								<div class="alert alert-success hide-weak" role="alert">
+									<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+								</div>
+
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+
+							</form>	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	<!-- Modal aplikujRejestracja -->
+	<div class="modal fade" id="modalAplikujRejestracja" tabindex="-1" role="dialog" aria-labelledby="modalAplikujRejestracjaLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalAplikujRejestracjaLabel">
+						<i class="icon-mail"></i> Interesuje mnie ta praca
+						<small>(ID: 123123)</small>
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center d-block d-sm-none">Pomocnik na budowie</h3>
+
+							<!-- alert -->
+							<div class="alert alert-success collapse-mobile" role="alert">
+								<h2>Jesteś zmęczony ciągłym uzupełnianiem danych?	</h2>
+								
+								<div class="d-sm-flex justify-content-between">
+									<div class="collapse" id="modalAplikujRejestracja-alert">
+										<p>Zarejestruj się a Twoje dane, raz zapisane, będą automatycznie dodawane do odpowiedzi na oferty pracy!</p>
+									</div>
+									<a class="btn btn-success btn-right mb-2 mb-sm-0" style="flex-shrink:0;" href="register.html">Zarejestruj się</a>
+								</div>
+
+
+								<!-- close btn -->
+								<div class="close-btn close-btn-absolute mt-0">
+									<button data-target="#modalAplikujRejestracja-alert" data-toggle="collapse" type="button" aria-expanded="false">
+										<i class="fa fa-angle-down"></i>
+									</button>
+								</div>
+							</div>
+	
+							<form role="form">
+
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="aplikujRejestracja-wiadomosc" class="control-label sr-only">Wiadomość do pracodawcy</label>
+									<textarea placeholder="Wiadomość"
+														class="form-control" name="aplikujRejestracja-wiadomosc" rows="6"
+														required
+														maxlength="400">Witam. Jestem zainteresowany Państwa ofertą pracy na wymienione stanowisko...</textarea>
+								</div>
+
+								<!-- stawka -->
+								<div class="form-group">
+									<label for="aplikujRejestracja-stawka" class="control-label sr-only">Stawka</label>
+
+									<div class="input-group custom">
+										<span class="input-group-addon">PLN</span>
+
+										<input type="text"
+														id="aplikujRejestracja-stawka"
+														name="aplikujRejestracja-stawka"
+														class="form-control only-numbers"
+														placeholder="Zaproponuj wynagrodzenie netto"
+														maxlength="10">
+
+										<span class="input-group-btn">
+											<select name="" id="aplikujRejestracja-stawka_typ" class="form-control">
+												<option selected disabled>Rodzaj płatności</option>
+												<option value="calosc">Za całość</option>
+												<option value="godzina">Na godzinę</option>
+												<option value="miesiecznie">miesięcznie</option>
+											</select>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<!-- osoba -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="aplikujRejestracja-osoba" class="control-label sr-only">
+											Osoba kontaktowa
+                    </label>
+                    <div class="input-icon">
+                      <i class="fa icon-user"></i>
+                      <input type="text"
+                            class="form-control"
+                            name="aplikujRejestracja-osoba" id="aplikujRejestracja-osoba"
+                            placeholder="Podaj osobę kontaktową"
+                            maxlength="35"
+                            required>
+                    </div>
+									</div>
+	
+									<!-- telefon -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="aplikujRejestracja-tel" class="control-label sr-only">
+											Telefon
+                    </label>
+                    <div class="input-icon">
+                      <i class="fa icon-phone" aria-hidden="true"></i>
+                      <input type="tel"
+                            class="form-control only-number"
+                            name="aplikujRejestracja-tel" id="aplikujRejestracja-tel"
+                            placeholder="Wpisz numer telefonu"
+                            maxlength="15"
+                            required>
+                    </div>
+									</div>
+								</div>
+
+								<!-- plik -->
+								<div class="form-group">
+									<label class="control-label d-block sr-only">Załącznik CV</label>
+									<div class="d-flex flex-wrap align-items-center">
+										<input type="file" class="custom-file-input" name="aplikujRejestracja-file-cv" id="aplikujRejestracja-file-cv" accept="image/gif,image/jpeg" required>
+
+										<label for="aplikujRejestracja-file-cv" class="btn btn-default color-gray">
+											<i class="fa fa-file"></i> <span>Wybierz plik z CV</span>
+										</label>
+
+										<a class="d-inline-block ml-2 mr-2"
+											 style="flex-shrink: 0;"
+											 data-toggle="tooltip"
+											 data-placement="bottom"
+											 title="Format .jpg lub .gif; maksymalny rozmiar 2MB">
+												<i class="fa fa-2x fa-question-circle" aria-hidden="true"></i>
+										</a>
+									</div>
+								</div>
+
+								<!-- rejestracja czy nie -->
+								<div class="form-group mt-4">
+									<label class="sr-only" for="modalAplikujRejestracja-konto">Czy chcesz automatycznie założyć konto?</label>
+
+									<label class="radio-inline">
+										<input type="radio"
+														name="modalAplikujRejestracja-konto"
+														id="modalAplikujRejestracja-konto"
+														data-toggle="collapse"
+														data-target="#modalAplikujRejestracja-konto_collapse"
+														required> Aplikuj oraz załóż konto
+									</label>
+									<label class="radio-inline">
+										<input type="radio"
+														name="modalAplikujRejestracja-konto"
+														id="modal-konto-nie"
+														data-toggle="close-collapse"
+														data-target="#modalAplikujRejestracja-konto_collapse"
+														required checked> Aplikuj bez konta
+									</label>
+							
+								</div>
+
+								<!-- email -->
+								<div class="form-group">
+									<label for="aplikujRejestracja-email" class="control-label sr-only">
+										Adres email
+									</label>
+									<div class="input-icon">
+										<i class="icon-mail fa"></i>
+										<input id="aplikujRejestracja-email"
+													name="aplikujRejestracja-email"
+													type="text"
+													placeholder="Podaj adres e-mail"
+													class="form-control email"
+													required>
+									</div>
+								</div>
+
+								<div class="collapse collapse-form-inputs" id="modalAplikujRejestracja-konto_collapse">
+									<!-- haslo -->
+									<div class="form-group">
+										<label for="aplikujRejestracja-haslo" class="control-label sr-only">
+											Hasło
+										</label>
+										<div class="input-icon">
+											<i class="icon-lock fa"></i>
+												<input type="password"
+															class="form-control required"
+															placeholder="Wpisz hasło"
+															id="aplikujRejestracja-haslo"
+															name="aplikujRejestracja-haslo"
+															required>
+										</div>
+									</div>
+	
+									<!-- zgoda -->
+									<div class="form-group">
+										<!-- checkbox 1 -->
+										<div class="termbox">
+											<label class="checkbox-inline checkbox" for="modalAplikujRejestracja-check-regulamin">
+												<input type="checkbox" name="modalAplikujRejestracja-check-regulamin" id="modalAplikujRejestracja-check-regulamin" value="1" class="required" required>
+												Oświadczam, że zapoznałem się z <a href="">regulamine serwisu</a> oraz <a href="">polityką prywatności</a><sup>*</sup>
+											</label>
+										</div>
+	
+										<!-- checkbox 2 -->
+										<div class="termbox">
+											<label class="checkbox-inline checkbox" for="modalAplikujRejestracja-check-dane">
+												<input type="checkbox" name="modalAplikujRejestracja-check-dane" id="modalAplikujRejestracja-check-dane" value="1" class="required" required>
+												Wyrażam zgodę na przetwarzanie danych osobowych dla celów związanych z prowadzeniem serwisu <sup>*</sup>
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<!-- info -->
+								<div class="privacy-info">
+									<p class="small">
+										Przesyłając CV wyrażasz zgodę na przetwarzanie i przechowywanie zawartych w nim danych przez Infopark sp. z.o.o oraz autora ogłoszenia.
+										<a href="#modalAplikujRejestracja-info-more" data-toggle="collapse">Szczegóły</a>
+									</p>
+									<p class="small collapse" id="modalAplikujRejestracja-info-more">
+										Niniejsza zgoda obejmuje również zezwolenie na udostępnianie Twojego CV i zawartych w nim danych pomiotom trzecim oraz na ich przetwarzanie przez te podmioty w celach związanych z postępowaniem rekrutacyjnym. Wyrażasz również zgodę na stworzenie przez Infopark sp. z.o.o na podstawie danych zawartych w CV Twojej indywidualnej sylwetki pracownika.
+									</p>
+								</div>
+
+								<div class="alert alert-success hide-weak" role="alert">
+									<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+								</div>
+
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	<!-- Modal aplikujRejestracja2 -->
+	<div class="modal fade" id="modalAplikujRejestracja2" tabindex="-1" role="dialog" aria-labelledby="modalAplikujRejestracja2Label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalAplikujRejestracja2Label">
+						<i class="icon-mail"></i> Interesuje mnie ta praca
+						<small>(ID: 123123)</small>
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center d-block d-sm-none">Pomocnik na budowie</h3>
+	
+							<form role="form">
+
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="aplikujRejestracja2-wiadomosc" class="control-label sr-only">Wiadomość do pracodawcy</label>
+									<textarea placeholder="Wiadomość"
+														class="form-control" name="aplikujRejestracja2-wiadomosc" rows="6"
+														required
+														maxlength="400">Witam. Jestem zainteresowany Państwa ofertą pracy na wymienione stanowisko...</textarea>
+								</div>
+
+								<!-- stawka -->
+								<div class="form-group">
+									<label for="aplikujRejestracja2-stawka" class="control-label sr-only">Stawka</label>
+
+									<div class="input-group custom">
+										<span class="input-group-addon">PLN</span>
+
+										<input type="text"
+														id="aplikujRejestracja2-stawka"
+														name="aplikujRejestracja2-stawka"
+														class="form-control only-number"
+														placeholder="Zaproponuj wynagrodzenie netto"
+														maxlength="10">
+
+										<span class="input-group-btn">
+											<select name="" id="aplikujRejestracja2-stawka_typ" class="form-control">
+												<option selected disabled>Rodzaj płatności</option>
+												<option value="calosc">Za całość</option>
+												<option value="godzina">Na godzinę</option>
+												<option value="miesiecznie">miesięcznie</option>
+											</select>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<!-- osoba -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="aplikujRejestracja2-osoba" class="control-label sr-only">
+											Osoba kontaktowa
+                    </label>
+                    <div class="input-icon">
+                      <i class="fa icon-user"></i>
+                      <input type="text"
+                            class="form-control"
+                            name="aplikujRejestracja2-osoba" id="aplikujRejestracja2-osoba"
+                            placeholder="Podaj osobę kontaktową"
+                            maxlength="35"
+                            required>
+                    </div>
+									</div>
+	
+									<!-- telefon -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="aplikujRejestracja2-tel" class="control-label sr-only">
+											Telefon
+                    </label>
+                    <div class="input-icon">
+                      <i class="fa icon-phone" aria-hidden="true"></i>
+                      <input type="tel"
+                            class="form-control only-number"
+                            name="aplikujRejestracja2-tel" id="aplikujRejestracja2-tel"
+                            placeholder="Wpisz numer telefonu"
+                            maxlength="15"
+                            required>
+                    </div>
+									</div>
+								</div>
+
+								<!-- plik -->
+								<div class="form-group">
+									<label class="control-label d-block sr-only">Załącznik CV</label>
+									<div class="d-flex flex-wrap align-items-center">
+										<input type="file" class="custom-file-input" name="aplikujRejestracja2-file-cv" id="aplikujRejestracja2-file-cv" accept="image/gif,image/jpeg" required>
+
+										<label for="aplikujRejestracja2-file-cv" class="btn btn-default color-gray">
+											<i class="fa fa-file"></i> <span>Wybierz plik z CV</span>
+										</label>
+
+										<a class="d-inline-block ml-2 mr-2"
+											 style="flex-shrink: 0;"
+											 data-toggle="tooltip"
+											 data-placement="bottom"
+											 title="Format .jpg lub .gif; maksymalny rozmiar 2MB">
+												<i class="fa fa-2x fa-question-circle" aria-hidden="true"></i>
+										</a>
+									</div>
+								</div>
+
+								<!-- rejestracja czy nie -->
+								<div class="form-group mt-4 radio-change-active">
+									<label class="sr-only" for="modalAplikujRejestracja2-konto">Czy chcesz automatycznie założyć konto?</label>
+
+									<label class="radio-inline d-block d-sm-inline-block active">
+										<input type="radio"
+														name="modalAplikujRejestracja2-konto"
+														id="modalAplikujRejestracja2-konto-nie"
+														data-close-collapse="#modalAplikujRejestracja2-zgoda,#modalAplikujRejestracja2-socials,#modalAplikujRejestracja2-haslo"
+														checked required> Aplikuj bez konta
+									</label>
+
+									<label class="radio-inline d-block d-sm-inline-block">
+										<input type="radio"
+														name="modalAplikujRejestracja2-konto"
+														id="modalAplikujRejestracja2-konto-tak"
+														data-toggle="open-collapse"
+														data-target="#modalAplikujRejestracja2-zgoda,#modalAplikujRejestracja2-socials,#modalAplikujRejestracja2-haslo"> Aplikuj - automatycznie załóż konto
+									</label>									
+
+									<label class="radio-inline d-block d-sm-inline-block">
+										<input type="radio"
+														name="modalAplikujRejestracja2-konto"
+														id="modalAplikujRejestracja2-konto-loguj"
+														data-toggle="open-collapse"
+														data-target="#modalAplikujRejestracja2-haslo, #modalAplikujRejestracja2-socials"
+														data-close-collapse="#modalAplikujRejestracja2-zgoda"> Mam już konto
+									</label>
+							
+								</div>
+
+								<!-- email -->
+								<div class="form-group">
+									<label for="aplikujRejestracja2-email" class="control-label sr-only">
+										Adres email
+									</label>
+									<div class="input-icon">
+										<i class="icon-user fa"></i>
+										<input id="aplikujRejestracja2-email"
+													name="aplikujRejestracja2-email"
+													type="text"
+													placeholder="Podaj adres e-mail"
+													class="form-control email"
+													required>
+									</div>
+								</div>
+
+								<!-- haslo -->
+								<div class="form-group collapse collapse-form-inputs" id="modalAplikujRejestracja2-haslo">
+									<label for="aplikujRejestracja2-haslo2" class="control-label sr-only">
+										Hasło
+									</label>
+									<div class="input-icon">
+										<i class="icon-lock fa"></i>
+											<input type="password"
+														class="form-control make-required"
+														placeholder="Wpisz hasło"
+														id="aplikujRejestracja2-haslo2"
+														name="aplikujRejestracja2-haslo2">
+									</div>
+									<a href="forgot-password.html" class="small mt-2 text-right d-block"> Zapomniałeś hasła? </a>
+								</div>
+	
+								<!-- zgoda -->
+								<div class="form-group collapse collapse-form-inputs" id="modalAplikujRejestracja2-zgoda">
+									<!-- checkbox 1 -->
+									<div class="termbox">
+										<label class="checkbox-inline checkbox" for="modalAplikujRejestracja2-check-regulamin">
+											<input type="checkbox" name="modalAplikujRejestracja2-check-regulamin" id="modalAplikujRejestracja2-check-regulamin" value="1" class="make-required">
+											Oświadczam, że zapoznałem się z <a href="">regulamine serwisu</a> oraz <a href="">polityką prywatności</a><sup>*</sup>
+										</label>
+									</div>
+
+									<!-- checkbox 2 -->
+									<div class="termbox">
+										<label class="checkbox-inline checkbox" for="modalAplikujRejestracja2-check-dane">
+											<input type="checkbox" name="modalAplikujRejestracja2-check-dane" id="modalAplikujRejestracja2-check-dane" value="1" class="make-required">
+											Wyrażam zgodę na przetwarzanie danych osobowych dla celów związanych z prowadzeniem serwisu <sup>*</sup>
+										</label>
+									</div>
+								</div>
+
+								<!-- info -->
+								<div class="privacy-info">
+									<p class="small">
+										Przesyłając CV wyrażasz zgodę na przetwarzanie i przechowywanie zawartych w nim danych przez Infopark sp. z.o.o oraz autora ogłoszenia.
+										<a href="#modalAplikujRejestracja2-info-more" data-toggle="collapse">Szczegóły</a>
+									</p>
+									<p class="small collapse" id="modalAplikujRejestracja2-info-more">
+										Niniejsza zgoda obejmuje również zezwolenie na udostępnianie Twojego CV i zawartych w nim danych pomiotom trzecim oraz na ich przetwarzanie przez te podmioty w celach związanych z postępowaniem rekrutacyjnym. Wyrażasz również zgodę na stworzenie przez Infopark sp. z.o.o na podstawie danych zawartych w CV Twojej indywidualnej sylwetki pracownika.
+									</p>
+								</div>
+
+								<!-- alert success -->
+								<div class="alert alert-success mt-3" role="alert">
+									<strong>Oferta została wysłana!</strong> Potwierdź klikając w link aktywacyjny wysłany na podany adres email.
+								</div>
+
+								<!-- alert danger -->
+								<div class="alert alert-danger mt-3" role="alert">
+									<strong>Oferta nie została wysłana!</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, porro!
+								</div>
+
+								<!-- Submit and reset -->
+								<div class="form-group text-right mb-0">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+
+								<!-- sociale -->
+								<div class="form-group text-center mb-0 collapse" id="modalAplikujRejestracja2-socials">
+									<div class="line-text"><span>lub</span></div>
+
+									<a href="#" class="btn btn-fb mb-1">
+										<i class="fa fa-facebook color-white"></i> Zaloguj przez Facebook
+									</a>
+
+									<a href="#" class="btn btn-gplus">
+										<i class="fa fa-google-plus color-white"></i> Zaloguj przez Google+
+									</a>
+
+									<div class="small color-grey mt-3">
+										<i class="fa fa-lock" aria-hidden="true"></i> Nie opublikujemy nic na Twoim facebooku ani google plus.
+									</div>
+								</div>
+
+							</form>	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	<!-- Modal aplikujNiezalogowany -->
+	<div class="modal fade" id="modalAplikujNiezalogowany" tabindex="-1" role="dialog" aria-labelledby="modalAplikujNiezalogowanyLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalAplikujNiezalogowanyLabel">
+						<i class="icon-mail"></i> Interesuje mnie ta praca
+						<small>(ID: 123123)</small>
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center d-block d-sm-none">Pomocnik na budowie</h3>
+
+							<!-- alert -->
+							<div class="alert alert-success collapse-mobile" role="alert">
+								<h2>Jesteś zmęczony ciągłym uzupełnianiem danych?	</h2>
+								
+								<div class="d-sm-flex justify-content-between">
+									<div class="collapse" id="modalAplikujNiezalogowany-alert">
+										<p>Zarejestruj się a Twoje dane, raz zapisane, będą automatycznie dodawane do odpowiedzi na oferty pracy!</p>
+									</div>
+									<a class="btn btn-success btn-right mb-2 mb-sm-0" style="flex-shrink:0;" href="register.html">Zarejestruj się</a>
+								</div>
+
+
+								<!-- close btn -->
+								<div class="close-btn close-btn-absolute mt-0">
+									<button data-target="#modalAplikujNiezalogowany-alert" data-toggle="collapse" type="button" aria-expanded="false">
+										<i class="fa fa-angle-down"></i>
+									</button>
+								</div>
+							</div>
+	
+							<form role="form">
+
+								<!-- wiadomosc -->
+								<div class="form-group">
+									<label for="aplikujNiezalogowany-wiadomosc" class="control-label sr-only">Wiadomość do pracodawcy</label>
+									<textarea placeholder="Wiadomość"
+														class="form-control" name="aplikujNiezalogowany-wiadomosc" rows="6"
+														required
+														maxlength="400">Witam. Jestem zainteresowany Państwa ofertą pracy na wymienione stanowisko...</textarea>
+								</div>
+
+								<!-- stawka -->
+								<div class="form-group">
+									<label for="aplikujNiezalogowany-stawka" class="control-label sr-only">Stawka</label>
+
+									<div class="input-group custom">
+										<span class="input-group-addon">PLN</span>
+
+										<input type="text"
+														id="aplikujNiezalogowany-stawka"
+														name="aplikujNiezalogowany-stawka"
+														class="form-control only-numbers"
+														placeholder="Zaproponuj wynagrodzenie netto"
+														maxlength="10">
+
+										<span class="input-group-btn">
+											<select name="" id="aplikujNiezalogowany-stawka_typ" class="form-control">
+												<option selected disabled>Rodzaj płatności</option>
+												<option value="calosc">Za całość</option>
+												<option value="godzina">Na godzinę</option>
+												<option value="miesiecznie">miesięcznie</option>
+											</select>
+										</span>
+									</div>
+								</div>
+
+								<div class="row">
+									<!-- osoba -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="aplikujNiezalogowany-osoba" class="control-label sr-only">
+											Osoba kontaktowa
+										</label>
+										<input type="text"
+													class="form-control"
+													name="aplikujNiezalogowany-osoba" id="aplikujNiezalogowany-osoba"
+													placeholder="Podaj osobę kontaktową"
+													maxlength="35"
+													required>
+									</div>
+	
+									<!-- telefon -->
+									<div class="form-group col-xs-6 col-xxs-12">
+										<label for="aplikujNiezalogowany-tel" class="control-label sr-only">
+											Telefon
+										</label>
+										<input type="text"
+													class="form-control only-number"
+													name="aplikujNiezalogowany-tel" id="aplikujNiezalogowany-tel"
+													placeholder="Wpisz numer telefonu"
+													maxlength="15"
+													required>
+									</div>
+								</div>
+
+								<!-- email -->
+								<div class="form-group">
+									<label for="aplikujNiezalogowany-email" class="control-label sr-only">
+										Adres email
+									</label>
+									<input type="text"
+												class="form-control"
+												name="aplikujNiezalogowany-email" id="aplikujNiezalogowany-email"
+												placeholder="Podaj email"
+												maxlength="50"
+												required>
+								</div>
+
+								<!-- plik -->
+								<div class="form-group">
+									<label class="control-label d-block sr-only">Załącznik CV</label>
+									<div class="d-flex flex-wrap align-items-center">
+										<input type="file" class="custom-file-input" name="aplikujNiezalogowany-file-cv" id="aplikujNiezalogowany-file-cv" accept="image/gif,image/jpeg" required>
+
+										<label for="aplikujNiezalogowany-file-cv" class="btn btn-default">
+											<i class="fa fa-file"></i> <span>Wybierz plik z CV</span>
+										</label>
+
+										<a class="d-inline-block ml-2 mr-2"
+											 style="flex-shrink: 0;"
+											 data-toggle="tooltip"
+											 data-placement="bottom"
+											 title="Format .jpg lub .gif; maksymalny rozmiar 2MB">
+												<i class="fa fa-2x fa-question-circle" aria-hidden="true"></i>
+										</a>
+									</div>
+								</div>
+
+								<!-- info -->
+								<div class="privacy-info">
+									<p class="small">
+										Przesyłając CV wyrażasz zgodę na przetwarzanie i przechowywanie zawartych w nim danych przez Infopark sp. z.o.o oraz autora ogłoszenia.
+										<a href="#modalAplikujNiezalogowany-info-more" data-toggle="collapse">Szczegóły</a>
+									</p>
+									<p class="small collapse" id="modalAplikujNiezalogowany-info-more">
+										Niniejsza zgoda obejmuje również zezwolenie na udostępnianie Twojego CV i zawartych w nim danych pomiotom trzecim oraz na ich przetwarzanie przez te podmioty w celach związanych z postępowaniem rekrutacyjnym. Wyrażasz również zgodę na stworzenie przez Infopark sp. z.o.o na podstawie danych zawartych w CV Twojej indywidualnej sylwetki pracownika.
+									</p>
+								</div>
+
+								<div class="alert alert-success hide-weak" role="alert">
+									<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+								</div>
+
+								<!-- Submit and reset -->
+								<div class="form-group text-right">
+									<button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Zamknij">
+										Anuluj
+									</button>
+									<button class="btn btn-primary">
+										Wyślij
+									</button>
+								</div>
+
+							</form>	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+	<!-- Modal aplikujLoguj -->
+	<div class="modal fade" id="modalAplikujLoguj" tabindex="-1" role="dialog" aria-labelledby="modalAplikujLogujLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalAplikujLogujLabel">
+						<i class="icon-mail"></i> Interesuje mnie ta praca
+						<small>(ID: 123123)</small>
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+	
+							<h3 class="bold mt5 mb15 text-center d-block d-sm-none">Pomocnik na budowie</h3>
+
+							<!-- alert -->
+							<div class="alert alert-success collapse-mobile" role="alert">
+								<h2>Jesteś zainteresowany tą pracą?	</h2>
+								
+								<div class="d-sm-flex justify-content-between">
+									<div class="collapse" id="modalAplikujLoguj-alert">
+										<p>Skorzystaj z darmowej rejestracji w serwisie, uzupełnij swój profil i wysyłaj swoje propozycje n oferty pracy!</p>
+									</div>
+									<a class="btn btn-success btn-right mb-2 mb-sm-0" style="flex-shrink:0;" href="register.html">Zarejestruj się</a>
+								</div>
+
+
+								<!-- close btn -->
+								<div class="close-btn close-btn-absolute mt-0">
+									<button data-target="#modalAplikujLoguj-alert" data-toggle="collapse" type="button" aria-expanded="false">
+										<i class="fa fa-angle-down"></i>
+									</button>
+								</div>
+							</div>
+	
+							<form role="form">
+
+								<!-- email -->
+								<div class="form-group">
+									<label for="aplikujLoguj-email" class="control-label">
+										Zaloguj się:
+									</label>
+									<label for="aplikujLoguj-email" class="control-label sr-only">
+										Adres email
+									</label>
+									<div class="input-icon">
+										<i class="icon-user fa"></i>
+										<input id="aplikujLoguj-email"
+													name="aplikujLoguj-email"
+													type="text"
+													placeholder="Podaj adres e-mail"
+													class="form-control email"
+													required>
+									</div>
+								</div>
+
+								<!-- haslo -->
+								<div class="form-group">
+									<label for="aplikujLoguj-haslo" class="control-label sr-only">
+										Hasło
+									</label>
+									<div class="input-icon">
+										<i class="icon-lock fa"></i>
+											<input type="password"
+														class="form-control required"
+														placeholder="Wpisz hasło"
+														id="aplikujLoguj-haslo"
+														name="aplikujLoguj-haslo"
+														required>
+									</div>
+								</div>
+
+								<!-- dont logout -->
+								<div class="form-group d-flex justify-content-between">
+									<label class="checkbox-inline checkbox m-0 pt-0" for="check-logout">
+										<input type="checkbox" name="check-logout" id="check-logout" value="logout">
+										Nie wylogowywuj mnie
+									</label>
+								</div>
+
+								<div class="alert alert-success hide-weak" role="alert">
+									<strong>Dziękujemy! </strong> Twoje dane zostały zapisane poprawnie.
+								</div>
+
+								<!-- submit -->
+								<div class="row mt-5">
+									<div class="form-group col-md-8 col-md-offset-2">
+										<input name="submit"
+													class="btn btn-primary  btn-block"
+													value="Wyślij"
+													type="submit">
+	
+										<div class="line-text"><span>lub</span></div>
+	
+										<a href="#" class="btn btn-block btn-fb">
+											<i class="fa fa-facebook color-white"></i> Zaloguj przez Facebook
+										</a>
+	
+										<a href="#" class="btn btn-block btn-gplus">
+											<i class="fa fa-google-plus color-white"></i> Zaloguj przez Google+
+										</a>
+									</div>
+								</div>
+
+							</form>	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+  <!-- /modal -->
+  
+  <!-- Modal Category -->
+	<div class="modal fade" id="modalCategory" tabindex="-1" role="dialog" aria-labelledby="modalCategoryLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalCategoryLabel">
+						<i class="icon-newspaper"></i> Wybierz kategorię
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+          <form id="modalCategory-accordion" class="row modal-confirm" data-modal="#modalCategory">
+
+            <div class="col-sm-6 col-md-4">
+              <!-- Motoryzacja -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Mechanika-pojazdowa"
+                          value="Mechanika pojazdowa"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-car ln-shadow"></i>
+                    <span>Mechanika pojazdowa</span>
+                    
+                  </div>
+                </label> 
+              </div>
+  
+              <!-- Informatyka -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-IT"
+                          value="IT / Telekomunikacja"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-desktop ln-shadow"></i>
+                    <span>IT / Telekomunikacja</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- handel-detaliczny -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-handel-detaliczny"
+                          value="handel-detaliczny"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-cubes ln-shadow"></i>
+                    <span>Handel detaliczny</span>
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Sluzba-zdrowia -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Sluzba-zdrowia"
+                          value="Służba zdrowia / Opieka"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-user-md ln-shadow"></i>
+                    <span>Służba zdrowia / Opieka</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Transport -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Transport"
+                          value="Kierowca / Transport"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-truck ln-shadow"></i>
+                    <span>Kierowca / Transport</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Logistyka -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Logistyka"
+                          value="Logistyka / Spedycja"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-map-signs ln-shadow"></i>
+                    <span>Logistyka / Spedycja</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Gastronomia -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Gastronomia"
+                          value="Gastronomia"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-cutlery ln-shadow"></i>
+                    <span>Gastronomia</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Sztuka -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Sztuka"
+                          value="Sztuka / Kultura / Rozrywka"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-university ln-shadow"></i>
+                    <span>Sztuka / Kultura / Rozrywka</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Edukacja-i-sport -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Edukacja"
+                          value="Szkolnictwo / Edukacja"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-graduation-cap ln-shadow"></i>
+                    <span>Szkolnictwo / Edukacja</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Budownictwo -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Budownictwo"
+                          value="Budowa / Wykończenie"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-home ln-shadow"></i>
+                    <span>Budowa / Wykończenie</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+            </div>
+            <div class="col-sm-6 col-md-4">
+
+              <!-- Utrzymanie-czystosci -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Utrzymanie-czystosci"
+                          value="Utrzymanie czystości"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-tint ln-shadow"></i>
+                    <span>Utrzymanie czystości</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Ochrona -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Ochrona"
+                          value="Ochrona"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-shield ln-shadow"></i>
+                    <span>Ochrona</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Mechanika-precyzyjna -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Mechanika-precyzyjna"
+                          value="Mechanika precyzyjna"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-rocket ln-shadow"></i>
+                    <span>Mechanika precyzyjna</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Rolnictwo -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Rolnictwo"
+                          value="Rolnictwo"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-leaf ln-shadow"></i>
+                    <span>Rolnictwo</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Przemysl -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Przemysl"
+                          value="Produkcja / Przemysł"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-industry ln-shadow"></i>
+                    <span>Produkcja / Przemysł</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Uslugi -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Uslugi"
+                          value="Uslugi"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-shopping-bag ln-shadow"></i>
+                    <span>Uslugi</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Praca-sezonowa -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Praca-sezonowa"
+                          value="Praca sezonowa"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-sun-o ln-shadow"></i>
+                    <span>Praca sezonowa / dodatkowa</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Administacja / Biuro -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Administacja"
+                          value="Administacja / Biuro"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-briefcase ln-shadow"></i>
+                    <span>Administacja / Biuro</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Finanse / Księgowość -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Finanse"
+                          value="Finanse / Księgowość"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-money ln-shadow"></i>
+                    <span>Finanse / Księgowość</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Uroda / Kosmetyka -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Uroda"
+                          value="Uroda / Kosmetyka"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-paint-brush ln-shadow"></i>
+                    <span>Uroda / Kosmetyka</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+            </div>
+            <div class="col-sm-6 col-md-4">              
+
+              <!-- Hotelarstwo / Turystyka -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Hotelarstwo"
+                          value="Hotelarstwo / Turystyka"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-bed ln-shadow"></i>
+                    <span>Hotelarstwo / Turystyka</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Magazyn / Dystrybucja / Zakupy -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Magazyn"
+                          value="Magazyn / Dystrybucja / Zakupy"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-shopping-basket ln-shadow"></i>
+                    <span>Magazyn / Dystrybucja / Zakupy</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Marketing / PR / Media -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Marketing"
+                          value="Marketing / PR / Media"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-users ln-shadow"></i>
+                    <span>Marketing / PR / Media</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Obsługa klienta -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Obsluga-klienta"
+                          value="Obsługa klienta"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-address-book-o ln-shadow"></i>
+                    <span>Obsługa klienta</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Opieka dla dzieci -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Opieka-dla-dzieci"
+                          value="Opieka dla dzieci"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-child ln-shadow"></i>
+                    <span>Opieka dla dzieci</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Kadra kierwonicza -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Kadra-kierwonicza"
+                          value="Kadra kierwonicza"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-address-card-o ln-shadow"></i>
+                    <span>Kadra kierwonicza</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+              <!-- Pozostałe oferty -->
+              <div class="radio cat-list">
+                <label>
+                  <input type="radio" name="modalCategory-cat"
+                          id="modalCategory-Pozostale"
+                          value="Pozostałe oferty"
+                          required>
+                  <div class="cat-title">
+                    <i class="fa fa-file ln-shadow"></i>
+                    <span>Pozostałe oferty</span>
+                    
+                  </div>
+                </label> 
+              </div>
+
+            </div>
+
+          </form>              
+				</div>
+	
+			</div>
+		</div>
+	</div>
+  <!-- /modal -->
+  
+  <!-- Modal Profil specjalisty -->
+	<div class="modal fade" id="modalSpec" tabindex="-1" role="dialog" aria-labelledby="modalSpecLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalSpecLabel">
+						<i class="icon-user"></i> Profil specjalisty
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+          
+          <!-- metadane -->
+          <span class="info-row meta-data">
+            <span>Kandydat na: <a href="#">Kierowca tira na trasy Alaska - Berlin</a></span>
+            <span class="id">
+              ID: 123123
+            </span>
+          </span>
+
+          <div class="d-flex flex-wrap flex-column-reverse flex-sm-row align-items-center">
+            <!-- info -->
+            <div class="user-info seller-info mt-3 flex-shrink-0 mx-auto mx-sm-0">            
+              <h3 class="no-margin">Sergiej Sobczuk</h3>
+              <div class="info-row mb-2">
+                <i class=" icon-clock"> </i> Ostatnie logowanie: 08/01/2016
+              </div>
+              <p><span class="bold">mężczyzna</span>, 25 lat</p>
+              <p><span class="bold">kraj</span>: Ukraina - obecnie w Polsce</p>
+              <p><span class="bold">j. polski</span>: podstawowy</p>
+              <p><span class="bold">wykształcenie wyższe</span>: mechanik samochodowy</p>
+              <p>
+                <span class="bold">Oczekiwania finansowe:</span><br>
+                <span class="big bold">3800 - 4000</span>
+                <span class="">PLN / miesiąc</span>
+              </p>
+              
+              <!-- tagi -->
+              <div class="tags">
+                <span>program 500+</span>
+                <span>kierowca tirów</span>
+                <span>opiekunka do dzieci</span>
+              </div>
+            </div>
+  
+            <!-- zdjecie -->
+            <div class="user-info seller-info mx-auto mr-sm-0 ml-sm-auto text-center">
+              <div class="company-logo-thumb">
+                <a>
+                  <img alt="img" class="img-responsive img-circle" src="images/users/5.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- tresc -->
+          <div class="ads-details-info jobs-details-info border-top pt-3">
+
+            <h4 class="text-uppercase ">poszukuje pracy w zakresie:</h4>
+            <ul class="list-check">
+              <li>
+                Rodzaj szukanej pracy: <span>Na pełny etat</span>
+              </li>
+              <li>
+                W dni: <span>Poniedziałek, Wtorek, Środa, Czwartek, Piątek</span>
+              </li>
+            </ul>
+
+            <h4 class="text-uppercase ">Szukam pracy w branży:</h4>
+            <ul class="list-check">
+              <li>
+                Budownictwo:<br>
+                <span><span class="bold">doświadczenie: </span>brak, </span>
+                <span><span class="bold">posiadam: </span>kursy</span>
+              </li>
+              <li>
+                Transport - kierowca:<br>
+                <span><span class="bold">doświadczenie: </span>expert, </span>
+                <span><span class="bold">posiadam: </span>wykształcenie wyższe, certyfikaty</span>
+              </li>
+            </ul>
+
+            <h4 class="text-uppercase ">wykonywana praca:</h4>
+            <ul class="custom-list">
+              <li>
+                <h4 class="add-title">Kierowca tira</h4>
+                <div class="info-row">
+                  <span><i class="fa fa-map-marker" aria-hidden="true"></i> zdobyte w Polsce</span>
+                  <span><i class="fa fa-clock-o" aria-hidden="true"></i> 01.02.2012 - 23.12.2016</span>
+                  <span><i class="fa fa-user" aria-hidden="true"></i> Szwagrex</span>
+                </div>
+                <div class="description">
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro nesciunt cupiditate voluptate eveniet itaque, ratione dignissimos quisquam quo animi, doloremque modi, a quae quaerat architecto odit cumque vero necessitatibus? Reiciendis!</p>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+
+				</div>
+	
+			</div>
+		</div>
+	</div>
+  <!-- /modal -->
+  
+  <!-- Modal Profil pracodawcy -->
+	<div class="modal fade" id="modalPracodawca" tabindex="-1" role="dialog" aria-labelledby="modalPracodawcaLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+					<button type="button" class='close' data-dismiss="modal" aria-label="Zamknij">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="modalPracodawcaLabel">
+						<i class="icon-user"></i> Profil pracodawcy
+					</h4>
+				</div>
+	
+				<div class="modal-body">
+          
+          <!-- metadane -->
+          <span class="info-row meta-data">
+            <span>W serwisie od: 01.01.1970</span>
+            <span class="id">
+              Ilość ofert: <a href="#" class="d-inline">123</a>
+            </span>
+          </span>
+
+          <div class="d-flex flex-wrap flex-column flex-sm-row">
+            <!-- zdjecie -->
+            <div class="user-info seller-info mx-auto mr-sm-0 ml-sm-0 text-center">
+              <div class="company-logo-thumb">
+                <a href="#" class="d-block">
+                  <img alt="img" class="img-responsive img-circle" src="images/jobs/company-logos/11.jpg">
+                </a>
+              </div>
+            </div>
+
+            <!-- info -->
+            <div class="user-info seller-info mt-3 flex-shrink-0 mx-auto mx-sm-0">            
+              <h3 class="no-margin"> Data Systems Ltd</h3>
+              <p>Mazowieckie: <strong>New York</strong></p>
+              <p>ul. Manhattan 125</p>
+              <p><a href="#" class="color-black">www.demoweb.com</a></p>
+            </div>
+          </div>
+
+          <!-- tresc -->
+          <div class="ads-details-info jobs-details-info border-top pt-3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore pariatur amet facere quod, eum perferendis quam, tempore, delectus beatae eaque harum id debitis dolorum optio illo asperiores corrupti? Repellat quas consectetur doloribus non voluptatem atque hic, maxime nobis libero porro fuga unde quibusdam? Recusandae id officia assumenda nulla amet culpa.</p>
+
+            <h4 class="text-uppercase mb-0">nasze oferty pracy:</h4>
+
+            <!-- oferty -->
+            <div class="adds-wrapper jobs-list">
+
+              <!--job item wyslane cv-->
+              <div class="item-list job-item">
+                <div class="add-desc-box">
+                  <div class="add-details jobs-item">
+
+                    <!-- wysłane cv -->
+                    <a href="#" class="sendcv" data-toggle="tooltip" data-placement="bottom" title="Wysłano CV">
+                      <i class="fa fa-check bigger btn-check color-success"></i>
+                    </a>
+                      
+                    <h4 class="job-title m-0 p-0">
+                      <a href="job-details.html"> Praca na plantacji truskawek, pracownik fizyczny </a>
+                    </h4>
+
+                  </div>
+                </div>
+              </div>
+              <!--/.job-item-->
+
+              <!--job item -->
+              <div class="item-list job-item">
+                <div class="add-desc-box">
+                  <div class="add-details jobs-item">
+
+                    <h4 class="job-title m-0 p-0">
+                      <a href="job-details.html"> Zatrudnimy spawacza konstrukcji drewnianych </a>
+                    </h4>
+
+                  </div>
+                </div>
+              </div>
+              <!--/.job-item-->
+  
+             </div>
+          </div>
+        </div>
+        
+        <div class="modal-footer text-right">
+          <a href="#" class="btn btn-primary btn-sm">
+            <i class="icon-pencil"></i> Edytuj profil
+          </a>
+          <a href="#" class="btn btn-primary btn-sm">
+            <i class="icon-docs"></i> Lista ogłoszeń
+          </a>
+        </div>
+	
+			</div>
+		</div>
+	</div>
+	<!-- /modal -->
+
+</div>
+
+
+
+<!-- Le javascript
+================================================== -->
+
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="assets/js/jquery/2.2.4/jquery.js"></script>
+<script src="assets/js/vendors.min.js"></script>
+<script src="assets/js/messages_pl.min.js"></script>
+<script src="assets/js/fileinput.js"></script>
+<script src="assets/js/jquery.sticky-kit.min.js"></script>
+
+<!-- include custom script for site  -->
+<script src="assets/js/script.js"></script>
+
+
+</body>
+</html>

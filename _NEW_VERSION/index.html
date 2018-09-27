@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="assets/ico/favicon.png">
+  <!-- style -->
+  <style>
+    ul > li {
+      margin: 8px 0;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+<h3>Rozdział 1. Logowanie/Zakładanie konta profilowego :</h3>
+ <ul>
+    <li><a href="final_login.html"><b>Krok 1:</b>Logowanie</a></li>
+    <li><a href="link_pracodawca_aktywacja_konta_login.html">Logowanie na dane konta w trakcie zakładania</a></li>
+    <li><a href="final_rejestracja.html"><b>Krok 2:</b>Rejestracja</a></li>
+     <li><a href="link_pracodawca_aktywacja_konta.html"><b>Krok 3: </b> Strona z Podsumowaniem</a></li>
+     <li><a href="email_templates/pracodawca_temple_aktywacja_konta.html"><b>Krok 4: </b>  Mail aktualizacyjny konto</a></li>
+     <li><a href="final_login_pierwsze_logowanie.html"><b>Krok 5: </b> Przejście z Linku aktywacyjnego z maila do strony z logowaniem (mail - aktywny)</a></li>
+     <li><a href="email_templates/pracodawca_template_potwierdzenie_zalozenia_konta.html"><b>Mail potwierdzający</b>  Potwierdzenie mailowe załozenie konta</a></li>
+     <li><a href="final_rejestracja_ponownie.html"><b>Krok 6:</b>  Przejście z Linku aktywacyjnego z maila
+ (mail - przeterminowany) - ponowne przejscie do panelu rejestracji </a></li>
+     <li><a href="link _aktywacja_konta_przeterminowany.html"><b>Krok 7:</b>  Przejście z Linku aktywacyjnego z maila
+ (mail - przeterminowany) (konto załozone) - przejscie do pustej strony</a></li>
+
+</ul>
+
+<h3>Rozdział 2. Rozdział 2. Przypomnij hasło/zmiana hasła :</h3>
+ <ul>
+      <li><a href="final_forgot-password.html"><b>Krok 1: </b> Przypomnij zmień hasło</a></li>
+    <li><a href="link_potwierdzenie_zmiana_hasla.html">Krok 2: - Plansza z info o wysłanym linku</a></li>
+    <li><a href="email_templates/link_nowe_haslo.html"><b>Krok 3: </b>  Mail z linkiem do zmiany hasła</a></li>
+    <li><a href="final_login_pierwsze_logowanie_po_zmianie_hasla.html">Potwierdzenie maila w trakcie wazności - przejscie do logowania</a>
+    <li><a href="email_templates/link_potwierdzenie_nowehaslo.html">Mail potwierdzający zmanę hasła</a></li> 
+    <li><a href="final_potwierdz_nowe_haslo.html">Potwierdzenie maila po jego czasie ważności (najnowszy mail)</a></li> 
+    <li><a href="link _aktywacja_hasla_przeterminowany.html">Potwierdzenie maila po jego czasie ważności  (stary mail)</a></li>
+    
+</ul>
+
+<h3>Zakładanie konta Pracodawcy - przez dodawanie ogłoszenia:</h3>
+Uzytkownik pracodawca niezalogowany, tworzy konto przez formularz "dodawanie ogłoszeni"<br>
+ <ul>
+    <li><a href="dodawanie_rejestracja.html"><b>Krok 1</b> - Dodawanie ogłosenia wraz z rejestracją</a><br><small>Czy w "lokalizacji pracy" rezygnujemy z pół województwo, miejscowość, a wstawiamy jedno pole "wpisz miejscowość" podłaczamy baze z gus "teryt"</small></li>
+   
+    <li><a href="link_pracodawca_aktywacja_ver2.html"><b>Krok 2 </b> - Strona potwierdzająca wysłanie linku aktywacyjnego </a></li>
+    <li><a href="link _dodawanie_ogloszenia_przeterminowany.html"><b>Krok 2 </b> - Strona potwierdzająca wysłanie linku aktywacyjnego link przeterminowany</a></li> 
+    Bardzo ważna kwestia.<br>
+<small>
+Jak działa link aktywacyjny, nadesłany na maila? <br>
+a). Przekierowuje nas do strony z logowaniem? (login, hasło)<br>
+b). Przekierowuje nas bezpośrednio do panelu dodawania ogłoszenia, wraz z uzupełnioną treścią.<br>
+</small>
+
+    <li><a href="email_templates/pracodawca_template_aktywacja.html"><b>Krok 3 </b> - Mail aktywacyjny publikację</a></li>
+    <li><a href="dodawanie_akceptacja_profilu.html">Przejscie z linku aktywacyjnego kontunuacja dodawania</a></li>
+    <small>Tu do zrobienia:<br>1. Bym zrobił coś z tym "endzinem" do wstawiana logo, przed kopertą wstawił może ikonkę plusa<br>
+      2. Praca dla Roberta wstawić "croppera"</small>
+    <li><a href="pracodawca_wystawione_ogloszenia_wer2.html">Obraz po dodaniu ogłoszenia - przejscie do listy ogłoszeń wer 2 zuborzona</a></li>
+<small>
+  1.Wyrzucamy przypominajkę o uzupełnieniu danych profilowych.<br>
+  2.Dodatkowo jeżeli płatność się powiedzie do każdej widomości dodajemy informacje o płatności. Oczywiście te informacje idą z systemu płatniczego<br>
+  3. Nasze guziki.<br>
+  a.Jeżeli nasze ogłoszenie nie jest promowane sprzedajemy "dwa guziki - pokazujemy co możemy zrobić aby wyróznić ogłoszenie" (podbij) (wyróznij)<br>
+  b.Jeżeli nasze ogłoszenie, będzie wyróznione na pełny okres publikacji ogłoszenia, przycisk "wyróżnij" znika, na jego miejsce wskakuje "przedłuż"
+  c.Jeżeli ogłoszenie zostanie podbite , przycisk "podbij" znika na okreslony czas np 5 godzin (do uzgodnienia, czy ustalamy ramy czasowe).<br>
+  d.Jeżeli zbliża się termin wygaśnięcia ogłoszenia (np 3. dni), przyciski wyróznij, podbij , znikają pojawia się jedynie przycisk "przedłuż"<br>
+  e. Tak samo w przypadku jak wszystkie opcje sią wykupione (podbicie, wyróznienie), niech się wyświetli przycisk "przedłuż"<br>
+  <b>Pytanie za 100 punktów</b><br>
+  Powiadomienia mailowe o ogłoszeniu<br>
+  - start publikacji ogłoszenia<br>
+  - ogłoszenie wygasnie za ? 3, 4 5 dni<br>
+  - ogłoszenie wygasło <br>
+  Nie dawałbym informacji że ogłoszenie zostało podbite wyróznione edytowane i takie tam, takie sprawy trzymałbym jedynie w systemie
+
+
+</small>
+    <li><a href="pracodawca_nadeslane_cv.html">Lista nadesłane CV do ogłoszenia </a></li>
+    <small>
+    Opcje wyróznij, podbij, przedłuż - przekierowanie do tego samego panelu, jedynie róznią sie nagłówkami<br>
+    Wyświtlają sie tylko te opcje które nie sa wykupione.<br>
+    Jeżeli jest wykupione wyróznienie na pełny okres, opcja ta sie nie pojawia, podobnie z podbiciem. Jezeli dokupimy przedłużenie, opcjia wyróznij powinna sie wyświetlić.
+    </small>  
+    <li><a href="pracodawca_abonament.html">Wyróżnij/Podbij ogłoszenia</a></li>
+    <small>1.Jeżeli ogłoszenie ma więcej niż 3 dni do wygaśnięcia , wówcza opcja "Przedłuż":<br>
+    a. bym tą opcję usunął<br>
+    b. zrobiłbym ją płatną<br>
+    Chcę uniknąć takiej sytuacji, zakładamy że wszystkie ogłoszenia są na początku darmowe, nawet ich wznowienie (chodzi o to aby jak najwięcej nałapać wpisów), nie chcę sytuacji że osoba będzie wraz z funkcją podbicia promowania miała możliwość dowolnego przedłuzania ogłoszenia. Może to spowodować że nabije sobie kilkaset dni. Co niesie za sobą niebezpieczeństwo, że takie ogłoszenie będzie "wieczne" i może być ich pełno.<br>W póżniejszym okresie kiedy publikacja będzie płatna opcja przedłużenia jest jak najbardziej wskazana.<br>Co robimy w przypadku kiedy wszystkie opcje : wyróżnienie , podbicie będą już zastosowane na pełny okres publikacji, nie dajemy takiej możliwości aby przejść do panelu wyróznień.(jedyna opcja jaka pozostaje to przedłużenie za kasę)</small>
+    <li><a href="pracodawca_abonament_przedluzenie.html">Przedłuż ogłoszenia</a></li>
+    <small>Tu zastosowałbym przedłuzanie ogłoszenia w przypadku kiedy ogłoszenie wygasło lub do wygasnięcia za 3 dni, oczywiście przedłużenie za free<br></small>
+    <small>Jezeli sie uda wykupić wybrana opcję przechodzimy bezposrednio do listy ogłoszeń</small>
+    <li><a href="edytuj_ogloszenie.html">Edycja ogłoszenia</a></li>
+    
+    
+    <li><a href="dodaj_wznow_ogloszenie.html">Wznowienie ogłoszenia</a></li>
+    <small>Przy wznawianiu ogłoszenia , jeżeli nie ma żadnych poprawek w treści ogłoszenia, ogłoszenie takie jest publikowane bez akceptacji
+    </small>
+    <li><a href="pracodawca_kredyty.html">Płatność za kredyty</a></li>
+    <li><a href="pracodawca_profil.html">Profil pracodawcy</a></li>
+    <li><a href="pracodawca_ustawienia.html">Ustawienia - ustawienia profilu</a></li>
+    <li><a href="pracodawca_platnosci.html">Ustawienie - lista płatności</a></li>
+    <li><a href="pracodawca_lista_wiadomosci_pracodawca.html">Wiadomości - lista wszystkich wiadomości</a></li>
+    <small>
+     zasady działania wiadomości<br>
+     Wysłanie wiadomości jest kontynuacją nadesłania cv do oferty. Rozpocząć konwersację jako pierwszy jedynie może pracodawca.
+     Wyrózniamy 3 ikonki, wysłane, nowa wiadomość, przeczytane. Tytułem wiadomości zawsze bedzie tytuł ogłoszenia, odbiorcą i nadawca zawsze podmiot wysyłający ofertę do pracy<br>
+     Moja sugestja nie wiem czy nie wpowadzić filtrowania, po ogłoszeniach.
+    </small>
+    <li><a href="pracodawca_wiadomosci_watek_pracodawca_oprywatna.html">Wiadomości - zagłębienie w wątek osoba prywatna</a></li>
+    <li><a href="pracodawca_wiadomosci_watek_pracodawca_agencja.html">Wiadomości - zagłębienie w wątek agencja pracy</a></li>
+    <small>Jak wspominałem wiadomośći są kontunuacją wysłanego CV, dlatego rozwinięcie wątku będzie zawsze zaczynał sie od treści wysłanego CV.<br>niech strona z otwartym watkiem zawsze się zaczyna na ostaniej wiadomości, tak aby widoczna była ostatnia wiadomośc i formularz do odpisania </small>
+  </ul>
+
+  <h3>Zakładanie konta Pracodawcy - przez rejestrację:</h3>
+ <ul>
+    <li><a href="final_rejestracja.html"><b>Krok 1</b> Rejestracja</a></li>
+    <small>Moje watpliwości co do "kapczy"<br>
+      Dajemy mozliwośc pracownikowi , logowania sie przez fb, g+<br></small>
+    <li><a href="link_pracodawca_aktywacja_konta.html"><b>Krok 2 </b> - Strona potwierdzająca wysłanie linku aktywacyjnego</a></li>
+    <li><a href="email_templates/pracodawca_temple_aktywacja_konta.html">Mail aktywacyjny aktywacja po rejestracji</a></li>
+    <li><a href="link _aktywacja_konta_przeterminowany.html"><b>Krok 2 link przeterminowany </b> - Strona potwierdzająca wysłanie linku aktywacyjnego</a></li>
+    <li><a href="pracodawca_panel_powitalny_wer2.html">Panel powitalny</a></li>
+    <small>Tu sie tylko skupmy na jednym , przycisku majwazniejszym, na dodaniu ogłoszenia, niech on bedzie na środku ekranu</small>
+    <li><a href="dodawanie_zarejestrowany.html">Dodawanie ogloszenia po zarejestrowaniu</a></li>
+  </ul>
+  <h3>Powiadomienia mailowe:</h3>
+  Tu jest sporo pytań:<br>
+  1. Czy w powiadomieniach mailowych odnotowujemy każde "pierdniecie"<br>
+  2. Jeżeli tak jakie musimy odnotować powiadomienia?<br>
+  3. Jak działaja linki w powiadomieniu ? (po kliknięciu w link , jesteśmy przekierowywani, bezposrednio do strony z logowaniem, po zalogowamiu przechodzimy do odpowiedniej strony, czy też robimy że z linku przechodzimy na strone bez logowania. )
+  4. Czy każdy link ma ważność
+
+
+  <ul>
+  <li><a href="email_templates/noweCV.html">Powiadomienie nowe CV</a></li>
+  <li><a href="email_templates/nowaWiadomosc.html">Powiadomienia nowa wiadomość</a></li>
+  <li><a href="email_templates/ogloszenie_powiadomienie.html">Powiadomienie o weryfikacji</a></li>
+  <li><a href="email_templates/ogloszenie_opublikowane.html">Ogłoszenie opublikowane</a></li>
+  <li><a href="email_templates/ogloszenie_wygasnie.html">Przypominajka o wygaśnięciu</a></li>
+  <li><a href="email_templates/ogloszenie_wznawianie.html">Ogłoszenie wygasło wznów</a></li>
+  <li><a href="email_templates/ogloszenie_platnosc.html">Płatnośc za ogłoszenie</a></li>
+  <small> moja uwaga płatności bym połaczył z informacją o opublikowaniu ogłoszenia<br>Pamietajmy że dojdzie powiadomienie o płatności z systemu płatności</small>
+  <li><a href="email_templates/ogloszenie_platnosc_kredytu.html">Płatność kredytami</a></li>
+  <li><a href="email_templates/ogloszenie_platnosc_zakup_kredytu.html">Płatność zakup kredytów</a></li>
+  <li><a href="link_strona_pusta.html">Strona pusta</a></li>
+  </ul>
+
+
+<h3>Ogólne wytyczne które trzeba dorobić.</h3>
+<small>W stronach gdzie mamy dodawanie ogłoszenia, edytowanie.<br>
+1.  W lokalizacji miejsca pracy wstawiamy jedno pole podczepiamy baze z GUS u<br>
+2.  Wstawiamy „croppera”<br>
+3.  Ten sam „cropper” wstawiamy w opisie – Profil<br>
+<strong>Zasady płatności</strong> <br>
+1.  Znika przycisk „zapłać kredytami” w momencie kiedy wartość kredytów jest niższa niż wartość płatności.<br>
+<strong>Wyświetlanie listy :</strong><br>
+1.  Jako pierwsze wyświetlają się zawsze wiadomości gdzie są nadesłane do nich nowe wiadomości <br>
+2.  Jako pierwsze wyświetlają się zawsze ogłoszenia gdzie są nadesłane do nich nowe CV<br></small>
+
+<b>Uwaga ogółna: wszedzie poprawiamy teksty, składnie literówki itd</b>
+<ul>
+<h3>Proponowany heder</h3><br>
+<li><a href="dodawanie_rejestracja.html"><b>Heder z tego pliku</b> - W przycisku dajemu info ze za darmo</a><br><small>Narazie nie ma sensu rozrzucania go bo nie widomo który wybierzemy</small></li>
+<li><a href="dodawanie_akceptacja_profilu.html"><b>Heder po zalogowaniu</b>, taka forma, w nazwie użytkownika, pierwszy człon z maila</a></li>
+   
+    <li><a href="dodawanie_akceptacja_profilu.html"><b>stopka z tego samego pliku </b> - Prosze o dane co ma byc w stopce </a></li>
+</ul>
+
+</body>
+</html>

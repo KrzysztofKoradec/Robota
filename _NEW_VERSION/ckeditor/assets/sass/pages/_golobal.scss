@@ -1,0 +1,96 @@
+/* TERMS & CONDITION */
+
+.container-content {
+    display: block;
+    clear: both;
+}
+ul.list-number {
+    margin-left: 30px;
+    li {
+        list-style: unset none decimal;
+    }
+}
+
+// DEMO PANEL
+
+.themeControll {
+    background: #2d3e50;
+    height: auto;
+    width: 170px;
+    position: fixed;
+    left: 0;
+    padding: 20px 0 0;
+    top: 100px;
+    z-index: 999999;
+    transform: translateX(0);
+    opacity: 1;
+    filter: none;
+    transition: opacity .5s linear, transform .7s cubic-bezier(.56, .48, 0, .99);
+    &.active {
+        display: block;
+        transform: translateX(-170px);
+        transition: opacity .5s linear, transform .7s cubic-bezier(.56, .48, 0, .99);
+    }
+    h3 > a {
+        color: white;
+        font-size: 14px;
+    }
+
+    .linkinner a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0;
+        clear: both;
+        color: $white;
+        display: block;
+        font-size: 13px;
+        height: auto;
+        line-height: 16px;
+        margin-bottom: 5px;
+        padding-bottom: 8px;
+        padding-left: 10px;
+        text-transform: capitalize;
+        width: auto;
+        font-family: $base-font-condensed;
+    }
+    .nicescroll-cursors {
+        background-color: rgba(255, 255, 255,0.75) !important;
+        border: 1px solid rgba(255, 255, 255,0.9)  !important;
+    }
+}
+.tbtn {
+    background: #2d3e50;
+    color: $white !important;
+    font-size: 30px;
+    height: auto;
+    padding: 10px;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    width: 40px;
+    cursor: pointer;
+}
+.linkinner {
+    display: block;
+    height: 400px;
+    margin-top: 15px;
+    overflow-y: auto;
+    padding-bottom: 15px;
+    padding-right: 10px;
+
+}
+.linkScroll {
+    .scroller-bar {
+        width: 17px;
+        background: #1d2e40 !important;
+        border-color: #1d2e40 !important;
+    }
+    .scroller-track {
+        background: #1d2e40 !important;
+        border-color: #1d2e40 !important;
+    }
+}
+@media(max-width: 780px) {
+    .themeControll {
+        display: none;
+    }
+}

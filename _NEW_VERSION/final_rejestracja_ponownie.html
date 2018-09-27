@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Meta info -->
+	<title>Rejestracja konta</title>
+	<meta name="description" value="">
+	<meta name="keywords" value="">
+	<meta name="author" value="">
+
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="assets/ico/favicon.png">
+
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="assets/css/style.css" rel="stylesheet">
+	<!-- styles needed for carousel slider -->
+	<link href="assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+	<!-- bxSlider CSS file -->
+	<link href="assets/plugins/bxslider/jquery.bxslider.css" rel="stylesheet"/>
+
+	<!-- Just for debugging purposes. -->
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- include pace script for automatic web page progress bar  -->
+	<script>
+			paceOptions = {
+					elements: true
+			};
+	</script>
+	<script src="assets/js/pace.min.js"></script>
+	<!-- reCAPTCHA -->
+	<script src="https://www.google.com/recaptcha/api.js?onload=reCaptchaCallback&render=explicit" async defer></script>
+</head>
+
+<body>
+<div id="wrapper">
+
+
+  
+  <!-- HEADER, or navbar -->
+  <div class="header">
+  	<nav class="navbar navbar-site navbar-default" role="navigation">
+  		<div class="container">
+
+        <!-- NAVBAR HEADER -->
+        <!-- logo and navigations toggle buttons -->
+  			<div class="navbar-header">
+
+          <!-- open menu btn -->
+  				<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle toggle-icon" type="button">
+  					<span class="sr-only">Toggle navigation</span>
+						<i class="fa fa-bars closed active" aria-hidden="true"></i>
+						<i class="fa fa-times opened" aria-hidden="true"></i>
+					</button>
+
+          <!-- logo -->
+  				<a href="index.html" class="navbar-brand logo logo-title">
+  					<span class="logo-icon">
+              <i class="icon icon-search-1 ln-shadow-logo "></i>
+            </span>
+						<span class="light">OFERTY</span> <span>PRACY</span>
+					</a>
+  			</div>
+
+
+        <!-- NAVBAR COLLAPSE -->
+        <!-- main navigation, will collapse on mobile -->
+  			<div class="navbar-collapse collapse">
+
+          <!-- main navigation -->
+  				<ul class="nav navbar-nav navbar-right">
+  					<li>
+              <a href="login.html">Logowanie</a>
+						</li>
+						
+						<li>
+              <a href="register.html">Rejestracja</a>
+            </li>
+
+  					<li class="postadd">
+							<a class="btn btn-block btn-border btn-post btn-danger" href="dodawanie_ogloszenia.html" data-toggle="tooltip" title="Dodaj nową ofertę pracy"
+							 data-placement="bottom">
+                <i class="fa fa-plus" aria-hidden="true"></i> ofertę pracy za darmo
+              </a>
+						</li>
+						
+						<li class="dropdown lang-menu">
+							<button type="button"
+											class="btn btn-default dropdown-toggle"
+											data-toggle="dropdown">
+								<span class="lang-title">PL </span><span class="caret"></span>
+							</button>
+
+							<ul class="dropdown-menu user-menu" role="menu">
+								<li><a class="active">
+        								<span class="lang-name">English</span></a></li>
+								<li><a><span class="lang-name">German </span></a></li>
+								<li><a><span class="lang-name">Russian </span></a></li>
+								<li><a><span class="lang-name">Ukrainian </span></a></li>
+							</ul>
+						</li>
+  				</ul>
+
+				</div><!--/.nav-collapse -->
+				
+
+  		</div><!-- /.container-fluid -->
+  	</nav>
+  </div><!-- /.header -->
+  
+
+
+  <!-- INTRO -->
+  <div class="intro jobs-intro bottom-out hasOverly"
+       style="background-image: url(images/jobs/1.jpg); background-position: center center;">
+    <div class="overlay"></div>
+    <div class="container text-center">
+
+      <h1 class="intro-title animated fadeInDown">Podany link jest już nieaktywny </h1>
+      <p class="sub animateme fittext3 animated fadeIn">Zarejestruj sie ponownie</p>
+
+    </div>
+	</div>
+  <!-- /intro -->
+	
+
+
+	<!-- MAIN CONTAINER -->
+	<div class="main-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 login-box">
+					<!-- panel -->
+					<div class="panel panel-default">
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 col-sm-12">
+
+                <form role="form"
+                      class="loginForm"
+                      name="register-form"
+                      method="get"
+                      action="">
+
+
+                  <!-- header -->
+                  <div class="panel-intro text-center border-bottom">
+                    <div class="form-group big m-0 lh-1">
+                      <label class="sr-only" for="rodzaj">Kim jesteś?</label>
+    
+                      <label class="roboto bold uppercase radio-inline lh-1"
+                            data-close-collapse="#login-more-collapse"
+                            data-toggle="open-collapse"
+                            data-target="#rodzaj-collapse">
+                        <input type="radio"
+                                name="rodzaj"
+                                id="pracodawca"
+                                class="mt-0"                                
+                                checked> pracodawca
+                      </label>
+
+                      <label class="roboto bold uppercase radio-inline lh-1 radio-collapse"
+                            data-close-collapse="#rodzaj-collapse"
+                            data-toggle="open-collapse"
+                            data-target="#login-more-collapse">
+                        <input type="radio"
+                                name="rodzaj"
+                                id="pracownik"                                
+                                class="mt-0"                                
+                                required> pracownik
+                      </label>
+                  
+                      </div>
+                  </div>                
+
+
+                  <!-- content -->
+                  <div class="panel-body">
+
+                    <!-- jako kto -->
+										<div class="form-group collapse in collapse-form-inputs" id="rodzaj-collapse">
+											<label for="rodzaj_select">Publikuj jako: </label>
+											<div>
+												<select name="rodzaj_select" id="rodzaj_select" class="form-control required">
+													<option value="firma" selected>Firma</option>
+													<option value="agencja">Agencja pośrednictwa pracy</option>
+													<option value="osoba">Osoba prywatna</option>
+												</select>
+											</div>
+										</div>
+										
+										<!-- username -->
+										<div class="form-group mt-4">
+											<label for="sender-email" class="control-label">Użytownik:</label>
+		
+											<div class="input-icon">
+												<i class="icon-user fa"></i>
+												<input id="sender-email"
+															name="sender-email"
+															type="text"
+															maxlength="55"
+															placeholder="Podaj adres e-mail"
+															class="form-control email"
+															required>
+											</div>
+										</div>
+		
+										<!-- password -->
+										<div class="form-group">
+											<label for="user-pass" class="control-label">Hasło:</label>
+		
+											<div class="input-icon">
+												<i class="icon-lock fa"></i>
+													<input type="password"
+																class="form-control"
+																placeholder="Wpisz hasło"
+																id="user-pass"
+																name="user-pass"
+																maxlength="30"
+																required>
+											</div>
+										</div>
+		
+										<!-- checkbox 1 -->
+										<div class="form-group">
+											<div class="termbox mb10">
+												<label class="checkbox-inline checkbox" for="check-regulamin">
+														<input
+															type="checkbox"
+															name="check-regulamin" id="check-regulamin"
+															value="1"
+															required
+															data-validation-required-message="Musisz zaakceptować regulamin"
+														>
+														Oświadczam, że zapoznałem się z <a href="">regulamine serwisu</a> oraz <a href="">polityką prywatności</a><sup>*</sup>
+													</label>
+												<p class="help-block"></p>
+											</div>
+										</div>
+		
+										<!-- checkbox 2 -->
+										<div class="form-group">
+											<div class="termbox mb10">
+												<label class="checkbox-inline checkbox" for="check-dane">
+														<input
+															type="checkbox"
+															name="check-dane" id="check-dane"
+															value="1"
+															required
+															data-validation-required-message="Musisz zaakceptować regulamin"
+														>
+														Wyrażam zgodę na przetwarzanie danych osobowych dla celów związanych z prowadzeniem serwisu <sup>*</sup>
+													</label>
+												<p class="help-block"></p>
+											</div>
+										</div>
+		                                <!-- alert -->
+                                         <div class="alert alert-danger hide-weak" role="alert">
+						                 <strong>Wystapił błąd!</strong> Spróbuj ponownie
+				                         </div>
+										<!-- reCAPTCHA -->
+										<div class="form-group">
+											<div class="captcha-wrap">
+												<div id="RecaptchaField1"></div>
+											</div>
+											<div class="clearfix"></div>
+											<p class="help-block captcha">Musisz pokazać, że nie jesteś robotem</p>
+										</div>
+                    
+                    <!-- submit -->
+                    <div class="form-group">
+
+                      <input name="submit"
+                            class="btn btn-primary  btn-block"
+                            value="Wyślij"
+                            type="submit">
+
+                      <div class="collapse" id="login-more-collapse">
+                        <div class="line-text"><span>lub</span></div>
+  
+                        <a href="#" class="btn btn-block btn-fb">
+                          <i class="fa fa-facebook color-white"></i> Zarejestruj się przez Facebook
+                        </a>
+                      </div>
+                    </div>
+
+                    
+                    <!-- bottom info -->
+                    <div class="login-box-btm text-center">
+                      <p>
+                        Mam już konto <br>
+                        <a href="final_login.html">Zaloguj się!</a>
+                      </p>
+                    </div>
+                      
+                  </div>
+                  
+
+                </form>
+
+              </div>
+            </div>
+						
+					</div><!-- /.panel -->
+				</div>
+			</div>
+		</div>
+  </div><!-- /.main-container -->
+
+
+
+	<!-- FOOTER -->
+	<footer class="main-footer">
+		<div class="footer-content">
+			<div class="container">
+				<div class="row">
+
+					<!-- Links 1 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">About us</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="#">About Company</a></li>
+								<li><a href="#">For Business</a></li>
+								<li><a href="#">Our Partners</a></li>
+								<li><a href="#">Press Contact</a></li>
+								<li><a href="#">Careers</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Links 2 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">Help & Contact</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="#">Stay Safe Online</a></li>
+								<li><a href="#">How to Sell</a></li>
+								<li><a href="#">How to Buy</a></li>
+								<li><a href="#">Posting Rules</a></li>
+								<li><a href="#">Promote Your Ad</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Links 3 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">More From Us</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="blogs.html">Blog</a></li>
+								<li><a href="#">Popular Searches</a></li>
+								<li><a href="#"> Site Map</a></li>
+								<li><a href="#"> Customer Reviews</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Links 4 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">Account</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="account-home.html"> Manage Account	</a></li>
+								<li><a href="login.html">Login</a></li>
+								<li><a href="signup.html">Register</a></li>
+								<li><a href="account-myads.html"> My ads</a></li>
+								<li><a href="seller-profile.html"> Profile</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Newsletter & socials -->
+					<div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="row">
+
+							<!-- Newsletter -->
+							<div class="col-xxs-12 col-xs-6 col-sm-12 text-xxs-center">
+								<h4 class="footer-title">Zapisz się do newslettera</h4>
+								<form class="form-inline">
+									<div class="form-group">
+										<label for="newsletter_email" class="sr-only">
+											Podaj swój adres email
+										</label>
+
+										<input type="email"
+													name="newsletter_email"
+													id="newsletter_email"
+													class="form-control"
+													placeholder="Podaj adres email"
+													required>
+
+										<input type="submit"
+													name="newletter-submit"
+													id="newletter-submit"
+													class="form-control btn btn-primary"
+													value="Zapisz mnie">
+									</div>
+								</form>
+							</div>
+
+
+							<!-- Socials -->
+							<div class="col-xxs-12 col-xs-6 col-sm-12 text-xxs-center">
+								<h4 class="footer-title">Znajdź nas na</h4>
+								<ul class="list-unstyled list-inline footer-nav social-list-footer social-list-color footer-nav-inline">
+									<li><a class="icon-color fb" title="Facebook" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-facebook"></i> </a></li>
+									<li><a class="icon-color tw" title="Twitter" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-twitter"></i> </a></li>
+									<li><a class="icon-color gp" title="Google+" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-google-plus"></i> </a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+
+					<!-- Copyrights -->
+					<div class="col-xs-12">
+						<div class="copy-info text-center">
+							&copy; 2017 BootClassified. All Rights Reserved.
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</footer><!-- /.footer -->
+
+
+
+</div><!-- /.wrapper -->
+
+
+
+
+<!-- Modals
+================================================== -->
+
+<!-- Modal Change Language -->
+<div id="select-country"
+			class="modal fade modalHasList"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+
+			<!-- header -->
+			<div class="modal-header">
+				<button type="button"
+								class="close"
+								data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span>
+				</button>
+
+				<h4 class="modal-title uppercase font-weight-bold"
+						id="exampleModalLabel">
+					<i class=" icon-map"></i> Wybierz język
+				</h4>
+			</div>
+
+
+			<!-- body -->
+			<div class="modal-body">
+				<ul class="cat-list">
+
+					<li>
+						<span class="flag-icon flag-icon-pl"> </span>
+						<a href="#PL">Polish</a>
+					</li>
+
+					<li>
+						<span class="flag-icon flag-icon-gb"> </span>
+						<a href="#gb">English</a>
+					</li>
+
+					<li>
+						<span class="flag-icon flag-icon-ru"> </span>
+						<a href="#ru">Russian</a>
+					</li>
+
+					<li>
+						<span class="flag-icon flag-icon-ua"> </span>
+						<a href="#ua">Ukrainian</a>
+					</li>
+
+				</ul>	
+			</div>
+
+
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+<!-- Le javascript
+================================================== -->
+
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="assets/js/jquery/2.2.4/jquery.js"></script>
+<script src="assets/js/vendors.min.js"></script>
+<script src="assets/js/fileinput.js"></script>
+<script src="assets/js/jquery.sticky-kit.min.js"></script>
+
+<!-- include custom script for site  -->
+<script src="assets/js/messages_pl.min.js"></script>
+<script src="assets/js/script.js"></script>
+<!-- reCAPTCHA -->
+<script>
+	var RC2KEY = '6Lfo_RAUAAAAAJxgnMejDKB-jkcjvulalvyG-WpO',
+		doSubmit = false,
+		helpBlock = document.querySelector('.help-block.captcha');
+
+	function reCaptchaVerify(response) {
+		if (response === document.querySelector('.g-recaptcha-response').value) {
+			doSubmit = true;
+			helpBlock.style.display = 'none';
+		}
+	}
+
+	function reCaptchaCallback() {
+		grecaptcha.render('RecaptchaField1', {
+			'sitekey': RC2KEY,
+			'callback': reCaptchaVerify
+		});
+	}
+
+	document.forms['register-form'].addEventListener('submit', function (e) {
+		if (!doSubmit) {
+			e.preventDefault();
+			helpBlock.style.display = 'block';
+			return false;
+		}
+		else {
+			// Zwalidowane poprawnie
+			// mozna cos zrobic
+		}
+	})
+
+</script>
+
+</body>
+</html>

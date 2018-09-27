@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+}
+
+.email-bg {
+  padding: 15px;
+  background-color: #f1f1f1;
+}
+
+.email-container {
+  max-width: 700px;
+  background: white;
+  color: #333;
+  font-family: sans-serif;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px 3px;
+  box-shadow: 0 1px 1px rgba(180, 180, 180, 0.5);
+  padding: 20px 15px;
+}
+
+a {
+  color: #16A085;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  border-bottom: 2px solid #16A085;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.footer {
+  border-top: 1px solid #16A085;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+.header p {
+  border-bottom: 1px solid #16A085;
+  margin: 0;
+  color: #fff;
+  background-color: #16A085;
+  padding: 5px 10px;
+  float: right;
+  margin-top: 10px;
+}
+
+.separator {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.separator>div {
+  width: 200px;
+  max-width: 50%;
+  height: 20px;
+  background-color: #16A085;
+  display: inline-block;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 50px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  line-height: 1.25;
+  font-size: 0.95em;
+}
+
+h4 {
+  color: #aaa;
+  font-size: 0.9em;
+}
+
+.details {
+  margin: 30px 0;
+  padding: 15px 0;
+  border-top: 1px dashed #bbb;
+  border-bottom: 1px dashed #ccc;
+}
+
+.details h4 {
+  margin-top: 0;
+}
+
+.details p {
+  margin-bottom: 0;
+}
+
+table {
+  margin: 1.33em 0;
+  font-size: 0.95em;
+  padding: 0 10px;
+}
+
+table th {
+  text-align: left;
+  padding: 0 10px 0 0;
+}
+
+table td {
+  padding-bottom: 10px;
+  line-height: 1.25
+}
+
+.manage h4 {
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+ul li {
+  font-size: 0.95em;
+  padding: 5px 0;
+}
+
+.color-info {
+  color: #FF9113;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.jobs-list {
+  margin-top: 30px;
+}
+
+.job-item {
+  margin-bottom: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.job-item .photobox,
+.job-item .add-desc-box {
+  float: left;
+}
+
+.job-item .photobox {
+  margin-right: 15px;
+  max-width: 70px;
+}
+
+.job-item .photobox a {
+  display: block;
+}
+
+.job-item .photobox .thumbnail {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+.job-item .company-title {
+  display: block;
+  color: rgb(153, 153, 153);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.job-item .job-title {
+ margin: 0 0 5px 0;
+ font-size: 17px;
+}
+.job-item .job-title a {
+  text-decoration: none;
+}
+
+.job-item .info-row {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+.job-item .info-row > span {
+  display: inline-block;
+  margin-right: 10px;
+  border-right: 1px solid #ddd;
+  padding-right: 10px;
+  line-height: 1;
+  margin-bottom: 5px;
+}

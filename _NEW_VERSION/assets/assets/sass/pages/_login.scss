@@ -1,0 +1,34 @@
+.login-page {
+
+  .main-container {
+    background: #eee
+      url('../../images/tlo2.jpg')
+      scroll
+      no-repeat
+      center bottom;
+    background-size: auto ;
+
+    @include breakpoint($mobile) {
+      padding-bottom: 250px;
+      background-size: auto 300px;
+    }
+  }
+
+  .select-sort-by.selectpicker {
+    width: 100%;
+  }
+}
+
+.add-page {
+  @include breakpoint($xs-min) {
+    .main-container {
+      background: #eee
+        url('../../images/tlo2.jpg')
+        scroll
+        no-repeat
+        center top;
+      background-size: 100% auto;
+      background-attachment: fixed;
+    }
+  }
+}

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Meta info -->
+	<title>Wiadomości</title>
+	<meta name="description" value="">
+	<meta name="keywords" value="">
+	<meta name="author" value="">
+
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="assets/ico/favicon.png">
+
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="assets/css/style.css" rel="stylesheet">
+	<!-- styles needed for carousel slider -->
+	<link href="assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link href="assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+	<!-- bxSlider CSS file -->
+	<link href="assets/plugins/bxslider/jquery.bxslider.css" rel="stylesheet"/>
+
+	<!-- Just for debugging purposes. -->
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- include pace script for automatic web page progress bar  -->
+	<script>
+			paceOptions = {
+					elements: true
+			};
+	</script>
+	<script src="assets/js/pace.min.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+
+
+  
+<!-- HEADER, or navbar -->
+  <div class="header">
+    <nav class="navbar navbar-site navbar-default" role="navigation">
+      <div class="container">
+
+        <!-- NAVBAR HEADER -->
+        <!-- logo and navigations toggle buttons -->
+        <div class="navbar-header">
+
+          <!-- open menu btn -->
+          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle toggle-icon" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-user closed active" aria-hidden="true"></i>
+            <i class="fa fa-times opened" aria-hidden="true"></i>
+            <span class="badge bg-info">NOWE</span>
+          </button>
+          
+          <!-- obserwowane -->
+          <a class="navbar-toggle" href="#">
+            <i class="fa icon-star-empty active" aria-hidden="true"></i>
+            <span class="badge bg-info to-left">2</span>
+          </a>
+
+          <!-- logo -->
+          <a href="index.html" class="navbar-brand logo logo-title">
+            <span class="logo-icon">
+              <i class="icon icon-search-1 ln-shadow-logo "></i>
+            </span>
+            <span class="light">OFERTY</span> <span>PRACY</span>
+          </a>
+        </div>
+
+
+        <!-- NAVBAR COLLAPSE -->
+        <!-- main navigation, will collapse on mobile -->
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            <!-- obserwowane -->
+            <li class="followed"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Obserwowane ogłoszenia">
+              <a href="#">
+                <span class="badge bg-info align-baseline">2</span>
+                <i class="fa icon-star-empty" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <!-- Wiadomości -->
+             <li class="dropdown user-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="badge bg-info align-baseline">13</span>
+                      <i class="fa fa-bell-o ml-1 mr-1 align-baseline bold color-primary"></i>
+                      <i class=" icon-down-open-big fa align-baseline"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                      <li><a href="#">
+                        <span class="badge bg-info">NOWA</span> wiadomość <small>(3)</small>
+                      </a></li>
+                      <li><a href="#">
+                        <span class="badge bg-info">NOWE</span> CV <small>(2)</small>
+                      </a></li>
+                    </ul>
+                  </li>
+
+            <!-- Profil - dropdown -->
+            <li class="dropdown user-dropdown">
+
+              <!-- toggler -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa-user fa mr-1"></i>
+                <span>Jhon Doe</span>
+                <i class=" icon-down-open-big fa"></i>
+              </a>
+
+              <!-- menu -->
+              <ul class="dropdown-menu user-menu">
+
+                <!-- accounte name -->
+                <li class="account-name">
+                  <i class="fa fa-user ln-shadow"></i>
+                  <p>john.doe@example.com</p>
+                  <a href="#" class="btn btn-primary">
+                    <span>Doładuj konto</span><br>
+                    <small>Stan 147 PLN / kredytów</small>
+                  </a>
+                </li>
+
+                <!-- links -->
+                <li><a href="lista_ogloszen.html">
+                  <i class=" icon-docs "></i> Ogłoszenia
+                </a></li>
+
+                <li>
+                  <a href="uzytkownik_profil.html">
+                    <i class="icon-user"></i> 
+                    <span>Profil</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="icon-mail"></i> Wiadomości
+                  </a>
+                </li>
+                <li>
+                  <a href="#navbar-ustawienia-collapse" data-toggle="collapse">
+                    <i class="fa fa-angle-down pull-right" aria-hidden="true"></i>
+                    <i class="icon-cog"></i> Ustawienia
+                  </a>
+
+                  <div class="collapse navbar-collapse-together" id="navbar-ustawienia-collapse">
+                    <a href="#">Ustawienia</a>
+                    <a href="#">Płatności</a>
+                  </div>
+                </li>
+
+                <li><a href="login.html">
+                  <i class=" icon-logout "></i> Wyloguj
+                </a></li>
+
+              </ul>
+            </li>
+
+            <!-- dodaj ogloszenie -->
+            <li class="postadd">
+              <a class="btn btn-block btn-border btn-post btn-danger" href="dodawanie_ogloszenia.html" data-toggle="tooltip" title="Dodaj nową ofertę pracy"
+               data-placement="bottom">
+                <i class="fa fa-plus" aria-hidden="true"></i> ofertę pracy za darmo
+              </a>
+            </li>
+
+            <!-- lang menu -->
+            <li class="dropdown lang-menu">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="lang-title">PL </span><span class="caret"></span>
+              </button>
+
+              <ul class="dropdown-menu user-menu" role="menu">
+                <li><a class="active">
+                    <span class="lang-name">English</span>
+                </a></li>
+                <li><a><span class="lang-name">German </span></a></li>
+                <li><a><span class="lang-name">Russian </span></a></li>
+                <li><a><span class="lang-name">Ukrainian </span></a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+
+
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </div>
+  <!-- /.header -->
+
+
+
+	<!-- MAIN CONTAINER -->
+	<div class="main-container">
+		<div class="container">
+			<div class="row">
+
+
+				<!-- SIDEBAR -->
+				<div class="col-sm-3 page-sidebar hidden-xs">
+					<aside>
+						<div class="inner-box">
+							<div class="user-panel-sidebar">
+								<!-- Box -->
+								<div class="collapse-box ">
+									<h5 class="collapse-title bold">
+										Panel Pracodawcy
+
+										<a href="#aside-ustawienia" data-toggle="collapse" class="pull-right">
+											<i class="fa fa-angle-down"></i>
+										</a>
+									</h5>
+
+									<div class="panel-collapse collapse in" id="aside-ustawienia">
+										<ul class="acc-list">
+											<li class="active"><a href="#">
+												<i class="icon-docs" aria-hidden="true"></i> Ogłoszenia
+											</a></li>
+											<li><a href="#">
+												<i class="fa fa-envelope-o" aria-hidden="true"></i> Wiadomości
+											</a></li>
+											<li><a href="profil_pracodawcy.html">
+												<i class="icon-user"></i> Profil
+											</a></li>
+											<li><a href="#.html">
+												<i class="icon-cog"></i> Ustawienia
+											</a></li>
+											<li><a href="#.html">
+												<i class="icon-money"></i> Płatności
+											</a></li>
+										</ul>
+									</div>
+								</div>
+								<!-- /.collapse-box  -->
+								
+
+							</div>
+							<!-- /.user-panel-sidebar  -->
+						</div>
+						<!-- /.inner-box  -->
+					</aside>
+				</div>
+				<!--/.page-sidebar-->
+
+				
+				<!-- CONTENT -->
+				<div class="col-sm-9 page-content">
+					<div class="inner-box">
+                        
+                        <!-- title -->
+						<h2 class="title-2">
+							<i class="icon-mail"></i> Wiadomości
+						</h2>
+
+					    <!-- sorting -->
+						<div class="tab-filter">
+							<select class="selectpicker select-sort-by" data-style="btn-select" data-width="auto">
+								<option>do: wszystkie ogłoszenia</option>
+								<option>Kierowca Tira na trasy Erop.... </option>
+								<option>Tester manualny do APP</option>
+								<option>Tester znający anakonde</option>
+								<option>Pani do kawy</option>
+							</select>
+						</div>
+						
+						<!-- content -->
+						<div class="tab-content no-padding">
+
+							<!-- NOWE -->
+							<div class="property-list tab-pane fade in active" id="nowe">
+
+                                <!-- item-list -->
+								<div class="item-list">
+
+									<div class="col">
+									    <div class="blogs-comment-avatar">
+											<figure>
+												<img alt="avatar" src="images/jobs/company-logos/18.jpg">
+											</figure>
+										</div>
+										<div class="add-author">
+											
+											<div class="company-name">Szwagrex</div>
+											<div class="company-type">Agencja pracy</div>
+										</div>
+										<div class="info-row ml-auto">
+											<span class="hidden-md-up">04/03/2017</span>
+										</div>
+									</div>
+
+									<div class="col add-desc-box">
+										<div class="add-details clearfix">
+											<h5 class="add-title"><a href="final_wiadomosci_pracodawca_agencja.html">
+												oferta do: Pomocnik kucharrza kuchnia wiejska - <i class="fa fa-envelope-o"> </i> 5</span>
+											</a></h5>
+											<div class="info-row">
+												<span class="item-location">Eligendi consequatur minima exercitationem nemo enim! Qui dicta ullam voluptate.
+											</div>
+										</div>
+									</div>
+
+									<div class="col mail-date">
+										<div class="mb-2 info-row hidden-sm-down">04/03/2017</div>
+										<a class="btn btn-border-thin  btn-share" data-toggle="tooltip" title="Usuń" data-placement="left">
+											<i class="icon icon-trash"></i>
+										</a>
+									</div>
+
+								</div>
+								<!--/.item-list-->
+
+																<!-- item-list -->
+								<div class="item-list">
+
+									<div class="col">
+									    <div class="blogs-comment-avatar">
+											<figure>
+												<img alt="avatar" src="images/jobs/company-logos/agency.jpg">
+											</figure>
+										</div>
+										<div class="add-author">
+											
+											<div class="company-name">Szwagrex</div>
+											<div class="company-type">Agencja pracy</div>
+										</div>
+										<div class="info-row ml-auto">
+											<span class="hidden-md-up">04/03/2017</span>
+										</div>
+									</div>
+
+									<div class="col add-desc-box">
+										<div class="add-details clearfix">
+											<h5 class="add-title"><a href="final_wiadomosci_pracodawca_agencja.html">
+												oferta do: Przykład nieprzeczytanej wiadomości - <i class="fa fa-envelope-o"> </i> 2
+											</a></h5>
+											<div class="info-row">
+												<span class="item-location">Eligendi consequatur minima exercitationem nemo enim! Qui dicta ullam voluptate.</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="col mail-date">
+										<div class="mb-2 info-row hidden-sm-down">04/03/2017</div>
+										<a class="btn btn-border-thin  btn-share" data-toggle="tooltip" title="Usuń" data-placement="left">
+											<i class="icon icon-trash"></i>
+										</a>
+									</div>
+
+								</div>
+								<!--/.item-list-->
+
+
+
+								<!-- item-list -->
+								<div class="item-list">
+
+									<div class="col">
+										<div class="blogs-comment-avatar">
+											<figure>
+												<img alt="avatar" src="images/users/user.jpg">
+											</figure>
+										</div>
+										
+										<div class="add-author">
+											
+											<div class="company-name">Andrzej Janusz</div>
+											<div class="company-type">o. prywatna</div>
+										</div>
+										<div class="info-row ml-auto">
+											<span class="hidden-md-up">04/03/2017</span>
+										</div>
+									</div>
+
+									<div class="col add-desc-box">
+										<div class="add-details clearfix">
+											<h5 class="add-title"><a href="final_wiadomosci_pracodawca_oprywatna.html">
+												CV do: Przykład nieprzeczytanej wiadomości - <i class="fa fa-envelope-o"> </i> 2
+											</a></h5>
+											<div class="info-row">
+												<span class="item-location">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, animi accusamus, sunt esse error sapiente facilis dolores itaque nobis consectetur enim et quae nam iure quibusdam consequatur laborum neque aperiam.</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="col mail-date">
+										<div class="mb-2 info-row hidden-sm-down">04/03/2017</div>
+										<a class="btn btn-border-thin  btn-share" data-toggle="tooltip" title="Usuń" data-placement="left">
+											<i class="icon icon-trash"></i>
+										</a>
+									</div>
+
+								</div>
+                                <!--/.item-list-->
+
+								<!-- item-list -->
+								<div class="item-list">
+
+									<div class="col">
+										<div class="blogs-comment-avatar">
+											<figure>
+												<img alt="avatar" src="images/users/5.jpg">
+											</figure>
+										</div>
+										<div class="add-author">
+											
+											<div class="company-name">Robert Lewy</div>
+											<div class="company-type">o.prywatna</div>
+										</div>
+										<div class="info-row ml-auto">
+											<span class="hidden-md-up">04/03/2017</span>
+										</div>
+									</div>
+
+									<div class="col add-desc-box">
+										<div class="add-details clearfix">
+											<h5 class="add-title"><a href="final_wiadomosci_pracodawca_agencja.html">
+												CV do: Pomocnik kucharrza kuchnia wiejska - <i class="fa fa-envelope-o"> </i> 5</span>
+											</a></h5>
+											<div class="info-row">
+												<span class="item-location">Eligendi consequatur minima exercitationem nemo enim! Qui dicta ullam voluptate.</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="col mail-date">
+										<div class="mb-2 info-row hidden-sm-down">04/03/2017</div>
+										<a class="btn btn-border-thin  btn-share" data-toggle="tooltip" title="Usuń" data-placement="left">
+											<i class="icon icon-trash"></i>
+										</a>
+									</div>
+
+								</div>
+								<!--/.item-list-->
+
+								<!-- item-list -->
+								<div class="item-list seen">
+
+									<div class="col">
+									    <div class="blogs-comment-avatar">
+											<figure>
+												<img alt="avatar" src="images/users/7.jpg">
+											</figure>
+										</div>
+										<div class="add-author">
+											
+											<div class="company-name">Piotrek Konowalski</div>
+											<div class="company-type">o.prywatna</div>
+										</div>
+										<div class="info-row ml-auto">
+											<span class="hidden-md-up">04/03/2017</span>
+										</div>
+									</div>
+
+									<div class="col add-desc-box">
+										<div class="add-details clearfix">
+											<h5 class="add-title"><a class="color-grey1" href="wiadomosci.html">
+												CV do: Przykład przeczytanej wiadomości <span color-info></span>
+											</a></h5>
+											<div class="info-row">
+												<span class="item-location">Jestem zainteresowany Państwa ogłoszeniem w sprawie kierowcy tira. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="col mail-date">
+										<div class="mb-2 info-row hidden-sm-down">04/03/2017</div>
+										<a class="btn btn-border-thin  btn-share" data-toggle="tooltip" title="Usuń" data-placement="left">
+											<i class="icon icon-trash"></i>
+										</a>
+									</div>
+
+								</div>
+								<!--/.item-list-->
+
+								<!-- item-list -->
+								<div class="item-list send">
+
+									<div class="col">
+										<div class="blogs-comment-avatar">
+											<figure>
+												<img alt="avatar" src="images/jobs/company-logos/19.jpg">
+											</figure>
+										</div>
+										<div class="add-author">			
+											<div class="company-name">FisrtStep</div>
+											<div class="company-type">Agencja pracy</div>
+										</div>
+										<div class="info-row ml-auto">
+											<span class="hidden-md-up">04/03/2017</span>
+										</div>
+									</div>
+
+									<div class="col add-desc-box">
+										<div class="add-details clearfix">
+											<h5 class="add-title"><a class="color-grey1" href="final_wiadomosci_pracodawca_agencja.html">
+												CV do: Przykład wysłanej wiadomości - <i class="fa fa-envelope-open-o"> </i> 2
+											</a></h5>
+											<div class="info-row">
+												<span class="item-location">Jestem zainteresowany Państwa ogłoszeniem w sprawie kierowcy tira. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="col mail-date">
+										<div class="mb-2 info-row hidden-sm-down">04/03/2017</div>
+										<a class="btn btn-border-thin  btn-share" data-toggle="tooltip" title="Usuń" data-placement="left">
+											<i class="icon icon-trash"></i>
+										</a>
+									</div>
+
+								</div>
+								<!--/.item-list-->
+
+
+
+              
+								<!-- item-list -->
+								<div class="item-list seen">
+
+									<div class="col">
+										<div class="blogs-comment-avatar">
+											<figure>
+												<img alt="avatar" src="images/jobs/company-logos/19.jpg">
+											</figure>
+										</div>
+										<div class="add-author">
+											
+											<div class="company-name">FisrtStep</div>
+											<div class="company-type">Agencja pracy</div>
+
+										</div>
+										<div class="info-row ml-auto">
+											<span class="hidden-md-up">04/03/2017</span>
+										</div>
+									</div>
+
+									<div class="col add-desc-box">
+										<div class="add-details clearfix">
+											<h5 class="add-title"><a class="color-grey1" href="wiadomosci.html">
+												CV do:Przykład przeczytanej wiadomości - <i class="fa fa-envelope-open-o"> </i> <span color-info>5</span>
+											</a></h5>
+											<div class="info-row">
+												<span class="item-location">Jestem zainteresowany Państwa ogłoszeniem w sprawie kierowcy tira. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="col mail-date">
+										<div class="mb-2 info-row hidden-sm-down">04/03/2017</div>
+										<a class="btn btn-border-thin  btn-share" data-toggle="tooltip" title="Usuń" data-placement="left">
+											<i class="icon icon-trash"></i>
+										</a>
+									</div>
+
+								</div>
+								<!--/.item-list-->
+
+								<!-- pagination-bar -->
+								<div class="pagination-bar text-center">
+									<ul class="pagination">
+										<li class="active"><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#"> ...</a></li>
+										<li><a class="pagination-btn" href="#">Next &raquo;</a></li>
+									</ul>
+								</div>
+								<!--/.pagination-bar -->
+							</div>
+
+						</div>
+
+
+					</div><!-- /.inner-box -->
+				</div><!--/.page-content-->
+
+
+			</div><!--/.row-->
+		</div><!--/.container-->
+	</div><!-- /.main-container -->
+
+
+
+	<!-- FOOTER -->
+	<footer class="main-footer">
+		<div class="footer-content">
+			<div class="container">
+				<div class="row">
+
+					<!-- Links 1 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">About us</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="#">About Company</a></li>
+								<li><a href="#">For Business</a></li>
+								<li><a href="#">Our Partners</a></li>
+								<li><a href="#">Press Contact</a></li>
+								<li><a href="#">Careers</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Links 2 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">Help & Contact</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="#">Stay Safe Online</a></li>
+								<li><a href="#">How to Sell</a></li>
+								<li><a href="#">How to Buy</a></li>
+								<li><a href="#">Posting Rules</a></li>
+								<li><a href="#">Promote Your Ad</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Links 3 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">More From Us</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="blogs.html">Blog</a></li>
+								<li><a href="#">Popular Searches</a></li>
+								<li><a href="#"> Site Map</a></li>
+								<li><a href="#"> Customer Reviews</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Links 4 -->
+					<div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+						<div class="footer-col">
+							<h4 class="footer-title">Account</h4>
+
+							<ul class="list-unstyled footer-nav">
+								<li><a href="account-home.html"> Manage Account	</a></li>
+								<li><a href="login.html">Login</a></li>
+								<li><a href="signup.html">Register</a></li>
+								<li><a href="account-myads.html"> My ads</a></li>
+								<li><a href="seller-profile.html"> Profile</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+					<!-- Newsletter & socials -->
+					<div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="row">
+
+							<!-- Newsletter -->
+							<div class="col-xxs-12 col-xs-6 col-sm-12 text-xxs-center">
+								<h4 class="footer-title">Zapisz się do newslettera</h4>
+								<form class="form-inline">
+									<div class="form-group">
+										<label for="newsletter_email" class="sr-only">
+											Podaj swój adres email
+										</label>
+
+										<input type="email" name="newsletter_email" id="newsletter_email" class="form-control" placeholder="Podaj adres email" required>
+
+										<input type="submit" name="newletter-submit" id="newletter-submit" class="form-control btn btn-primary" value="Zapisz mnie">
+									</div>
+								</form>
+							</div>
+
+
+							<!-- Socials -->
+							<div class="col-xxs-12 col-xs-6 col-sm-12 text-xxs-center">
+								<h4 class="footer-title">Znajdź nas na</h4>
+								<ul class="list-unstyled list-inline footer-nav social-list-footer social-list-color footer-nav-inline">
+									<li><a class="icon-color fb" title="Facebook" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-facebook"></i> </a></li>
+									<li><a class="icon-color tw" title="Twitter" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-twitter"></i> </a></li>
+									<li><a class="icon-color gp" title="Google+" data-placement="top" data-toggle="tooltip" href="#"><i class="fa fa-google-plus"></i> </a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+
+					<!-- Copyrights -->
+					<div class="col-xs-12">
+						<div class="copy-info text-center">
+							&copy; 2017 BootClassified. All Rights Reserved.
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</footer><!-- /.footer -->
+
+
+
+</div><!-- /.wrapper -->
+
+
+
+
+<!-- Modals
+================================================== -->
+
+
+
+
+<!-- Le javascript
+================================================== -->
+
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="assets/js/jquery/2.2.4/jquery.js"></script>
+<script src="assets/js/vendors.min.js"></script>
+
+<!-- include custom script for site  -->
+<script src="assets/js/messages_pl.min.js"></script>
+<script src="assets/js/fileinput.min.js"></script>
+<script src="assets/js/jquery.sticky-kit.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+</body>
+</html>
